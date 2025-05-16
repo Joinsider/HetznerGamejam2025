@@ -1,4 +1,7 @@
+class_name Machine
 extends Node2D
+
+signal on_upgrade(new_level: int)
 
 @export var Player = 0
 
@@ -19,6 +22,7 @@ var level = 0
 
 func _ready() -> void:
 	$Sprite2D.texture = sprite[level]
+	Gamestate.players[Player].add_machine(self)
 	
 
 func _input(event: InputEvent) -> void:
@@ -36,9 +40,10 @@ func level_up() -> void:
 	if (Gamestate.players[Player].remove_coins(nextLevel.cost)):
 		level+=1
 		$Sprite2D.texture = sprite[level]
+		on_upgrade.emit(level)
 	else:
 		print("Player " + str(Player) + " has not the required Money: " + str(nextLevel.cost))
-	
-		
 
-	
+func _on_timer_timeout() -> void:
+	var amount = Gameconstants.machine_levels[level].outcome
+	Gamestate.players[Player].add_collectable_coins(amount)

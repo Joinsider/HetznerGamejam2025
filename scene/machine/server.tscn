@@ -17,3 +17,9 @@ texture = ExtResource("2_7ka82")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_lfpuk")
 debug_color = Color(0.522331, 0.573624, 0.0204646, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

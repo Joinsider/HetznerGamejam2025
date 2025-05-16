@@ -1,11 +1,30 @@
 class_name Player
 extends CharacterBody2D
 
+signal coins_updated(coins: int)
+signal collectable_coins_updated(coins: int)
+signal machine_upgraded
 
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
 
-var _coins: int = 50;
+var _collectable_coins: int = 0
+var _coins: int = 50
+var _machines: Array[Machine] = []
+
+func get_income() -> int:
+	var income: int = 0
+	for machine in _machines:
+		income += Gameconstants.machine_levels[machine.level].outcome
+	return income
+
+func add_machine(machine: Machine) -> void:
+	_machines.append(machine)
+	machine.on_upgrade.connect(_on_machine_upgrade)
+	
+func _on_machine_upgrade(new_level: int) -> void:
+	machine_upgraded.emit()
+	
 
 func has_coins(amount: int) -> bool:
 	return _coins >= amount
@@ -14,10 +33,21 @@ func remove_coins(amount: int) -> bool:
 	if (!has_coins(amount)):
 		return false
 	_coins -= amount
+	coins_updated.emit(_coins)
 	return true
 	
 func add_coins(amount: int) -> void:
 	_coins += amount
+	coins_updated.emit(_coins)
+	
+func add_collectable_coins(amount: int) -> void:
+	_collectable_coins += amount
+	collectable_coins_updated.emit(_collectable_coins)
+	
+func collect_coins() -> void:
+	add_coins(_collectable_coins)
+	_collectable_coins = 0
+	collectable_coins_updated.emit(_collectable_coins)
 
 var _controlls = [
  	["player0_left", "player0_right", "player0_up", "player0_down"],
