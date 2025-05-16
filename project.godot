@@ -66,6 +66,11 @@ player1_right={
 ]
 }
 
+[gui]
+
+theme/custom="uid://ctbe20oi50s8b"
+theme/custom_font="uid://bcbvw8rdcndk"
+
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
