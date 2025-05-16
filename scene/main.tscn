@@ -1,9 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlnqtwcysd5c7"]
+[gd_scene load_steps=8 format=4 uid="uid://dlnqtwcysd5c7"]
 
-[sub_resource type="TileSet" id="TileSet_no8bm"]
-tile_size = Vector2i(64, 64)
+[ext_resource type="TileSet" uid="uid://cbf4m3yaaxdjn" path="res://tileSet/tileSetMaschines.tres" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
+size = Vector2(512, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brvut"]
+size = Vector2(512, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0l8b"]
+size = Vector2(32, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ha60"]
+size = Vector2(100, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
+size = Vector2(100, 288)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_no8bm")
+tile_map_data = PackedByteArray("AAABAAEAAQAAAAAAAQADAAEAAQAAAAAAAQADAAMAAQAAAAAAAQABAAMAAQAAAAAAAQABAAUAAQAAAAAAAQADAAUAAQAAAAAAAQADAAcAAQAAAAAAAQABAAcAAQAAAAAAAQAOAAcAAQAAAAAAAQAMAAcAAQAAAAAAAQAMAAUAAQAAAAAAAQAOAAUAAQAAAAAAAQAOAAMAAQAAAAAAAQAMAAMAAQAAAAAAAQAMAAEAAQAAAAAAAQAOAAEAAQAAAAAAAQA=")
+tile_set = ExtResource("1_itxqv")
+
+[node name="Player" parent="." instance=ExtResource("2_v0l8b")]
+position = Vector2(147, 99)
+
+[node name="Player2" parent="." instance=ExtResource("2_v0l8b")]
+position = Vector2(294, 198)
+Player = 1
+
+[node name="Down Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down Collision"]
+position = Vector2(256, 339)
+shape = SubResource("RectangleShape2D_wp4xf")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="UP Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UP Collision"]
+position = Vector2(256, -50)
+shape = SubResource("RectangleShape2D_brvut")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="Right Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Collision"]
+position = Vector2(256, 144)
+shape = SubResource("RectangleShape2D_v0l8b")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="Left Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Collision"]
+position = Vector2(563, 144)
+shape = SubResource("RectangleShape2D_0ha60")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="Middle" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle"]
+position = Vector2(-50, 144)
+shape = SubResource("RectangleShape2D_4j5ol")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
