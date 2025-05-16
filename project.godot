@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="GameJam"
+run/main_scene="uid://dlnqtwcysd5c7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=512
+window/size/viewport_height=288
+window/size/mode=3
+window/size/initial_screen=1
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
