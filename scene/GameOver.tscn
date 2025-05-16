@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b7s2d5a3qd8a5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Restart Game" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Restart Game"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(327.763, 185.878)
