@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlnqtwcysd5c7"]
+[gd_scene load_steps=10 format=3 uid="uid://dlnqtwcysd5c7"]
 
 [ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://610r2hnyq8u4" path="res://scene/machine/server.tscn" id="3_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://dg0yn7o4j1jg4" path="res://scene/selectMenu.tscn" id="4_brvut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
@@ -147,3 +148,10 @@ debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
 position = Vector2(-50, 144)
 shape = SubResource("RectangleShape2D_4j5ol")
 debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="SelectMenu" parent="." instance=ExtResource("4_brvut")]
+position = Vector2(16, 104)
+
+[node name="SelectMenu2" parent="." instance=ExtResource("4_brvut")]
+position = Vector2(496, 104)
+Player = 1
