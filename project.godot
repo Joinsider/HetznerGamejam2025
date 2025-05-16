@@ -23,6 +23,11 @@ window/size/mode=3
 window/size/initial_screen=1
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="uid://ctbe20oi50s8b"
+theme/custom_font="uid://bcbvw8rdcndk"
+
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
