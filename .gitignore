@@ -3,3 +3,5 @@
 /android/
 
 .DS_Store
+/.idea/
+*.uid
