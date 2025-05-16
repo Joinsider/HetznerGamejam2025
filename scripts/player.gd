@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 150.0
+@export var SPEED = 50.0
 @export var Player = 0
 
 

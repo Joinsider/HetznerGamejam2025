@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://cbf4m3yaaxdjn" path="res://tileSet/tileSetMaschines.tres" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
-[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/background.png" id="2_wp4xf"]
+[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="2_wp4xf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
