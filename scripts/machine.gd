@@ -42,7 +42,7 @@ func level_up() -> void:
 		$Sprite2D.texture = sprite[level]
 		on_upgrade.emit(level)
 	else:
-		print("Player " + str(Player) + " has not the required Money: " + str(nextLevel.cost))
+		Gamestate.players[Player].show_message("Not enough money! (" + str(Gamestate.players[Player]._coins) + "/" + str(nextLevel.cost) + ")")
 
 func _on_timer_timeout() -> void:
 	var amount = Gameconstants.machine_levels[level].outcome

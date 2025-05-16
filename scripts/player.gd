@@ -8,6 +8,7 @@ signal machine_upgraded
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
 
+var is_in_menu: bool = false
 var _collectable_coins: int = 0
 var _coins: int = 50
 var _machines: Array[Machine] = []
@@ -49,6 +50,10 @@ func collect_coins() -> void:
 	_collectable_coins = 0
 	collectable_coins_updated.emit(_collectable_coins)
 
+func show_message(message: String) -> void:
+	$CenterContainer/Notification.text = message
+	$NotificationTimer.start()
+
 var _controlls = [
  	["player0_left", "player0_right", "player0_up", "player0_down"],
 	["player1_left", "player1_right", "player1_up", "player1_down"]
@@ -77,5 +82,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
-
+	if is_in_menu:
+		return
 	move_and_slide()
+
+
+func _on_notification_timer_timeout() -> void:
+	$CenterContainer/Notification.text = ""

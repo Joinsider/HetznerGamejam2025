@@ -21,10 +21,13 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(controlls[Player][3]):
 		if visible:
 			visible = false
+			Gamestate.players[Player].is_in_menu = false
 		else:
 			visible = true
+			Gamestate.players[Player].is_in_menu = true
 	if event.is_action_pressed(controlls[Player][0]):
 		if visible == true:
 			print("Call effetct")
 			visible = false
+			Gamestate.players[Player].is_in_menu = false
 		
