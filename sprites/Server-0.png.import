@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xmropcmt7uhh"
-path="res://.godot/imported/ente.jpg-7a2de8400e8b763e00dd0beff342683c.ctex"
+uid="uid://b6s53ofxsmg1r"
+path="res://.godot/imported/Server-0.png-9e5a3857e40c107d297c1060d38a98fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ente.jpg"
-dest_files=["res://.godot/imported/ente.jpg-7a2de8400e8b763e00dd0beff342683c.ctex"]
+source_file="res://sprites/Server-0.png"
+dest_files=["res://.godot/imported/Server-0.png-9e5a3857e40c107d297c1060d38a98fe.ctex"]
 
 [params]
 

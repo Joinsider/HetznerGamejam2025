@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k3cvba6i7yvq"
-path="res://.godot/imported/3server.jpg-e9cdb7d7995d02cadb398940fc661e0f.ctex"
+uid="uid://yrq1qstlwbun"
+path="res://.godot/imported/Duck0.png-fb26a1e718b216e87871aa71daba71be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/3server.jpg"
-dest_files=["res://.godot/imported/3server.jpg-e9cdb7d7995d02cadb398940fc661e0f.ctex"]
+source_file="res://sprites/Duck0.png"
+dest_files=["res://.godot/imported/Duck0.png-fb26a1e718b216e87871aa71daba71be.ctex"]
 
 [params]
 
