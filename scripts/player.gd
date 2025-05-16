@@ -9,6 +9,14 @@ var controlls = [
  	["player0_left", "player0_right", "player0_up", "player0_down"],
 	["player1_left", "player1_right", "player1_up", "player1_down"]
 ]
+var sprite = [
+	preload("res://sprites/Duck0.png"),
+	preload("res://sprites/Duck1.png")
+]
+
+func _ready() -> void:
+	$Sprite2D.texture = sprite[Player]
+
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
