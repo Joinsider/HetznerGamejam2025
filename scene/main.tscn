@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://dlnqtwcysd5c7"]
+[gd_scene load_steps=9 format=3 uid="uid://dlnqtwcysd5c7"]
 
-[ext_resource type="TileSet" uid="uid://cbf4m3yaaxdjn" path="res://tileSet/tileSetMaschines.tres" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://610r2hnyq8u4" path="res://scene/machine/server.tscn" id="3_wp4xf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
@@ -26,15 +26,91 @@ texture_filter = 1
 position = Vector2(256, 144)
 texture = ExtResource("2_wp4xf")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAABAAEAAQAAAAAAAQADAAEAAQAAAAAAAQADAAMAAQAAAAAAAQABAAMAAQAAAAAAAQABAAUAAQAAAAAAAQADAAUAAQAAAAAAAQADAAcAAQAAAAAAAQABAAcAAQAAAAAAAQAOAAcAAQAAAAAAAQAMAAcAAQAAAAAAAQAMAAUAAQAAAAAAAQAOAAUAAQAAAAAAAQAOAAMAAQAAAAAAAQAMAAMAAQAAAAAAAQAMAAEAAQAAAAAAAQAOAAEAAQAAAAAAAQA=")
-tile_set = ExtResource("1_itxqv")
-
 [node name="Player" parent="." instance=ExtResource("2_v0l8b")]
+z_index = 1
 position = Vector2(147, 99)
 
 [node name="Player2" parent="." instance=ExtResource("2_v0l8b")]
+z_index = 1
 position = Vector2(294, 198)
+PlayerIndex = 1
+
+[node name="Servers" type="Node2D" parent="."]
+
+[node name="Player0" type="Node2D" parent="Servers"]
+
+[node name="0Server" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(48, 48)
+
+[node name="0Server2" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(112, 48)
+
+[node name="0Server3" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(48, 112)
+
+[node name="0Server4" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(112, 112)
+
+[node name="0Server5" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(48, 176)
+
+[node name="0Server6" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(112, 176)
+
+[node name="0Server7" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(48, 240)
+
+[node name="0Server8" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
+position = Vector2(112, 240)
+
+[node name="Player1" type="Node2D" parent="Servers"]
+
+[node name="0Server" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(400, 48)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server2" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(464, 48)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server3" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(400, 112)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server4" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(464, 112)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server5" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(400, 176)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server6" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(464, 176)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server7" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(400, 240)
+rotation = 3.14159
+scale = Vector2(1, -1)
+Player = 1
+
+[node name="0Server8" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
+position = Vector2(464, 240)
+rotation = 3.14159
+scale = Vector2(1, -1)
 Player = 1
 
 [node name="Down Collision" type="StaticBody2D" parent="."]
