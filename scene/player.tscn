@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cr6pmkx3fod6e"]
 
 [ext_resource type="Script" uid="uid://diwdyyttqfeiq" path="res://scripts/player.gd" id="1_hjaqi"]
-[ext_resource type="Texture2D" uid="uid://d4dk3pjdecak6" path="res://sprites/Duck0.png" id="2_hjaqi"]
+[ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_hjaqi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ct4mp"]
 radius = 9.0
@@ -13,4 +13,5 @@ script = ExtResource("1_hjaqi")
 shape = SubResource("CircleShape2D_ct4mp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_hjaqi")
