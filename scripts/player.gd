@@ -6,6 +6,7 @@ signal collectable_coins_updated(coins: int)
 signal machine_upgraded
 signal demand_updated(new_demand: int)
 signal attack_started(attack: Gameconstants.Attack)
+signal attack_ended(attack: Gameconstants.Attack)
 
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
@@ -19,7 +20,7 @@ var _frezed
 
 var _demand: int = 100 #Requests Per Second
 
-var activeAttacks: Array[Gameconstants.Attack] = []
+var activeAttacks = {}
 
 var attackScene = {
 	Gameconstants.Attack.DDOS:preload("res://scene/effects/ddos.tscn"),
@@ -28,39 +29,6 @@ var attackScene = {
 	Gameconstants.Attack.FREEZE:preload("res://scene/effects/freeze.tscn"),
 	Gameconstants.Attack.FOG:preload("res://scene/effects/fog.tscn")
 }
-
-var activeAttackScene = {
-	Gameconstants.Attack.DDOS:null,
-	Gameconstants.Attack.OVERVOLTAGE:null,
-	Gameconstants.Attack.THUNDERSTORM:null,
-	Gameconstants.Attack.FREEZE:null,
-	Gameconstants.Attack.FOG:null,
-}
-
-var attackTimer = {
-	Gameconstants.Attack.DDOS:Timer.new(),
-	Gameconstants.Attack.OVERVOLTAGE:Timer.new(),
-	Gameconstants.Attack.THUNDERSTORM:Timer.new(),
-	Gameconstants.Attack.FREEZE:Timer.new(),
-	Gameconstants.Attack.FOG:Timer.new(),
-}
-
-var attackTimerTime = {
-	Gameconstants.Attack.DDOS:5,
-	Gameconstants.Attack.OVERVOLTAGE:5,
-	Gameconstants.Attack.THUNDERSTORM:5,
-	Gameconstants.Attack.FREEZE:5,
-	Gameconstants.Attack.FOG:5,
-}
-
-var attackTimerTimeouts = {
-	Gameconstants.Attack.DDOS:_on_DDOS_timer_timeout,
-	Gameconstants.Attack.OVERVOLTAGE:_on_OVERVOLTAGE_timer_timeout,
-	Gameconstants.Attack.THUNDERSTORM:_on_THUNDERSTORM_timer_timeout,
-	Gameconstants.Attack.FREEZE:_on_FREEZE_timer_timeout,
-	Gameconstants.Attack.FOG:_on_FOG_timer_timeout,
-}
-
 
 func get_income() -> int:
 	var income: int = 0
@@ -81,16 +49,15 @@ func get_demand() -> int:
 	
 func attack(type: Gameconstants.Attack) -> void:
 	print(str(PlayerIndex)+" got atacked with "+str(type))
-	if activeAttackScene[type] != null:
-		get_parent().remove_child(activeAttackScene[type])
-	activeAttackScene[type] = attackScene[type].instantiate()
+	if type in activeAttacks:
+		activeAttacks[type].queue_free()
+	activeAttacks[type] = attackScene[type].instantiate()
 	if PlayerIndex == 1:
-		activeAttackScene[type].position.x = 256
-	get_parent().add_child(activeAttackScene[type])
-	attackTimer[type].one_shot = true
-	add_child(attackTimer[type])
-	attackTimer[type].timeout.connect(attackTimerTimeouts[type])
-	attackTimer[type].start(attackTimerTime[type])
+		activeAttacks[type].position.x = 256
+	get_parent().add_child(activeAttacks[type])
+	activeAttacks[type].tree_exiting.connect(func():
+		_on_attack_finish(type)
+	)
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = true
 		$Sprite2D.texture = _sprite[PlayerIndex+2]
@@ -172,24 +139,9 @@ func _physics_process(delta: float) -> void:
 func _on_notification_timer_timeout() -> void:
 	$CenterContainer/Notification.text = ""
 
-func _on_DDOS_timer_timeout() -> void:
-	get_parent().remove_child(activeAttackScene[Gameconstants.Attack.DDOS])
-	remove_child(attackTimer[Gameconstants.Attack.DDOS])
-	
-func _on_OVERVOLTAGE_timer_timeout() -> void:
-	get_parent().remove_child(activeAttackScene[Gameconstants.Attack.OVERVOLTAGE])
-	remove_child(attackTimer[Gameconstants.Attack.OVERVOLTAGE])
-	
-func _on_THUNDERSTORM_timer_timeout() -> void:
-	get_parent().remove_child(activeAttackScene[Gameconstants.Attack.THUNDERSTORM])
-	remove_child(attackTimer[Gameconstants.Attack.THUNDERSTORM])
-
-func _on_FREEZE_timer_timeout() -> void:
-	_frezed = false
-	$Sprite2D.texture = _sprite[PlayerIndex]
-	get_parent().remove_child(activeAttackScene[Gameconstants.Attack.FREEZE])
-	remove_child(attackTimer[Gameconstants.Attack.FREEZE])
-
-func _on_FOG_timer_timeout() -> void:
-	get_parent().remove_child(activeAttackScene[Gameconstants.Attack.FOG])
-	remove_child(attackTimer[Gameconstants.Attack.FOG])
+func _on_attack_finish(type: Gameconstants.Attack) -> void:
+	activeAttacks.erase(type)
+	attack_ended.emit(type)
+	if type == Gameconstants.Attack.FREEZE:
+		_frezed = false
+		$Sprite2D.texture = _sprite[PlayerIndex]
