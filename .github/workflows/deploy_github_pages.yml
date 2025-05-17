@@ -20,34 +20,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup environment and debug
+      - name: Setup environment for templates
         run: |
-          mkdir -p /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable
-          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
-          echo "Current directory structure:"
-          ls -la /root/.local/share/ || echo "No root .local/share directory"
-          ls -la ~/.local/share/ || echo "No user .local/share directory"
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          mkdir -p /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
 
-      - name: Download and install export templates
+      - name: Install web export templates
         run: |
           echo "Downloading Godot ${GODOT_VERSION} export templates..."
           curl -Lo /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
           echo "Extracting templates..."
-          unzip -q /tmp/templates.tpz -d /tmp
+          cd /tmp && unzip -q templates.tpz
           
-          # Copy to both potential locations to ensure templates are found
-          cp -rv /tmp/templates/* /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          cp -rv /tmp/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          # Copy web template files and create specific debug and release files Godot expects
+          echo "Installing web templates..."
+          cp -v /tmp/templates/web_template.zip ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          cp -v /tmp/templates/web_template.zip ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/web_nothreads_debug.zip
+          cp -v /tmp/templates/web_template.zip ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/web_nothreads_release.zip
           
-          echo "Template installation complete!"
-          echo "Templates in home directory:"
-          ls -la ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          # Copy to other potential location for redundancy
+          cp -v /tmp/templates/web_template.zip /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          cp -v /tmp/templates/web_template.zip /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/web_nothreads_debug.zip
+          cp -v /tmp/templates/web_template.zip /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/web_nothreads_release.zip
+          
+          echo "Verifying installed templates:"
+          find /home/runner ~/.local -name "*.zip" | grep godot
           
       - name: Import project resources
         run: |
           echo "Importing project resources..."
           mkdir -p .godot/imported/
           godot --headless --quit
+          ls -la .godot/imported/ || echo "No imported resources directory"
           
       - name: Create staging directory
         run: mkdir -v -p docs
@@ -57,7 +61,7 @@ jobs:
 
       - name: Copy additional files to build directory
         run: |
-          cp coi-serviceworker.js docs/
+          cp coi-serviceworker.js docs/ || echo "coi-serviceworker.js not found"
           ls -la docs/
 
       - name: Deploy
