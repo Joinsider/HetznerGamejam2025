@@ -11,7 +11,7 @@ func _ready() -> void:
 	_move_indicator(0)
 	Gamestate.players[Player].demand_updated.connect(_on_demand_updated)
 	Gamestate.players[Player].machine_upgraded.connect(_on_machine_upgraded)
-	Gamestate.players[Player].attack_started.connect(_on_machine_upgraded)
+	Gamestate.players[Player].attack_started.connect(_on_attack_started)
 	_update()
 
 func _move_indicator(percentage: float):

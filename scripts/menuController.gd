@@ -7,9 +7,18 @@ var controlls = [
 	["player1_left", "player1_up", "player1_down","player1_upgrade"]
 ]
 
-@onready var selected = $".".get_children()[0]
+@onready var selected = $".".get_children()[1]
+
+func _ready() -> void:
+	Gamestate.players[Player].attack_started.connect(_onAtack)
+
+func _otherPlayer(player:int) -> int:
+	return posmod(player + 1, 2)
+	
 
 func _input(event: InputEvent) -> void:
+	if Gamestate.players[Player]._frezed:
+		return
 	if event.is_action_pressed(controlls[Player][1]):
 		selected.get_child(0).visible = false
 		selected = selected.prev
@@ -27,7 +36,12 @@ func _input(event: InputEvent) -> void:
 			Gamestate.players[Player].is_in_menu = true
 	if event.is_action_pressed(controlls[Player][0]):
 		if visible == true:
-			print("Call effetct")
+			Gamestate.players[_otherPlayer(Player)].attack(selected.atack)
 			visible = false
 			Gamestate.players[Player].is_in_menu = false
+		
+func _onAtack(type:Gameconstants.Attack) -> void:
+	if type == Gameconstants.Attack.FREEZE:
+		visible = false
+		Gamestate.players[Player].is_in_menu = false
 		
