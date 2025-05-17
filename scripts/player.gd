@@ -32,6 +32,14 @@ var attackScene = {
 	Gameconstants.Attack.FOG:preload("res://scene/effects/fog.tscn")
 }
 
+func check_death_timer(utilization: float) -> void:
+	print(utilization)
+	if utilization >= 1:
+		if $DeathTimer.is_stopped():
+			$DeathTimer.start()
+	else:
+		$DeathTimer.stop()
+
 func get_income() -> int:
 	var income: int = 0
 	for machine in _machines:
@@ -125,6 +133,7 @@ var _sprite = [
 func _ready() -> void:
 	$Sprite2D.texture = _sprite[PlayerIndex]
 	Gamestate.players[PlayerIndex] = self
+	utilization_updated.connect(check_death_timer)
 	
 
 func _physics_process(delta: float) -> void:
@@ -165,3 +174,7 @@ func _on_demand_progress_timeout() -> void:
 	_demand = int(pow(_dificult,1.8))
 	demand_updated.emit(_demand)
 	utilization_updated.emit(get_utilization())
+
+
+func _on_death_timer_timeout() -> void:
+	Gamestate.switch_to_gameover(PlayerIndex != 0)
