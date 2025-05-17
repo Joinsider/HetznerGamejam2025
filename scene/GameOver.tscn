@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7s2d5a3qd8a5"]
 
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_0mfy4"]
-[ext_resource type="Script" uid="uid://c0qemsmbw1rwj" path="res://scripts/restartGame.gd" id="2_tbok3"]
+[ext_resource type="Script" uid="uid://bchhuaunfijte" path="res://scripts/gameOver.gd" id="2_tbok3"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,3 +31,17 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart Game"
+
+[node name="Player1" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 63.0
+offset_right = 163.0
+offset_bottom = 79.0
+text = "Game Over"
+
+[node name="Player2" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 63.0
+offset_right = 442.0
+offset_bottom = 79.0
+text = "You Won"

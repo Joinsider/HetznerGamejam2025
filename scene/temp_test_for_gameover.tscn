@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://0q1yuhuxa8cg"]
+
+[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_2tvyr"]
+[ext_resource type="Script" uid="uid://g1doq1g2ht0o" path="res://scripts/temp_test_for_gameover.gd" id="2_vjhnm"]
+
+[node name="TempTestForGameover" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(256, 144)
+texture = ExtResource("1_2tvyr")
+
+[node name="TestController" type="Node2D" parent="."]
+script = ExtResource("2_vjhnm")
+
+[node name="Control" type="Control" parent="TestController"]
+custom_minimum_size = Vector2(512, 288)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 512.0
+offset_bottom = 288.0
+
+[node name="Player1" type="Button" parent="TestController/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -70.0
+offset_right = 100.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Player 1 Won"
+
+[node name="Player2" type="Button" parent="TestController/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Player 2 Won"
+
+[node name="Title" type="Label" parent="TestController/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.0
+offset_top = 30.0
+offset_right = 166.0
+offset_bottom = 56.0
+grow_horizontal = 2
+text = "Test Scene - Click a button to test game over"
+horizontal_alignment = 1
