@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://du4d1rfnvro8n"]
+[gd_scene load_steps=2 format=3 uid="uid://du4d1rfnvro8n"]
 
-[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_pq4dk"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
-size = Vector2(256, 288)
+[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_pq4dk"]
 
 [node name="Freeze" type="Node2D"]
 script = ExtResource("1_pq4dk")
@@ -12,7 +9,6 @@ script = ExtResource("1_pq4dk")
 z_index = 10
 z_as_relative = false
 position = Vector2(128, 144)
-texture = SubResource("PlaceholderTexture2D_s3otx")
 
 [node name="DeleteTimer" type="Timer" parent="."]
 wait_time = 5.0
