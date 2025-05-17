@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlnqtwcysd5c7"]
+[gd_scene load_steps=13 format=3 uid="uid://dlnqtwcysd5c7"]
 
 [ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://610r2hnyq8u4" path="res://scene/machine/server.tscn" id="3_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://dg0yn7o4j1jg4" path="res://scene/selectMenu.tscn" id="4_brvut"]
+[ext_resource type="PackedScene" uid="uid://dqf88ncyxgbw3" path="res://scene/statistics.tscn" id="5_0ha60"]
+[ext_resource type="PackedScene" uid="uid://x1abqqy62so4" path="res://scene/hopperMoney.tscn" id="6_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://6e7d6bib2eij" path="res://scene/demandDisplay.tscn" id="7_p1hux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
@@ -45,6 +48,7 @@ position = Vector2(48, 48)
 
 [node name="0Server2" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
 position = Vector2(112, 48)
+level = 1
 
 [node name="0Server3" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
 position = Vector2(48, 112)
@@ -68,50 +72,35 @@ position = Vector2(112, 240)
 
 [node name="0Server" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 48)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
+level = 1
 
 [node name="0Server2" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 48)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server3" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 112)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server4" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 112)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server5" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 176)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server6" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 176)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server7" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 240)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server8" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 240)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="Down Collision" type="StaticBody2D" parent="."]
@@ -154,4 +143,27 @@ position = Vector2(16, 104)
 
 [node name="SelectMenu2" parent="." instance=ExtResource("4_brvut")]
 position = Vector2(496, 104)
+Player = 1
+
+[node name="Statistics" parent="." instance=ExtResource("5_0ha60")]
+position = Vector2(10, 267)
+
+[node name="HopperMoney" parent="." instance=ExtResource("6_4j5ol")]
+position = Vector2(233, 126)
+
+[node name="HopperMoney2" parent="." instance=ExtResource("6_4j5ol")]
+position = Vector2(279, 126)
+Player = 1
+
+[node name="Statistics2" parent="." instance=ExtResource("5_0ha60")]
+position = Vector2(267, 267)
+Player = 1
+
+[node name="DemandDisplay" parent="." instance=ExtResource("7_p1hux")]
+z_index = 2
+position = Vector2(128, 10)
+
+[node name="DemandDisplay2" parent="." instance=ExtResource("7_p1hux")]
+z_index = 2
+position = Vector2(384, 10)
 Player = 1

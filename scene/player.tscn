@@ -15,3 +15,26 @@ shape = SubResource("CircleShape2D_ct4mp")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_hjaqi")
+
+[node name="NotificationTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -19.0
+offset_right = 287.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+
+[node name="Notification" type="Label" parent="CenterContainer"]
+layout_mode = 2
+
+[connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]

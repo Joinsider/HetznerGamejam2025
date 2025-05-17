@@ -1,4 +1,7 @@
+class_name Machine
 extends Node2D
+
+signal on_upgrade(new_level: int)
 
 @export var Player = 0
 
@@ -6,6 +9,7 @@ const controlls = [
  	"player0_interact",
 	"player1_interact"
 ]
+
 const sprite = [
 	preload("res://sprites/Server-0.png"),
 	preload("res://sprites/Server-1.png"),
@@ -15,10 +19,11 @@ const sprite = [
 	preload("res://sprites/Server-5.png"),
 ]
 
-var level = 0
+@export var level = 0
 
 func _ready() -> void:
 	$Sprite2D.texture = sprite[level]
+	Gamestate.players[Player].add_machine(self)
 	
 
 func _input(event: InputEvent) -> void:
@@ -27,18 +32,31 @@ func _input(event: InputEvent) -> void:
 	var overlapping_bodies = $Area2D.get_overlapping_bodies()
 	if !(Gamestate.players[Player] in overlapping_bodies):
 		return
-	level_up()
+	_upgrade()
 	
-func level_up() -> void:
+func _upgrade() -> void:
 	if level >= Gameconstants.machine_levels.size() - 1:
 		return
 	var nextLevel = Gameconstants.machine_levels[level+1]
 	if (Gamestate.players[Player].remove_coins(nextLevel.cost)):
 		level+=1
 		$Sprite2D.texture = sprite[level]
+		on_upgrade.emit(level)
 	else:
-		print("Player " + str(Player) + " has not the required Money: " + str(nextLevel.cost))
-	
-		
+		Gamestate.players[Player].show_message("Not enough money! (" + str(Gamestate.players[Player]._coins) + "/" + str(nextLevel.cost) + ")")
 
-	
+func _on_timer_timeout() -> void:
+	var amount = Gameconstants.machine_levels[level].outcome
+	Gamestate.players[Player].add_collectable_coins(amount)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if !(body == Gamestate.players[Player]):
+		return
+	$CenterContainer/UpgradeInfo.text = "Press " + Gamestate.get_key_string(controlls[Player]) + " to upgrade"
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if !(body == Gamestate.players[Player]):
+		return
+	$CenterContainer/UpgradeInfo.text = ""

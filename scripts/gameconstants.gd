@@ -8,3 +8,11 @@ var machine_levels: Array[MachineLevel] = [
 	MachineLevel.new(100, 300, 10000),
 	MachineLevel.new(300, 1000, 30000)
 ]
+
+enum Attack {
+	DDOS,
+	OVERVOLTAGE,
+	THUNDERSTORM,
+	FREEZE,
+	FOG
+}

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://x1abqqy62so4"]
+
+[ext_resource type="Script" uid="uid://bp6pe0up63out" path="res://scripts/hopper_money.gd" id="1_75fle"]
+[ext_resource type="Texture2D" uid="uid://b6s53ofxsmg1r" path="res://sprites/Server-0.png" id="2_ntrs7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_75fle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75fle"]
+size = Vector2(32, 32)
+
+[node name="HopperMoney" type="Node2D"]
+script = ExtResource("1_75fle")
+
+[node name="Money" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 18.0
+offset_right = 46.0
+offset_bottom = 34.0
+scale = Vector2(0.515, 0.515)
+text = "10 $"
+label_settings = SubResource("LabelSettings_75fle")
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ntrs7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_75fle")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,11 +1,51 @@
 class_name Player
 extends CharacterBody2D
 
+signal coins_updated(coins: int)
+signal collectable_coins_updated(coins: int)
+signal machine_upgraded
+signal demand_updated(new_demand: int)
+signal attack_started(attack: Gameconstants.Attack)
 
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
 
-var _coins: int = 50;
+var is_in_menu: bool = false
+var _collectable_coins: int = 0
+var _coins: int = 50
+var _machines: Array[Machine] = []
+
+var _demand: int = 100 #Requests Per Second
+
+var activeAttacks: Array[Gameconstants.Attack] = []
+
+func get_income() -> int:
+	var income: int = 0
+	for machine in _machines:
+		income += Gameconstants.machine_levels[machine.level].outcome
+	return income
+func get_performance() -> int:
+	var performance: int = 0
+	for machine in _machines:
+		performance += Gameconstants.machine_levels[machine.level].performance
+	if Gameconstants.Attack.THUNDERSTORM in activeAttacks:
+		return floor(performance / 2)
+	return performance
+func get_demand() -> int:
+	if Gameconstants.Attack.DDOS in activeAttacks:
+		return _demand * 2
+	return _demand
+	
+func attack(type: Gameconstants.Attack) -> void:
+	pass
+
+func add_machine(machine: Machine) -> void:
+	_machines.append(machine)
+	machine.on_upgrade.connect(_on_machine_upgrade)
+	
+func _on_machine_upgrade(new_level: int) -> void:
+	machine_upgraded.emit()
+	
 
 func has_coins(amount: int) -> bool:
 	return _coins >= amount
@@ -14,10 +54,25 @@ func remove_coins(amount: int) -> bool:
 	if (!has_coins(amount)):
 		return false
 	_coins -= amount
+	coins_updated.emit(_coins)
 	return true
 	
 func add_coins(amount: int) -> void:
 	_coins += amount
+	coins_updated.emit(_coins)
+	
+func add_collectable_coins(amount: int) -> void:
+	_collectable_coins += amount
+	collectable_coins_updated.emit(_collectable_coins)
+	
+func collect_coins() -> void:
+	add_coins(_collectable_coins)
+	_collectable_coins = 0
+	collectable_coins_updated.emit(_collectable_coins)
+
+func show_message(message: String) -> void:
+	$CenterContainer/Notification.text = message
+	$NotificationTimer.start()
 
 var _controlls = [
  	["player0_left", "player0_right", "player0_up", "player0_down"],
@@ -47,5 +102,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
-
+	if is_in_menu:
+		return
 	move_and_slide()
+	$Sprite2D.flip_h = direction_x < 0
+
+
+func _on_notification_timer_timeout() -> void:
+	$CenterContainer/Notification.text = ""
