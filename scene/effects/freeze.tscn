@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://du4d1rfnvro8n"]
+[gd_scene load_steps=3 format=3 uid="uid://du4d1rfnvro8n"]
 
 [ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_pq4dk"]
+[ext_resource type="AudioStream" uid="uid://jh4s8gw2sw3i" path="res://sounds/snoring.mp3" id="2_d52wk"]
 
 [node name="Freeze" type="Node2D"]
 script = ExtResource("1_pq4dk")
@@ -14,5 +15,8 @@ position = Vector2(128, 144)
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_d52wk")
 
 [connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]

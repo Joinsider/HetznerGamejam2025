@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct2kg2n1y02pt"]
+[gd_scene load_steps=7 format=3 uid="uid://ct2kg2n1y02pt"]
 
 [ext_resource type="Texture2D" uid="uid://tpylcqvg1w56" path="res://sprites/warning1.png" id="1_co5df"]
 [ext_resource type="Script" uid="uid://2h7pfq8cuepj" path="res://scripts/death_warning.gd" id="1_sio41"]
 [ext_resource type="Texture2D" uid="uid://hu8eq63j22ny" path="res://sprites/warning2.png" id="2_sio41"]
+[ext_resource type="AudioStream" uid="uid://c5wf8160jo4qk" path="res://sounds/alarm.mp3" id="4_pju7v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pju7v"]
 animations = [{
@@ -40,3 +41,6 @@ You cannot  withstand
 the demand! Act soon
 or you will go bankrupt"
 label_settings = SubResource("LabelSettings_xpdgo")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pju7v")

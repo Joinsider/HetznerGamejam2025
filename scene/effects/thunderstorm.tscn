@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://de7e7qtijeb3j"]
+[gd_scene load_steps=6 format=3 uid="uid://de7e7qtijeb3j"]
 
 [ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_ym5fm"]
 [ext_resource type="Texture2D" uid="uid://qqgalnl2hdut" path="res://sprites/Blitz.png" id="2_2eq3p"]
 [ext_resource type="Texture2D" uid="uid://nkyjcfm2l7i7" path="res://sprites/drop.png" id="3_381gw"]
+[ext_resource type="AudioStream" uid="uid://drqm4uq4jp12y" path="res://sounds/thunderstorm.mp3" id="4_g6f48"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
 size = Vector2(256, 288)
@@ -40,5 +41,6 @@ emission_rect_extents = Vector2(128, 0)
 gravity = Vector2(0, 400)
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_g6f48")
 
 [connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]
