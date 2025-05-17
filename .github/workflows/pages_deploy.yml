@@ -10,12 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Godot
-        uses: firebelley/setup-godot@v2
+      - uses: vitorgus/setup-godot@v1
         with:
           godot-version: 4.4.1
-          export-templates: true
-
+          download-templates: true
+      
       - name: Export project to Web
         run: |
           mkdir -p docs
