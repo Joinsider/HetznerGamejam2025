@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ct2kg2n1y02pt"]
+
+[ext_resource type="Texture2D" uid="uid://tpylcqvg1w56" path="res://sprites/warning1.png" id="1_co5df"]
+[ext_resource type="Script" uid="uid://2h7pfq8cuepj" path="res://scripts/death_warning.gd" id="1_sio41"]
+[ext_resource type="Texture2D" uid="uid://hu8eq63j22ny" path="res://sprites/warning2.png" id="2_sio41"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pju7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_co5df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sio41")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpdgo"]
+shadow_color = Color(0, 0, 0, 0.258824)
+shadow_offset = Vector2(-1, 1)
+
+[node name="DeathWarning" type="Node2D"]
+script = ExtResource("1_sio41")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pju7v")
+frame_progress = 0.538961
+
+[node name="Label" type="Label" parent="."]
+offset_left = -45.0
+offset_top = -12.0
+offset_right = 134.0
+offset_bottom = 61.0
+scale = Vector2(0.51, 0.51)
+text = "Warning!
+You cannot  withstand
+the demand! Act soon
+or you will go bankrupt"
+label_settings = SubResource("LabelSettings_xpdgo")
