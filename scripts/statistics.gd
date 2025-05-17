@@ -16,6 +16,6 @@ func _on_machine_upgraded():
 	_set_income(income)
 	
 func _set_income(income: int) -> void:
-	$Income.text = str(income) + " $/10s"
+	$Income.text = "+" + str(income)  + " $"
 func _set_coins(coins: int) -> void:
 	$Money.text = str(coins) + " $"
