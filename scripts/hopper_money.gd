@@ -20,6 +20,8 @@ func _on_collectable_coins_updated(coins: int):
 			continue
 		$Sprite2D.texture = _sprite[i]
 		break
+	if $Area2D.overlaps_body(Gamestate.players[Player]) and coins !=0:
+		Gamestate.players[Player].collect_coins()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if !(body == Gamestate.players[Player]):
