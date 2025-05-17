@@ -42,18 +42,18 @@ func check_death_timer(utilization: float) -> void:
 func get_income() -> int:
 	var income: int = 0
 	for machine in _machines:
-		income += Gameconstants.machine_levels[machine.level].outcome
+		income += Gameconstants.config.machine_levels[machine.level].outcome
 	return income
 func get_performance() -> int:
 	var performance: int = 0
 	for machine in _machines:
-		performance += Gameconstants.machine_levels[machine.level].performance
+		performance += Gameconstants.config.machine_levels[machine.level].performance
 	if Gameconstants.Attack.THUNDERSTORM in activeAttacks:
-		return floor(performance * Gameconstants.thunderstorm_multiplier)
+		return floor(performance * Gameconstants.config.thunderstorm_multiplier)
 	return performance
 func get_demand() -> int:
 	if Gameconstants.Attack.DDOS in activeAttacks:
-		return _demand * Gameconstants.ddos_multiplier
+		return _demand * Gameconstants.config.ddos_multiplier
 	return _demand
 func get_utilization() -> float:
 	var demand = get_demand()
@@ -183,7 +183,7 @@ func _on_attack_finish(type: Gameconstants.Attack) -> void:
 
 func _on_demand_progress_timeout() -> void:
 	_difficulty += 1
-	_demand = Gameconstants.demand.call(_difficulty)
+	_demand = Gameconstants.config.demand.call(_difficulty)
 	demand_updated.emit(_demand)
 	utilization_updated.emit(get_utilization())
 

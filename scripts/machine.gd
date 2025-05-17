@@ -39,9 +39,9 @@ func _input(event: InputEvent) -> void:
 	_upgrade()
 	
 func _upgrade() -> void:
-	if level >= Gameconstants.machine_levels.size() - 1:
+	if level >= Gameconstants.config.machine_levels.size() - 1:
 		return
-	var nextLevel = Gameconstants.machine_levels[level+1]
+	var nextLevel = Gameconstants.config.machine_levels[level+1]
 	if (Gamestate.players[Player].remove_coins(nextLevel.cost)):
 		level+=1
 		on_upgrade.emit(level)
@@ -55,7 +55,7 @@ func downgrade() -> void:
 	on_upgrade.emit(level)
 
 func _on_timer_timeout() -> void:
-	var amount = Gameconstants.machine_levels[level].outcome
+	var amount = Gameconstants.config.machine_levels[level].outcome
 	Gamestate.players[Player].add_collectable_coins(amount)
 
 
