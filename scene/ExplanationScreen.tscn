@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj7wssm0t6kd7"]
+
+[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_8bqwc"]
+
+[node name="RulesScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(256, 144)
+texture = ExtResource("1_8bqwc")
+
+[node name="Player1Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 28.0
+offset_top = 44.0
+offset_right = 228.0
+offset_bottom = 244.0
+
+[node name="Player2Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 284.0
+offset_top = 44.0
+offset_right = 484.0
+offset_bottom = 244.0
