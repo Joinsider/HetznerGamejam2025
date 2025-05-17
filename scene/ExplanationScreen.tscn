@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj7wssm0t6kd7"]
+[gd_scene load_steps=11 format=3 uid="uid://bj7wssm0t6kd7"]
 
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_8bqwc"]
 [ext_resource type="Script" uid="uid://y6mhbpbwpr0l" path="res://scripts/explanation_screen.gd" id="1_vxb50"]
 [ext_resource type="Texture2D" uid="uid://dvugg7tw3dy2o" path="res://sprites/button-small.png" id="2_t23jg"]
 [ext_resource type="Texture2D" uid="uid://btutig4boyvey" path="res://sprites/button-large.png" id="3_vxb50"]
+[ext_resource type="Texture2D" uid="uid://w6kah30icrpu" path="res://sprites/attack-container-small.png" id="4_fehqs"]
+[ext_resource type="Texture2D" uid="uid://dnw7gjh8q2xvt" path="res://sprites/Thunderstorm.png" id="5_jkm8o"]
+[ext_resource type="Texture2D" uid="uid://cnh8dc5pumras" path="res://sprites/DDOS.png" id="6_76ujy"]
+[ext_resource type="Texture2D" uid="uid://dr43wmeeuutb6" path="res://sprites/overvoltage.png" id="7_cnnsk"]
+[ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="7_oawxf"]
+[ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="9_ffvsi"]
 
 [node name="RulesScreen" type="Node2D"]
 script = ExtResource("1_vxb50")
@@ -19,18 +25,24 @@ offset_top = 44.0
 offset_right = 228.0
 offset_bottom = 244.0
 
-[node name="Control" type="Control" parent="Player1Panel"]
+[node name="Page1" type="Control" parent="Player1Panel"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="Player1Panel/Page1"]
 anchors_preset = 0
 offset_left = -21.0
 offset_top = -9.0
 offset_right = 179.0
 offset_bottom = 56.0
 
-[node name="W" type="Sprite2D" parent="Player1Panel/Control"]
+[node name="W" type="Sprite2D" parent="Player1Panel/Page1/Control"]
 position = Vector2(56, 30)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/Control/W"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/Control/W"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -38,11 +50,11 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "W"
 
-[node name="A" type="Sprite2D" parent="Player1Panel/Control"]
+[node name="A" type="Sprite2D" parent="Player1Panel/Page1/Control"]
 position = Vector2(40, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/Control/A"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/Control/A"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -50,11 +62,11 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "A"
 
-[node name="S" type="Sprite2D" parent="Player1Panel/Control"]
+[node name="S" type="Sprite2D" parent="Player1Panel/Page1/Control"]
 position = Vector2(56, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/Control/S"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/Control/S"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -63,11 +75,11 @@ scale = Vector2(0.6, 0.6)
 text = "S"
 metadata/_edit_use_anchors_ = true
 
-[node name="D" type="Sprite2D" parent="Player1Panel/Control"]
+[node name="D" type="Sprite2D" parent="Player1Panel/Page1/Control"]
 position = Vector2(71, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/Control/D"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/Control/D"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -75,11 +87,11 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "D"
 
-[node name="Q" type="Sprite2D" parent="Player1Panel"]
+[node name="Q" type="Sprite2D" parent="Player1Panel/Page1"]
 position = Vector2(34, 74)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/Q"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/Q"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -87,7 +99,7 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "Q"
 
-[node name="AttackMenu" type="Label" parent="Player1Panel"]
+[node name="AttackMenu" type="Label" parent="Player1Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 69.0
@@ -96,7 +108,7 @@ offset_bottom = 85.0
 scale = Vector2(0.8, 0.8)
 text = "Open Attack Menu"
 
-[node name="Description" type="Label" parent="Player1Panel/AttackMenu"]
+[node name="Description" type="Label" parent="Player1Panel/Page1/AttackMenu"]
 layout_mode = 0
 offset_top = 16.25
 offset_right = 375.0
@@ -104,11 +116,11 @@ offset_bottom = 51.25
 scale = Vector2(0.5, 0.5)
 text = "(Attacks weaken your opponent)"
 
-[node name="E" type="Sprite2D" parent="Player1Panel"]
+[node name="E" type="Sprite2D" parent="Player1Panel/Page1"]
 position = Vector2(34, 118)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player1Panel/E"]
+[node name="Label" type="Label" parent="Player1Panel/Page1/E"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -116,7 +128,7 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "E"
 
-[node name="Upgrade" type="Label" parent="Player1Panel"]
+[node name="Upgrade" type="Label" parent="Player1Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 112.0
@@ -125,7 +137,7 @@ offset_bottom = 128.0
 scale = Vector2(0.8, 0.8)
 text = "Upgrade Server"
 
-[node name="MovePlayer" type="Label" parent="Player1Panel"]
+[node name="MovePlayer" type="Label" parent="Player1Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 23.0
@@ -134,6 +146,173 @@ offset_bottom = 39.0
 scale = Vector2(0.8, 0.8)
 text = "Move the player"
 
+[node name="Page2" type="Control" parent="Player1Panel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AttacksLabel" type="Label" parent="Player1Panel/Page2"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 7.0
+offset_right = 129.0
+offset_bottom = 23.0
+text = "Attacks"
+
+[node name="Thunderstorm" type="Sprite2D" parent="Player1Panel/Page2"]
+position = Vector2(26, 37)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player1Panel/Page2/Thunderstorm"]
+texture = ExtResource("5_jkm8o")
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Thunderstorm"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Thunderstorm"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Thunderstorm/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "A thunderstorm has resulted in a temporary power outage.
+Less requests can be handled by your opponent servers for a short time"
+metadata/_edit_use_anchors_ = true
+
+[node name="DDOS" type="Sprite2D" parent="Player1Panel/Page2"]
+position = Vector2(26, 67)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player1Panel/Page2/DDOS"]
+texture = ExtResource("6_76ujy")
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/DDOS"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "DDOS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/DDOS/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "Multiple botnets start bombarding your opponents servers
+You opponent needs to handle double the requests for a few seconds"
+metadata/_edit_use_anchors_ = true
+
+[node name="Overvoltage" type="Sprite2D" parent="Player1Panel/Page2"]
+position = Vector2(26, 97)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player1Panel/Page2/Overvoltage"]
+texture = ExtResource("7_cnnsk")
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Overvoltage"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Overvoltage"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Overvoltage/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "A strong current hit the servers. A few wires were probably burned.
+Permanently destroys some servers of your enemy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Fog" type="Sprite2D" parent="Player1Panel/Page2"]
+position = Vector2(26, 127)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player1Panel/Page2/Fog"]
+texture = ExtResource("7_oawxf")
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Fog"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Fog"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/Fog/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "You left your windows open for too long, now clouds have entered the 
+enemy's datacenter"
+metadata/_edit_use_anchors_ = true
+
+[node name="SleepParalysis" type="Sprite2D" parent="Player1Panel/Page2"]
+position = Vector2(26, 157)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player1Panel/Page2/SleepParalysis"]
+texture = ExtResource("9_ffvsi")
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/SleepParalysis"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Sleep Paralysis"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player1Panel/Page2/SleepParalysis/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "Oha eine Schlafparalyse
+Your enemy is sent to sleep for a night"
+metadata/_edit_use_anchors_ = true
+
+[node name="LeftPage" type="Sprite2D" parent="Player1Panel"]
+position = Vector2(90, 182)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/LeftPage"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 36.0
+offset_bottom = 11.0
+scale = Vector2(0.8, 0.8)
+text = "A"
+
+[node name="RightPage" type="Sprite2D" parent="Player1Panel"]
+position = Vector2(106, 182)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/RightPage"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 36.0
+offset_bottom = 11.0
+scale = Vector2(0.8, 0.8)
+text = "D"
+
 [node name="Player2Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 200)
 offset_left = 284.0
@@ -141,11 +320,41 @@ offset_top = 44.0
 offset_right = 484.0
 offset_bottom = 244.0
 
-[node name="Shift" type="Sprite2D" parent="Player2Panel"]
+[node name="LeftPage" type="Sprite2D" parent="Player2Panel"]
+position = Vector2(90, 182)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/LeftPage"]
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 37.0
+offset_bottom = 11.0
+scale = Vector2(0.8, 0.8)
+text = "<"
+
+[node name="RightPage" type="Sprite2D" parent="Player2Panel"]
+position = Vector2(106, 182)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/RightPage"]
+offset_left = -2.0
+offset_top = -5.0
+offset_right = 38.0
+offset_bottom = 11.0
+scale = Vector2(0.8, 0.8)
+text = ">"
+
+[node name="Page1" type="Control" parent="Player2Panel"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Shift" type="Sprite2D" parent="Player2Panel/Page1"]
 position = Vector2(36, 118)
 texture = ExtResource("3_vxb50")
 
-[node name="Label" type="Label" parent="Player2Panel/Shift"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/Shift"]
 offset_left = -13.0
 offset_top = -4.0
 offset_right = 33.0
@@ -155,11 +364,11 @@ text = "Shift"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="STRG" type="Sprite2D" parent="Player2Panel"]
+[node name="STRG" type="Sprite2D" parent="Player2Panel/Page1"]
 position = Vector2(36, 74)
 texture = ExtResource("3_vxb50")
 
-[node name="Label" type="Label" parent="Player2Panel/STRG"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/STRG"]
 offset_left = -13.0
 offset_top = -4.0
 offset_right = 33.0
@@ -168,7 +377,7 @@ scale = Vector2(0.6, 0.6)
 text = "STRG"
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="Player2Panel"]
+[node name="Control" type="Control" parent="Player2Panel/Page1"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -21.0
@@ -176,11 +385,11 @@ offset_top = -9.0
 offset_right = 179.0
 offset_bottom = 56.0
 
-[node name="Up" type="Sprite2D" parent="Player2Panel/Control"]
+[node name="Up" type="Sprite2D" parent="Player2Panel/Page1/Control"]
 position = Vector2(56, 30)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player2Panel/Control/Up"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/Control/Up"]
 offset_left = -2.0
 offset_top = -2.0
 offset_right = 38.0
@@ -188,11 +397,11 @@ offset_bottom = 14.0
 scale = Vector2(0.6, 0.6)
 text = "^"
 
-[node name="Left" type="Sprite2D" parent="Player2Panel/Control"]
+[node name="Left" type="Sprite2D" parent="Player2Panel/Page1/Control"]
 position = Vector2(40, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player2Panel/Control/Left"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/Control/Left"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -200,11 +409,11 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = "<"
 
-[node name="Down" type="Sprite2D" parent="Player2Panel/Control"]
+[node name="Down" type="Sprite2D" parent="Player2Panel/Page1/Control"]
 position = Vector2(56, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player2Panel/Control/Down"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/Control/Down"]
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 42.0
@@ -214,11 +423,11 @@ scale = Vector2(0.6, 0.6)
 text = "^"
 metadata/_edit_use_anchors_ = true
 
-[node name="Right" type="Sprite2D" parent="Player2Panel/Control"]
+[node name="Right" type="Sprite2D" parent="Player2Panel/Page1/Control"]
 position = Vector2(71, 46)
 texture = ExtResource("2_t23jg")
 
-[node name="Label" type="Label" parent="Player2Panel/Control/Right"]
+[node name="Label" type="Label" parent="Player2Panel/Page1/Control/Right"]
 offset_left = -3.0
 offset_top = -4.0
 offset_right = 37.0
@@ -226,7 +435,7 @@ offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
 text = ">"
 
-[node name="MovePlayer" type="Label" parent="Player2Panel"]
+[node name="MovePlayer" type="Label" parent="Player2Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 23.0
@@ -235,7 +444,7 @@ offset_bottom = 39.0
 scale = Vector2(0.8, 0.8)
 text = "Move the player"
 
-[node name="Upgrade" type="Label" parent="Player2Panel"]
+[node name="Upgrade" type="Label" parent="Player2Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 112.0
@@ -244,7 +453,7 @@ offset_bottom = 128.0
 scale = Vector2(0.8, 0.8)
 text = "Upgrade Server"
 
-[node name="AttackMenu" type="Label" parent="Player2Panel"]
+[node name="AttackMenu" type="Label" parent="Player2Panel/Page1"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 69.0
@@ -253,13 +462,155 @@ offset_bottom = 85.0
 scale = Vector2(0.8, 0.8)
 text = "Open Attack Menu"
 
-[node name="Description" type="Label" parent="Player2Panel/AttackMenu"]
+[node name="Description" type="Label" parent="Player2Panel/Page1/AttackMenu"]
 layout_mode = 0
 offset_top = 16.25
 offset_right = 375.0
 offset_bottom = 51.25
 scale = Vector2(0.5, 0.5)
 text = "(Attacks weaken your opponent)"
+
+[node name="Page2" type="Control" parent="Player2Panel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AttacksLabel" type="Label" parent="Player2Panel/Page2"]
+offset_left = 70.0
+offset_top = 7.0
+offset_right = 129.0
+offset_bottom = 23.0
+text = "Attacks"
+
+[node name="Thunderstorm" type="Sprite2D" parent="Player2Panel/Page2"]
+position = Vector2(26, 37)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player2Panel/Page2/Thunderstorm"]
+texture = ExtResource("5_jkm8o")
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Thunderstorm"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Thunderstorm"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Thunderstorm/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "A thunderstorm has resulted in a temporary power outage.
+Less requests can be handled by your opponent servers for a short time"
+metadata/_edit_use_anchors_ = true
+
+[node name="DDOS" type="Sprite2D" parent="Player2Panel/Page2"]
+position = Vector2(26, 67)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player2Panel/Page2/DDOS"]
+texture = ExtResource("6_76ujy")
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/DDOS"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "DDOS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/DDOS/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "Multiple botnets start bombarding your opponents servers
+You opponent needs to handle double the requests for a few seconds"
+metadata/_edit_use_anchors_ = true
+
+[node name="Overvoltage" type="Sprite2D" parent="Player2Panel/Page2"]
+position = Vector2(26, 97)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player2Panel/Page2/Overvoltage"]
+texture = ExtResource("7_cnnsk")
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Overvoltage"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Overvoltage"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Overvoltage/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "A strong current hits the servers. And then a few stopped to work.
+Permanently destroys some servers of your enemy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Fog" type="Sprite2D" parent="Player2Panel/Page2"]
+position = Vector2(26, 127)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player2Panel/Page2/Fog"]
+texture = ExtResource("7_oawxf")
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Fog"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Fog"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/Fog/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "You left your windows open for too long, now clouds have entered the 
+datacenter"
+metadata/_edit_use_anchors_ = true
+
+[node name="SleepParalysis" type="Sprite2D" parent="Player2Panel/Page2"]
+position = Vector2(26, 157)
+texture = ExtResource("4_fehqs")
+
+[node name="Icon" type="Sprite2D" parent="Player2Panel/Page2/SleepParalysis"]
+texture = ExtResource("9_ffvsi")
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/SleepParalysis"]
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 129.0
+offset_bottom = 6.0
+scale = Vector2(0.5, 0.5)
+text = "Sleep Paralysis"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player2Panel/Page2/SleepParalysis/Label"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 468.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "Oha eine Schlafparalyse
+Your enemy is sent to sleep for a night"
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 28.0
