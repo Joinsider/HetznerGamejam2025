@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://610r2hnyq8u4"]
+[gd_scene load_steps=5 format=3 uid="uid://610r2hnyq8u4"]
 
-[ext_resource type="Script" uid="uid://drlsyrm4u1sbo" path="res://scripts/machine.gd" id="1_lfpuk"]
-[ext_resource type="Texture2D" uid="uid://b6s53ofxsmg1r" path="res://sprites/Server-0.png" id="2_7ka82"]
+[ext_resource type="Script" uid="uid://8jdpt15vdu6b" path="res://scripts/machine.gd" id="1_lfpuk"]
+[ext_resource type="SpriteFrames" uid="uid://bnxg4whigi0wn" path="res://sprites/Server-0.tres" id="2_lfpuk"]
+[ext_resource type="Script" uid="uid://csb3kja4m6og6" path="res://scripts/machineBlink.gd" id="3_7ka82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfpuk"]
 size = Vector2(32, 32)
@@ -9,8 +10,9 @@ size = Vector2(32, 32)
 [node name="0Server" type="Node2D"]
 script = ExtResource("1_lfpuk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ka82")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_lfpuk")
+script = ExtResource("3_7ka82")
 
 [node name="Area2D" type="Area2D" parent="."]
 
