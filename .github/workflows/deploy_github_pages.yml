@@ -20,32 +20,51 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup environment and debug
+        run: |
+          mkdir -p /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          echo "Current directory structure:"
+          ls -la /root/.local/share/ || echo "No root .local/share directory"
+          ls -la ~/.local/share/ || echo "No user .local/share directory"
+
       - name: Download and install export templates
         run: |
-          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
           echo "Downloading Godot ${GODOT_VERSION} export templates..."
           curl -Lo /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
           echo "Extracting templates..."
           unzip -q /tmp/templates.tpz -d /tmp
-          cp -r /tmp/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          ls -la ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          
+          # Copy to both potential locations to ensure templates are found
+          cp -rv /tmp/templates/* /home/runner/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          cp -rv /tmp/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          
           echo "Template installation complete!"
+          echo "Templates in home directory:"
+          ls -la ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          
+      - name: Import project resources
+        run: |
+          echo "Importing project resources..."
+          mkdir -p .godot/imported/
+          godot --headless --quit
           
       - name: Create staging directory
-        run: mkdir -v -p docs/web
+        run: mkdir -v -p docs
 
       - name: Build
-        run: godot -v --export-release "Web" docs/index.html project.godot
+        run: godot --headless --export-release "Web" docs/index.html
 
       - name: Copy additional files to build directory
         run: |
           cp coi-serviceworker.js docs/
+          ls -la docs/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          publish_dir: ./docs
           force_orphan: true
           user_name: 'github-ci[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
