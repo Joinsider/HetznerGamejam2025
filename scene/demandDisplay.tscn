@@ -8,10 +8,36 @@
 script = ExtResource("1_mv0gk")
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
 texture = ExtResource("1_ngd5f")
-region_enabled = true
-region_rect = Rect2(0, 0, 192, 16)
 
 [node name="Indicator" type="Sprite2D" parent="."]
 z_index = 2
 texture = ExtResource("2_3jd31")
+
+[node name="Percentage" type="Label" parent="."]
+offset_left = -9.0
+offset_top = 12.0
+offset_right = 59.0
+offset_bottom = 28.0
+scale = Vector2(0.275, 0.275)
+text = "50 %"
+horizontal_alignment = 1
+
+[node name="Demand" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 232.0
+offset_bottom = 28.0
+scale = Vector2(0.275, 0.275)
+text = "100.000 Req./s"
+horizontal_alignment = 1
+
+[node name="Performance" type="Label" parent="."]
+offset_left = -77.0
+offset_top = 12.0
+offset_right = 138.0
+offset_bottom = 28.0
+scale = Vector2(0.275, 0.275)
+text = "150.000 Req./s"
+horizontal_alignment = 1
