@@ -7,14 +7,23 @@ func _ready():
 	# Connect the button's pressed signal to our function
 	$Button.connect("pressed", _on_restart_button_pressed)
 	
+	# Debug to see if the parameters are being received
+	print("GameOver scene ready")
+	
 	# Get the game over parameters from the gamestate
 	if get_node("/root/Gamestate").has_meta("game_over_params"):
+		print("Found game_over_params in Gamestate")
 		var params = get_node("/root/Gamestate").get_meta("game_over_params")
 		player_1_won = params.player_1_won
 		player_2_won = params.player_2_won
 		
+		print("Player 1 won: ", player_1_won)
+		print("Player 2 won: ", player_2_won)
+		
 		# Update the win message
 		update_win_message()
+	else:
+		print("No game_over_params found in Gamestate")
 
 func _on_restart_button_pressed():
 	# Change to the main scene
@@ -23,6 +32,10 @@ func _on_restart_button_pressed():
 func update_win_message():
 	var player1_label = get_parent().get_node("Player1")
 	var player2_label = get_parent().get_node("Player2")
+	
+	print("Updating win message")
+	print("player1_label exists: ", is_instance_valid(player1_label))
+	print("player2_label exists: ", is_instance_valid(player2_label))
 	
 	if player1_label && player2_label:
 		if player_1_won && player_2_won:
@@ -37,3 +50,5 @@ func update_win_message():
 		else:
 			player1_label.text = "Game Over"
 			player2_label.text = "Game Over"
+	else:
+		print("Could not find player labels!")

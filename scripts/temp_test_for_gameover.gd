@@ -26,9 +26,12 @@ func _connect_buttons():
 # Called when Player 1 button is pressed
 func _on_player1_button_pressed():
 	# Call switch_to_gameover with Player 1 as winner (true, false)
-	get_node("/root/Gamestate").switch_to_gameover(true, false)
+	var gamestate = get_node("/root/Gamestate")
+	gamestate.switch_to_gameover(true, false)
 
 # Called when Player 2 button is pressed
 func _on_player2_button_pressed():
+	print("Player 2 button pressed")
 	# Call switch_to_gameover with Player 2 as winner (false, true)
-	get_node("/root/Gamestate").switch_to_gameover(false, true)
+	var gamestate = get_node("/root/Gamestate")
+	gamestate.switch_to_gameover(false, true)
