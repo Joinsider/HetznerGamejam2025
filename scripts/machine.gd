@@ -19,7 +19,7 @@ const sprite = [
 	preload("res://sprites/Server-5.png"),
 ]
 
-var level = 0
+@export var level = 0
 
 func _ready() -> void:
 	$Sprite2D.texture = sprite[level]

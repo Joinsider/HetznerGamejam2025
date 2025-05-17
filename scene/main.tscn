@@ -48,6 +48,7 @@ position = Vector2(48, 48)
 
 [node name="0Server2" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
 position = Vector2(112, 48)
+level = 1
 
 [node name="0Server3" parent="Servers/Player0" instance=ExtResource("3_wp4xf")]
 position = Vector2(48, 112)
@@ -72,6 +73,7 @@ position = Vector2(112, 240)
 [node name="0Server" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 48)
 Player = 1
+level = 1
 
 [node name="0Server2" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 48)

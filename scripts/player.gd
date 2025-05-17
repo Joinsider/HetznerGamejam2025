@@ -105,6 +105,7 @@ func _physics_process(delta: float) -> void:
 	if is_in_menu:
 		return
 	move_and_slide()
+	$Sprite2D.flip_h = direction_x < 0
 
 
 func _on_notification_timer_timeout() -> void:

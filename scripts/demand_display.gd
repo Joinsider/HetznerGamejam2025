@@ -30,16 +30,13 @@ func _on_machine_upgraded():
 func _update():
 	var demand = Gamestate.players[Player].get_demand()
 	var performance = Gamestate.players[Player].get_performance()
-	if performance == 0:
-		desired_percentage = 0
-	else:
-		desired_percentage = float(demand)/performance
+	desired_percentage = float(demand)/performance
+	desired_percentage = min(desired_percentage, 1)
 	$Percentage.text = str(round(desired_percentage*100)) + " %"
 	$Demand.text = str(demand) + " Req./s"
 	$Performance.text = str(performance) + " Req./s"
 	
 func _physics_process(delta: float) -> void:
-	print(delta)
 	var step: float = (desired_percentage - current_percentage)*5*delta
 	current_percentage += step
 	_move_indicator(current_percentage)
