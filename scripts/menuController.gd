@@ -21,10 +21,11 @@ func _input(event: InputEvent) -> void:
 		return
 	if event is InputEventJoypadMotion:
 		print(abs(event.axis_value))
-		if !event.axis==0:
+		if event.axis==1:
 			if abs(event.axis_value) < 0.6: 
 				print("unsett")
 				block = false
+				return
 				
 			if block == true:
 				return
@@ -34,7 +35,7 @@ func _input(event: InputEvent) -> void:
 				block = true
 			else:
 				return
-		else:
+		elif event.axis==0:
 			if abs(event.axis_value) < 0.6: 
 				return
 	if event.is_action_pressed(controlls[Player][1]) and visible:
