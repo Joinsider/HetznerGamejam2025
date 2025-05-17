@@ -19,6 +19,9 @@ func _otherPlayer(player:int) -> int:
 func _input(event: InputEvent) -> void:
 	if Gamestate.players[Player]._frezed:
 		return
+	if event is InputEventJoypadMotion:
+		if abs(event.axis_value) <= 0.98:
+			return
 	if event.is_action_pressed(controlls[Player][1]) and visible:
 		selected.get_child(0).visible = false
 		selected = selected.prev
