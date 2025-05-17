@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dg0yn7o4j1jg4"]
+[gd_scene load_steps=12 format=3 uid="uid://dg0yn7o4j1jg4"]
 
-[ext_resource type="Script" uid="uid://cy3mpa401bm4y" path="res://scripts/menuController.gd" id="1_pf7vd"]
-[ext_resource type="Script" uid="uid://cfc0fd3fc8b17" path="res://scripts/meueItem.gd" id="1_v5ul1"]
+[ext_resource type="Script" uid="uid://d1w575g7qvmw2" path="res://scripts/menuController.gd" id="1_pf7vd"]
+[ext_resource type="Script" uid="uid://d3qgf55gmc20g" path="res://scripts/meueItem.gd" id="1_v5ul1"]
 [ext_resource type="Texture2D" uid="uid://dnw7gjh8q2xvt" path="res://sprites/Thunderstorm.png" id="3_hg6f8"]
 [ext_resource type="Texture2D" uid="uid://c7ekb1j56sfxd" path="res://sprites/attack-selection.png" id="4_4c32f"]
 [ext_resource type="Texture2D" uid="uid://cnh8dc5pumras" path="res://sprites/DDOS.png" id="4_6wjab"]
 [ext_resource type="Texture2D" uid="uid://dr43wmeeuutb6" path="res://sprites/overvoltage.png" id="5_4c32f"]
+[ext_resource type="Script" uid="uid://bhrare7wm3wru" path="res://scripts/SelectMenueLable.gd" id="5_apqs7"]
 [ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="6_apqs7"]
 [ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="7_2expe"]
 [ext_resource type="Texture2D" uid="uid://h7r4xnsl3i4c" path="res://sprites/attack-container.png" id="8_6wjab"]
@@ -44,6 +45,8 @@ grow_vertical = 2
 text = "Thunder Storm"
 label_settings = SubResource("LabelSettings_4c32f")
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 2
 
 [node name="Label2" type="Label" parent="1/Select"]
 anchors_preset = 8
@@ -60,6 +63,8 @@ text = "Thunder Storm"
 label_settings = SubResource("LabelSettings_4c32f")
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 2
 
 [node name="Item" type="Sprite2D" parent="1"]
 texture = ExtResource("3_hg6f8")
@@ -89,6 +94,7 @@ grow_vertical = 2
 text = "DDOS"
 label_settings = SubResource("LabelSettings_4c32f")
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
 
 [node name="Label2" type="Label" parent="2/Select"]
 anchors_preset = 8
@@ -105,6 +111,7 @@ text = "DDOS"
 label_settings = SubResource("LabelSettings_4c32f")
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
 
 [node name="Item" type="Sprite2D" parent="2"]
 texture = ExtResource("4_6wjab")
@@ -135,6 +142,8 @@ grow_vertical = 2
 text = "Over Voltage"
 label_settings = SubResource("LabelSettings_4c32f")
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 1
 
 [node name="Label2" type="Label" parent="3/Select"]
 anchors_preset = 8
@@ -151,6 +160,8 @@ text = "Over Voltage"
 label_settings = SubResource("LabelSettings_4c32f")
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 1
 
 [node name="Item" type="Sprite2D" parent="3"]
 texture = ExtResource("5_4c32f")
@@ -181,6 +192,8 @@ grow_vertical = 2
 text = "Fog"
 label_settings = SubResource("LabelSettings_4c32f")
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 4
 
 [node name="Label2" type="Label" parent="4/Select"]
 anchors_preset = 8
@@ -197,6 +210,8 @@ text = "Fog"
 label_settings = SubResource("LabelSettings_4c32f")
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 4
 
 [node name="Item" type="Sprite2D" parent="4"]
 texture = ExtResource("6_apqs7")
@@ -227,6 +242,8 @@ grow_vertical = 2
 text = "Sleep Paralysis"
 label_settings = SubResource("LabelSettings_4c32f")
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 3
 
 [node name="Label2" type="Label" parent="5/Select"]
 anchors_preset = 8
@@ -243,6 +260,8 @@ text = "Sleep Paralysis"
 label_settings = SubResource("LabelSettings_4c32f")
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 3
 
 [node name="Item" type="Sprite2D" parent="5"]
 texture = ExtResource("7_2expe")

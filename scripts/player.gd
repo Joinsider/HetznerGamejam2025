@@ -49,11 +49,13 @@ func get_demand() -> int:
 	
 func attack(type: Gameconstants.Attack) -> void:
 	print(str(PlayerIndex)+" got atacked with "+str(type))
+	
 	if type in activeAttacks:
 		activeAttacks[type].queue_free()
 	activeAttacks[type] = attackScene[type].instantiate()
 	if PlayerIndex == 1:
-		activeAttacks[type].position.x = 256
+		activeAttacks[type].position.x = 512
+		activeAttacks[type].scale.x = -1
 	get_parent().add_child(activeAttacks[type])
 	activeAttacks[type].tree_exiting.connect(func():
 		_on_attack_finish(type)

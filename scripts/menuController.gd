@@ -36,7 +36,10 @@ func _input(event: InputEvent) -> void:
 			Gamestate.players[Player].is_in_menu = true
 	if event.is_action_pressed(controlls[Player][0]):
 		if visible == true:
-			Gamestate.players[_otherPlayer(Player)].attack(selected.atack)
+			if Gamestate.players[Player].remove_coins(Gameconstants.AttackCosts[selected.atack]):
+				Gamestate.players[_otherPlayer(Player)].attack(selected.atack)
+			else:
+				Gamestate.players[Player].show_message("Not enough money! (" + str(Gamestate.players[Player]._coins) + "/" + str(Gameconstants.AttackCosts[selected.atack]) + ")")
 			visible = false
 			Gamestate.players[Player].is_in_menu = false
 		

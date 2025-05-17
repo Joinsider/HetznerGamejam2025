@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://daxu3g6do40wc"]
 
-[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_65lvn"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
-size = Vector2(256, 288)
+[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_65lvn"]
+[ext_resource type="Texture2D" uid="uid://brsvfp6sp800x" path="res://sprites/Fire1.png" id="2_tngjr"]
 
 [node name="Overvoltage" type="Node2D"]
 script = ExtResource("1_65lvn")
@@ -11,8 +9,50 @@ script = ExtResource("1_65lvn")
 [node name="Effect0" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
-position = Vector2(128, 144)
-texture = SubResource("PlaceholderTexture2D_s3otx")
+position = Vector2(48, 48)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect4" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(48, 176)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect5" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(112, 176)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect6" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(48, 240)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect7" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(112, 240)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect1" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(112, 48)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect2" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(48, 112)
+texture = ExtResource("2_tngjr")
+
+[node name="Effect3" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(112, 112)
+texture = ExtResource("2_tngjr")
 
 [node name="DeleteTimer" type="Timer" parent="."]
 wait_time = 5.0

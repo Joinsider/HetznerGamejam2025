@@ -16,3 +16,11 @@ enum Attack {
 	FREEZE,
 	FOG
 }
+
+var AttackCosts = {
+	Attack.DDOS:200,
+	Attack.OVERVOLTAGE:300,
+	Attack.THUNDERSTORM:400,
+	Attack.FREEZE:50,
+	Attack.FOG:50
+}
