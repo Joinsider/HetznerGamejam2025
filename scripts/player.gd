@@ -5,6 +5,7 @@ signal coins_updated(coins: int)
 signal collectable_coins_updated(coins: int)
 signal machine_upgraded
 signal demand_updated(new_demand: int)
+signal utilization_updated(utilization: float)
 signal attack_started(attack: Gameconstants.Attack)
 signal attack_ended(attack: Gameconstants.Attack)
 
@@ -31,6 +32,14 @@ var attackScene = {
 	Gameconstants.Attack.FOG:preload("res://scene/effects/fog.tscn")
 }
 
+func check_death_timer(utilization: float) -> void:
+	print(utilization)
+	if utilization >= 1:
+		if $DeathTimer.is_stopped():
+			$DeathTimer.start()
+	else:
+		$DeathTimer.stop()
+
 func get_income() -> int:
 	var income: int = 0
 	for machine in _machines:
@@ -47,6 +56,12 @@ func get_demand() -> int:
 	if Gameconstants.Attack.DDOS in activeAttacks:
 		return _demand * 2
 	return _demand
+func get_utilization() -> float:
+	var demand = get_demand()
+	var performance = get_performance()
+	var utilization = float(demand)/performance
+	utilization = min(utilization, 1)
+	return utilization
 	
 func attack(type: Gameconstants.Attack) -> void:
 	print(str(PlayerIndex)+" got atacked with "+str(type))
@@ -65,6 +80,7 @@ func attack(type: Gameconstants.Attack) -> void:
 		_frezed = true
 		$Sprite2D.texture = _sprite[PlayerIndex+2]
 	attack_started.emit(type)
+	utilization_updated.emit(get_utilization())
 	
 
 func add_machine(machine: Machine) -> void:
@@ -73,6 +89,7 @@ func add_machine(machine: Machine) -> void:
 	
 func _on_machine_upgrade(new_level: int) -> void:
 	machine_upgraded.emit()
+	utilization_updated.emit(get_utilization())
 	
 
 func has_coins(amount: int) -> bool:
@@ -116,6 +133,7 @@ var _sprite = [
 func _ready() -> void:
 	$Sprite2D.texture = _sprite[PlayerIndex]
 	Gamestate.players[PlayerIndex] = self
+	utilization_updated.connect(check_death_timer)
 	
 
 func _physics_process(delta: float) -> void:
@@ -148,9 +166,15 @@ func _on_attack_finish(type: Gameconstants.Attack) -> void:
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = false
 		$Sprite2D.texture = _sprite[PlayerIndex]
+	utilization_updated.emit(get_utilization())
 
 
 func _on_demand_progress_timeout() -> void:
 	_dificult = _dificult+1
 	_demand = int(pow(_dificult,1.8))
 	demand_updated.emit(_demand)
+	utilization_updated.emit(get_utilization())
+
+
+func _on_death_timer_timeout() -> void:
+	Gamestate.switch_to_gameover(PlayerIndex != 0)

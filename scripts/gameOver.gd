@@ -1,7 +1,6 @@
 extends Control
 
-var player_1_won: bool = false
-var player_2_won: bool = false
+var player_0_won: bool = false
 
 func _ready():
 	# Connect the button's pressed signal to our function
@@ -14,11 +13,10 @@ func _ready():
 	if get_node("/root/Gamestate").has_meta("game_over_params"):
 		print("Found game_over_params in Gamestate")
 		var params = get_node("/root/Gamestate").get_meta("game_over_params")
-		player_1_won = params.player_1_won
-		player_2_won = params.player_2_won
+		player_0_won = params.player_0_won
 		
-		print("Player 1 won: ", player_1_won)
-		print("Player 2 won: ", player_2_won)
+		print("Player 0 won: ", player_0_won)
+		print("Player 1 won: ", !player_0_won)
 		
 		# Update the win message
 		update_win_message()
@@ -38,17 +36,11 @@ func update_win_message():
 	print("player2_label exists: ", is_instance_valid(player2_label))
 	
 	if player1_label && player2_label:
-		if player_1_won && player_2_won:
-			player1_label.text = "It's a Tie!"
-			player2_label.text = "It's a Tie!"
-		elif player_1_won:
+		if player_0_won:
 			player1_label.text = "Player 1 Won!"
 			player2_label.text = "Player 2 Lost!"
-		elif player_2_won:
+		else:
 			player1_label.text = "Player 1 Lost!"
 			player2_label.text = "Player 2 Won!"
-		else:
-			player1_label.text = "Game Over"
-			player2_label.text = "Game Over"
 	else:
 		print("Could not find player labels!")

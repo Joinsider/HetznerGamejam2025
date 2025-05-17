@@ -15,11 +15,10 @@ func get_key_string(interaction: String) -> String:
 		return OS.get_keycode_string(event.physical_keycode)
 	return "Invalid"
 
-func switch_to_gameover(player_1_won: bool = false, player_2_won: bool = false):
+func switch_to_gameover(player_0_won: bool = false):
 	# Store the win status in global variables for the gameover scene to access
 	var game_over_params = {
-		"player_1_won": player_1_won,
-		"player_2_won": player_2_won
+		"player_0_won": player_0_won
 	}
 	
 	# Store the parameters directly on self instead of trying to reference /root/Gamestate

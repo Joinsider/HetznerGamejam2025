@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://btiakb6xpn8yd"]
 
-[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_rg7kq"]
+[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_rg7kq"]
 [ext_resource type="Texture2D" uid="uid://bqhdk4vwdhwta" path="res://sprites/ddos1.png" id="2_r203h"]
 [ext_resource type="Texture2D" uid="uid://bpjjq4s5bf43u" path="res://sprites/ddos2.png" id="3_mfybn"]
 [ext_resource type="Texture2D" uid="uid://u1wwi1cvcb4w" path="res://sprites/ddos3.png" id="4_0w8uh"]
-[ext_resource type="Script" uid="uid://b4jiw4te7pa3n" path="res://scripts/AnimationPlay.gd" id="5_mfybn"]
+[ext_resource type="Script" uid="uid://desmg5ycy2rub" path="res://scripts/AnimationPlay.gd" id="5_mfybn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nqui1"]
 animations = [{
