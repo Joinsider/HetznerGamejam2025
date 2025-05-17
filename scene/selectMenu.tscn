@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg0yn7o4j1jg4"]
+[gd_scene load_steps=11 format=3 uid="uid://dg0yn7o4j1jg4"]
 
 [ext_resource type="Script" uid="uid://d1w575g7qvmw2" path="res://scripts/menuController.gd" id="1_pf7vd"]
 [ext_resource type="Script" uid="uid://d3qgf55gmc20g" path="res://scripts/meueItem.gd" id="1_v5ul1"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="6_apqs7"]
 [ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="7_2expe"]
 [ext_resource type="Texture2D" uid="uid://h7r4xnsl3i4c" path="res://sprites/attack-container.png" id="8_6wjab"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c32f"]
 
 [node name="SelectMenu" type="Node2D"]
 visible = false
@@ -22,11 +24,42 @@ texture = ExtResource("8_6wjab")
 script = ExtResource("1_v5ul1")
 prev = NodePath("../5")
 next = NodePath("../2")
-atack = 1
+atack = 2
 
 [node name="Select" type="Sprite2D" parent="1"]
 texture_filter = 1
 texture = ExtResource("4_4c32f")
+
+[node name="Label" type="Label" parent="1/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thunder Storm"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="1/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thunder Storm"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Item" type="Sprite2D" parent="1"]
 texture = ExtResource("3_hg6f8")
@@ -42,6 +75,37 @@ visible = false
 texture_filter = 1
 texture = ExtResource("4_4c32f")
 
+[node name="Label" type="Label" parent="2/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "DDOS"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="2/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "DDOS"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Item" type="Sprite2D" parent="2"]
 texture = ExtResource("4_6wjab")
 
@@ -50,12 +114,43 @@ position = Vector2(0, 40)
 script = ExtResource("1_v5ul1")
 prev = NodePath("../2")
 next = NodePath("../4")
-atack = 2
+atack = 1
 
 [node name="Select" type="Sprite2D" parent="3"]
 visible = false
 texture_filter = 1
 texture = ExtResource("4_4c32f")
+
+[node name="Label" type="Label" parent="3/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Over Voltage"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="3/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Over Voltage"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Item" type="Sprite2D" parent="3"]
 texture = ExtResource("5_4c32f")
@@ -72,6 +167,37 @@ visible = false
 texture_filter = 1
 texture = ExtResource("4_4c32f")
 
+[node name="Label" type="Label" parent="4/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fog"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="4/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fog"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="Item" type="Sprite2D" parent="4"]
 texture = ExtResource("6_apqs7")
 
@@ -86,6 +212,37 @@ atack = 3
 visible = false
 texture_filter = 1
 texture = ExtResource("4_4c32f")
+
+[node name="Label" type="Label" parent="5/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sleep Paralysis"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="5/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sleep Paralysis"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Item" type="Sprite2D" parent="5"]
 texture = ExtResource("7_2expe")

@@ -19,11 +19,11 @@ func _otherPlayer(player:int) -> int:
 func _input(event: InputEvent) -> void:
 	if Gamestate.players[Player]._frezed:
 		return
-	if event.is_action_pressed(controlls[Player][1]):
+	if event.is_action_pressed(controlls[Player][1]) and visible:
 		selected.get_child(0).visible = false
 		selected = selected.prev
 		selected.get_child(0).visible = true
-	if event.is_action_pressed(controlls[Player][2]):
+	if event.is_action_pressed(controlls[Player][2]) and visible:
 		selected.get_child(0).visible = false
 		selected = selected.next
 		selected.get_child(0).visible = true

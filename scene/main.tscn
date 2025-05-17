@@ -139,13 +139,16 @@ shape = SubResource("RectangleShape2D_4j5ol")
 debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
 
 [node name="SelectMenu" parent="." instance=ExtResource("4_brvut")]
+z_index = 2
 position = Vector2(16, 104)
 
 [node name="SelectMenu2" parent="." instance=ExtResource("4_brvut")]
+z_index = 2
 position = Vector2(496, 104)
 Player = 1
 
 [node name="Statistics" parent="." instance=ExtResource("5_0ha60")]
+z_index = 2
 position = Vector2(64, 270)
 
 [node name="HopperMoney" parent="." instance=ExtResource("6_4j5ol")]
@@ -156,6 +159,7 @@ position = Vector2(279, 126)
 Player = 1
 
 [node name="Statistics2" parent="." instance=ExtResource("5_0ha60")]
+z_index = 2
 position = Vector2(320, 270)
 Player = 1
 
