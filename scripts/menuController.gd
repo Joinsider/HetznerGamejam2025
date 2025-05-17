@@ -15,13 +15,28 @@ func _ready() -> void:
 func _otherPlayer(player:int) -> int:
 	return posmod(player + 1, 2)
 	
-
+var block = false
 func _input(event: InputEvent) -> void:
 	if Gamestate.players[Player]._frezed:
 		return
 	if event is InputEventJoypadMotion:
-		if abs(event.axis_value) <= 0.98:
-			return
+		print(abs(event.axis_value))
+		if !event.axis==0:
+			if abs(event.axis_value) < 0.6: 
+				print("unsett")
+				block = false
+				
+			if block == true:
+				return
+				
+			if abs(event.axis_value) >= 0.98:
+				print("set")
+				block = true
+			else:
+				return
+		else:
+			if abs(event.axis_value) < 0.6: 
+				return
 	if event.is_action_pressed(controlls[Player][1]) and visible:
 		selected.get_child(0).visible = false
 		selected = selected.prev
