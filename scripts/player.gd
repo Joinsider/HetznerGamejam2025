@@ -20,7 +20,7 @@ var _machines: Array[Machine] = []
 var _frezed
 
 var _demand: int = 0 #Requests Per Second
-var _dificult: int = 0
+var _difficulty: int = 0
 
 var activeAttacks = {}
 
@@ -49,11 +49,11 @@ func get_performance() -> int:
 	for machine in _machines:
 		performance += Gameconstants.machine_levels[machine.level].performance
 	if Gameconstants.Attack.THUNDERSTORM in activeAttacks:
-		return floor(performance / 2)
+		return floor(performance * Gameconstants.thunderstorm_multiplier)
 	return performance
 func get_demand() -> int:
 	if Gameconstants.Attack.DDOS in activeAttacks:
-		return _demand * 2
+		return _demand * Gameconstants.ddos_multiplier
 	return _demand
 func get_utilization() -> float:
 	var demand = get_demand()
@@ -182,8 +182,8 @@ func _on_attack_finish(type: Gameconstants.Attack) -> void:
 
 
 func _on_demand_progress_timeout() -> void:
-	_dificult = _dificult+1
-	_demand = int(pow(_dificult,1.8))
+	_difficulty += 1
+	_demand = Gameconstants.demand.call(_difficulty)
 	demand_updated.emit(_demand)
 	utilization_updated.emit(get_utilization())
 
