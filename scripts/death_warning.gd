@@ -7,7 +7,8 @@ func _ready() -> void:
 	if Player == 1:
 		$AnimatedSprite2D.flip_h = true
 	$AnimatedSprite2D.play()
-	$Audio.play()
 	
 func update(utilization: float) -> void:
-	visible = utilization >= 1 
+	if !visible && utilization >= 1:
+		$Audio.play()
+	visible = utilization >= 1

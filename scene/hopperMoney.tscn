@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://x1abqqy62so4"]
+[gd_scene load_steps=6 format=3 uid="uid://x1abqqy62so4"]
 
 [ext_resource type="Script" uid="uid://bp6pe0up63out" path="res://scripts/hopper_money.gd" id="1_75fle"]
 [ext_resource type="Texture2D" uid="uid://b6s53ofxsmg1r" path="res://sprites/Server-0.png" id="2_ntrs7"]
+[ext_resource type="AudioStream" uid="uid://b7ks8a58lrc6n" path="res://sounds/money_collect.mp3" id="3_ntrs7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_75fle"]
 
@@ -28,5 +29,8 @@ texture = ExtResource("2_ntrs7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_75fle")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ntrs7")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

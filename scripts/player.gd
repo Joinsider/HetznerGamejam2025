@@ -147,7 +147,7 @@ func _ready() -> void:
 	Gamestate.players[PlayerIndex] = self
 	utilization_updated.connect(check_death_timer)
 	
-
+var _last_position_step: Vector2 = Vector2(0, 0)
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -167,6 +167,9 @@ func _physics_process(delta: float) -> void:
 		return
 	move_and_slide()
 	$Sprite2D.flip_h = direction_x < 0
+	if (position - _last_position_step).length() > 20:
+		$FootSteps.play()
+		_last_position_step = position
 
 
 func _on_notification_timer_timeout() -> void:

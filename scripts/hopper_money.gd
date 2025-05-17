@@ -22,8 +22,10 @@ func _on_collectable_coins_updated(coins: int):
 		break
 	if $Area2D.overlaps_body(Gamestate.players[Player]) and coins !=0:
 		Gamestate.players[Player].collect_coins()
+		$Audio.play()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if !(body == Gamestate.players[Player]):
 		return
 	Gamestate.players[Player].collect_coins()
+	$Audio.play()
