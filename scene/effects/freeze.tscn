@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4d1rfnvro8n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
+size = Vector2(256, 288)
+
+[node name="Fog" type="Node2D"]
+
+[node name="Effect0" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+position = Vector2(128, 144)
+texture = SubResource("PlaceholderTexture2D_s3otx")
