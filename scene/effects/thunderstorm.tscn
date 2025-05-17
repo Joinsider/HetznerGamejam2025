@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://de7e7qtijeb3j"]
+[gd_scene load_steps=5 format=3 uid="uid://de7e7qtijeb3j"]
 
 [ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_ym5fm"]
+[ext_resource type="Texture2D" uid="uid://qqgalnl2hdut" path="res://sprites/Blitz.png" id="2_2eq3p"]
+[ext_resource type="Texture2D" uid="uid://nkyjcfm2l7i7" path="res://sprites/drop.png" id="3_381gw"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
 size = Vector2(256, 288)
@@ -19,5 +21,22 @@ texture = SubResource("PlaceholderTexture2D_s3otx")
 wait_time = 20.0
 one_shot = true
 autostart = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(128, 144)
+amount = 4
+texture = ExtResource("2_2eq3p")
+emission_shape = 3
+emission_rect_extents = Vector2(128, 144)
+gravity = Vector2(0, 0)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(128, -20)
+amount = 128
+texture = ExtResource("3_381gw")
+lifetime = 1.3
+emission_shape = 3
+emission_rect_extents = Vector2(128, 0)
+gravity = Vector2(0, 400)
 
 [connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]

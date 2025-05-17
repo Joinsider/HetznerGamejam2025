@@ -155,7 +155,7 @@ position = Vector2(496, 104)
 Player = 1
 
 [node name="Statistics" parent="." instance=ExtResource("5_0ha60")]
-z_index = 2
+z_index = 3
 position = Vector2(64, 270)
 
 [node name="HopperMoney" parent="." instance=ExtResource("6_4j5ol")]
@@ -166,15 +166,15 @@ position = Vector2(279, 126)
 Player = 1
 
 [node name="Statistics2" parent="." instance=ExtResource("5_0ha60")]
-z_index = 2
+z_index = 3
 position = Vector2(320, 270)
 Player = 1
 
 [node name="DemandDisplay" parent="." instance=ExtResource("7_p1hux")]
-z_index = 2
+z_index = 3
 position = Vector2(128, 10)
 
 [node name="DemandDisplay2" parent="." instance=ExtResource("7_p1hux")]
-z_index = 2
+z_index = 3
 position = Vector2(384, 10)
 Player = 1

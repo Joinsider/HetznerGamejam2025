@@ -24,6 +24,10 @@ const sprite = [
 func _ready() -> void:
 	$Sprite2D.texture = sprite[level]
 	Gamestate.players[Player].add_machine(self)
+	on_upgrade.connect(update_sprite)
+	
+func update_sprite(new_level: int):
+	$Sprite2D.texture = sprite[level]
 	
 
 func _input(event: InputEvent) -> void:
@@ -40,10 +44,15 @@ func _upgrade() -> void:
 	var nextLevel = Gameconstants.machine_levels[level+1]
 	if (Gamestate.players[Player].remove_coins(nextLevel.cost)):
 		level+=1
-		$Sprite2D.texture = sprite[level]
 		on_upgrade.emit(level)
 	else:
 		Gamestate.players[Player].show_message("Not enough money! (" + str(Gamestate.players[Player]._coins) + "/" + str(nextLevel.cost) + ")")
+
+func downgrade() -> void:
+	if level <= 0:
+		return
+	level -= 1
+	on_upgrade.emit(level)
 
 func _on_timer_timeout() -> void:
 	var amount = Gameconstants.machine_levels[level].outcome

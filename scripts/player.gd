@@ -15,7 +15,7 @@ signal attack_ended(attack: Gameconstants.Attack)
 
 var is_in_menu: bool = false
 var _collectable_coins: int = 0
-var _coins: int = 50
+var _coins: int = 500
 var _machines: Array[Machine] = []
 var _frezed
 
@@ -33,7 +33,6 @@ var attackScene = {
 }
 
 func check_death_timer(utilization: float) -> void:
-	print(utilization)
 	if utilization >= 1:
 		if $DeathTimer.is_stopped():
 			$DeathTimer.start()
@@ -62,6 +61,10 @@ func get_utilization() -> float:
 	var utilization = float(demand)/performance
 	utilization = min(utilization, 1)
 	return utilization
+func get_machines(min_level: int) -> Array[Machine]:
+	return _machines.filter(func(m):
+		return m.level >= min_level
+	)
 	
 func attack(type: Gameconstants.Attack) -> void:
 	print(str(PlayerIndex)+" got atacked with "+str(type))
@@ -69,6 +72,7 @@ func attack(type: Gameconstants.Attack) -> void:
 	if type in activeAttacks:
 		activeAttacks[type].free()
 	activeAttacks[type] = attackScene[type].instantiate()
+	activeAttacks[type].z_index = 1
 	if PlayerIndex == 1:
 		activeAttacks[type].position.x = 512
 		activeAttacks[type].scale.x = -1
@@ -79,6 +83,14 @@ func attack(type: Gameconstants.Attack) -> void:
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = true
 		$Sprite2D.texture = _sprite[PlayerIndex+2]
+	if type == Gameconstants.Attack.OVERVOLTAGE:
+		var suitable_machines = get_machines(1)
+		suitable_machines.shuffle()
+		print(suitable_machines)
+		var affected_machines: int = floor(randf_range(1, suitable_machines.size()))
+		print(affected_machines)
+		for i in range(affected_machines):
+			suitable_machines[i].downgrade()
 	attack_started.emit(type)
 	utilization_updated.emit(get_utilization())
 	

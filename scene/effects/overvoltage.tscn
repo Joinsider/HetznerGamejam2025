@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_65lvn"]
 [ext_resource type="Texture2D" uid="uid://brsvfp6sp800x" path="res://sprites/Fire1.png" id="2_tngjr"]
-[ext_resource type="Script" uid="uid://ck2odw3qbru0j" path="res://scripts/fireRandom.gd" id="3_cp44w"]
+[ext_resource type="Script" uid="uid://dkaqmq8a21inw" path="res://scripts/fireRandom.gd" id="3_cp44w"]
 
 [node name="Overvoltage" type="Node2D"]
 script = ExtResource("1_65lvn")
