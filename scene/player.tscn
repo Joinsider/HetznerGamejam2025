@@ -58,6 +58,7 @@ one_shot = true
 
 [node name="FootSteps" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ml7e8")
+volume_db = -6.0
 
 [connection signal="attack_started" from="." to="." method="_on_attack_started"]
 [connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]
