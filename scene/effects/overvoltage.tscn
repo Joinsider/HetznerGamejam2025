@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://daxu3g6do40wc"]
+[gd_scene load_steps=4 format=3 uid="uid://daxu3g6do40wc"]
 
 [ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_65lvn"]
 [ext_resource type="Texture2D" uid="uid://brsvfp6sp800x" path="res://sprites/Fire1.png" id="2_tngjr"]
+[ext_resource type="Script" uid="uid://ck2odw3qbru0j" path="res://scripts/fireRandom.gd" id="3_cp44w"]
 
 [node name="Overvoltage" type="Node2D"]
 script = ExtResource("1_65lvn")
@@ -11,48 +12,56 @@ z_index = 10
 z_as_relative = false
 position = Vector2(48, 48)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect4" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(48, 176)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect5" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(112, 176)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect6" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(48, 240)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect7" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(112, 240)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect1" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(112, 48)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect2" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(48, 112)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="Effect3" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
 position = Vector2(112, 112)
 texture = ExtResource("2_tngjr")
+script = ExtResource("3_cp44w")
 
 [node name="DeleteTimer" type="Timer" parent="."]
 wait_time = 5.0
