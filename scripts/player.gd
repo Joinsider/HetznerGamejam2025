@@ -18,7 +18,8 @@ var _coins: int = 50
 var _machines: Array[Machine] = []
 var _frezed
 
-var _demand: int = 100 #Requests Per Second
+var _demand: int = 0 #Requests Per Second
+var _dificult: int = 0
 
 var activeAttacks = {}
 
@@ -51,7 +52,7 @@ func attack(type: Gameconstants.Attack) -> void:
 	print(str(PlayerIndex)+" got atacked with "+str(type))
 	
 	if type in activeAttacks:
-		activeAttacks[type].queue_free()
+		activeAttacks[type].free()
 	activeAttacks[type] = attackScene[type].instantiate()
 	if PlayerIndex == 1:
 		activeAttacks[type].position.x = 512
@@ -147,3 +148,9 @@ func _on_attack_finish(type: Gameconstants.Attack) -> void:
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = false
 		$Sprite2D.texture = _sprite[PlayerIndex]
+
+
+func _on_demand_progress_timeout() -> void:
+	_dificult = _dificult+1
+	_demand = int(pow(_dificult,1.8))
+	demand_updated.emit(_demand)

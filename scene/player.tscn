@@ -37,5 +37,10 @@ scale = Vector2(0.35, 0.35)
 [node name="Notification" type="Label" parent="CenterContainer"]
 layout_mode = 2
 
+[node name="demandProgress" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="attack_started" from="." to="." method="_on_attack_started"]
 [connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]
+[connection signal="timeout" from="demandProgress" to="." method="_on_demand_progress_timeout"]
