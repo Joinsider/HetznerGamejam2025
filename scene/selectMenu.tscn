@@ -1,28 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://dg0yn7o4j1jg4"]
+[gd_scene load_steps=10 format=3 uid="uid://dg0yn7o4j1jg4"]
 
-[ext_resource type="Script" uid="uid://cy3mpa401bm4y" path="res://scripts/menuController.gd" id="1_pf7vd"]
-[ext_resource type="Script" uid="uid://cfc0fd3fc8b17" path="res://scripts/meueItem.gd" id="1_v5ul1"]
+[ext_resource type="Script" uid="uid://d1w575g7qvmw2" path="res://scripts/menuController.gd" id="1_pf7vd"]
+[ext_resource type="Script" uid="uid://d3qgf55gmc20g" path="res://scripts/meueItem.gd" id="1_v5ul1"]
 [ext_resource type="Texture2D" uid="uid://dnw7gjh8q2xvt" path="res://sprites/Thunderstorm.png" id="3_hg6f8"]
+[ext_resource type="Texture2D" uid="uid://c7ekb1j56sfxd" path="res://sprites/attack-selection.png" id="4_4c32f"]
 [ext_resource type="Texture2D" uid="uid://cnh8dc5pumras" path="res://sprites/DDOS.png" id="4_6wjab"]
 [ext_resource type="Texture2D" uid="uid://dr43wmeeuutb6" path="res://sprites/overvoltage.png" id="5_4c32f"]
 [ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="6_apqs7"]
 [ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="7_2expe"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_352gf"]
-size = Vector2(20, 20)
+[ext_resource type="Texture2D" uid="uid://h7r4xnsl3i4c" path="res://sprites/attack-container.png" id="8_6wjab"]
 
 [node name="SelectMenu" type="Node2D"]
 visible = false
 script = ExtResource("1_pf7vd")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+texture = ExtResource("8_6wjab")
+
 [node name="1" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
 script = ExtResource("1_v5ul1")
 prev = NodePath("../5")
 next = NodePath("../2")
+atack = 1
 
 [node name="Select" type="Sprite2D" parent="1"]
 texture_filter = 1
-texture = SubResource("PlaceholderTexture2D_352gf")
+texture = ExtResource("4_4c32f")
 
 [node name="Item" type="Sprite2D" parent="1"]
 texture = ExtResource("3_hg6f8")
@@ -36,7 +40,7 @@ next = NodePath("../3")
 [node name="Select" type="Sprite2D" parent="2"]
 visible = false
 texture_filter = 1
-texture = SubResource("PlaceholderTexture2D_352gf")
+texture = ExtResource("4_4c32f")
 
 [node name="Item" type="Sprite2D" parent="2"]
 texture = ExtResource("4_6wjab")
@@ -46,11 +50,12 @@ position = Vector2(0, 40)
 script = ExtResource("1_v5ul1")
 prev = NodePath("../2")
 next = NodePath("../4")
+atack = 2
 
 [node name="Select" type="Sprite2D" parent="3"]
 visible = false
 texture_filter = 1
-texture = SubResource("PlaceholderTexture2D_352gf")
+texture = ExtResource("4_4c32f")
 
 [node name="Item" type="Sprite2D" parent="3"]
 texture = ExtResource("5_4c32f")
@@ -60,11 +65,12 @@ position = Vector2(0, 60)
 script = ExtResource("1_v5ul1")
 prev = NodePath("../3")
 next = NodePath("../5")
+atack = 4
 
 [node name="Select" type="Sprite2D" parent="4"]
 visible = false
 texture_filter = 1
-texture = SubResource("PlaceholderTexture2D_352gf")
+texture = ExtResource("4_4c32f")
 
 [node name="Item" type="Sprite2D" parent="4"]
 texture = ExtResource("6_apqs7")
@@ -74,11 +80,12 @@ position = Vector2(0, 80)
 script = ExtResource("1_v5ul1")
 prev = NodePath("../4")
 next = NodePath("../1")
+atack = 3
 
 [node name="Select" type="Sprite2D" parent="5"]
 visible = false
 texture_filter = 1
-texture = SubResource("PlaceholderTexture2D_352gf")
+texture = ExtResource("4_4c32f")
 
 [node name="Item" type="Sprite2D" parent="5"]
 texture = ExtResource("7_2expe")

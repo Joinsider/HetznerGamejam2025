@@ -14,6 +14,7 @@ var is_in_menu: bool = false
 var _collectable_coins: int = 0
 var _coins: int = 50
 var _machines: Array[Machine] = []
+var _frezed
 
 var _demand: int = 100 #Requests Per Second
 
@@ -37,7 +38,13 @@ func get_demand() -> int:
 	return _demand
 	
 func attack(type: Gameconstants.Attack) -> void:
-	pass
+	print(str(PlayerIndex)+" got atacked with "+str(type))
+	if type == Gameconstants.Attack.FREEZE:
+		_frezed = true
+		$Sprite2D.texture = _sprite[PlayerIndex+2]
+		$frezeTimer.start()
+	attack_started.emit(type)
+	
 
 func add_machine(machine: Machine) -> void:
 	_machines.append(machine)
@@ -80,7 +87,9 @@ var _controlls = [
 ]
 var _sprite = [
 	preload("res://sprites/Duck0.png"),
-	preload("res://sprites/Duck1.png")
+	preload("res://sprites/Duck1.png"),
+	preload("res://sprites/Duck0-Sleeping.png"),
+	preload("res://sprites/Duck1-Sleeping.png")
 ]
 
 func _ready() -> void:
@@ -102,7 +111,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
-	if is_in_menu:
+	if is_in_menu or _frezed:
 		return
 	move_and_slide()
 	$Sprite2D.flip_h = direction_x < 0
@@ -110,3 +119,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_notification_timer_timeout() -> void:
 	$CenterContainer/Notification.text = ""
+
+func _on_freze_timer_timeout() -> void:
+	_frezed = false
+	$Sprite2D.texture = _sprite[PlayerIndex]
