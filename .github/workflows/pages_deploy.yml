@@ -34,6 +34,9 @@ jobs:
           mv templates/* ~/.local/share/godot/templates/4.4.1.stable
           rm -f Godot_v4.4.1-stable_linux.x86_64.zip Godot_v4.4.1-stable_export_templates.tpz
 
+      - name: Import Godot resources
+        run: godot --headless --editor --quit --path .
+    
       - name: Export project to Web
         run: |
           mkdir -p docs
