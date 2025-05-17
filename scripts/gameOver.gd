@@ -5,6 +5,7 @@ var player_0_won: bool = false
 func _ready():
 	# Connect the button's pressed signal to our function
 	$Button.connect("pressed", _on_restart_button_pressed)
+	$Button.grab_focus()
 	
 	# Debug to see if the parameters are being received
 	print("GameOver scene ready")
@@ -25,7 +26,7 @@ func _ready():
 
 func _on_restart_button_pressed():
 	# Change to the main scene
-	get_tree().change_scene_to_file("res://scene/main.tscn")
+	get_tree().change_scene_to_file("res://scene/StartScreen.tscn")
 
 func update_win_message():
 	var player1_label = get_parent().get_node("Player1")
