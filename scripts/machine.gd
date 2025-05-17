@@ -9,6 +9,7 @@ const controlls = [
  	"player0_interact",
 	"player1_interact"
 ]
+
 const sprite = [
 	preload("res://sprites/Server-0.png"),
 	preload("res://sprites/Server-1.png"),
@@ -47,3 +48,15 @@ func level_up() -> void:
 func _on_timer_timeout() -> void:
 	var amount = Gameconstants.machine_levels[level].outcome
 	Gamestate.players[Player].add_collectable_coins(amount)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if !(body == Gamestate.players[Player]):
+		return
+	$CenterContainer/UpgradeInfo.text = "Press " + Gamestate.get_key_string(controlls[Player]) + " to upgrade"
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if !(body == Gamestate.players[Player]):
+		return
+	$CenterContainer/UpgradeInfo.text = ""

@@ -70,50 +70,34 @@ position = Vector2(112, 240)
 
 [node name="0Server" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 48)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server2" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 48)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server3" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 112)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server4" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 112)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server5" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 176)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server6" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 176)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server7" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(400, 240)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="0Server8" parent="Servers/Player1" instance=ExtResource("3_wp4xf")]
 position = Vector2(464, 240)
-rotation = 3.14159
-scale = Vector2(1, -1)
 Player = 1
 
 [node name="Down Collision" type="StaticBody2D" parent="."]
