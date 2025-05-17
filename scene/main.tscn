@@ -146,7 +146,7 @@ position = Vector2(496, 104)
 Player = 1
 
 [node name="Statistics" parent="." instance=ExtResource("5_0ha60")]
-position = Vector2(10, 267)
+position = Vector2(64, 270)
 
 [node name="HopperMoney" parent="." instance=ExtResource("6_4j5ol")]
 position = Vector2(233, 126)
@@ -156,7 +156,7 @@ position = Vector2(279, 126)
 Player = 1
 
 [node name="Statistics2" parent="." instance=ExtResource("5_0ha60")]
-position = Vector2(267, 267)
+position = Vector2(320, 270)
 Player = 1
 
 [node name="DemandDisplay" parent="." instance=ExtResource("7_p1hux")]
