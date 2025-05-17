@@ -11,23 +11,23 @@ const controlls = [
 ]
 
 const sprite = [
-	preload("res://sprites/Server-0.png"),
-	preload("res://sprites/Server-1.png"),
-	preload("res://sprites/Server-2.png"),
-	preload("res://sprites/Server-3.png"),
-	preload("res://sprites/Server-4.png"),
-	preload("res://sprites/Server-5.png"),
+	preload("res://sprites/Server-0.tres"),
+	preload("res://sprites/Server-1.tres"),
+	preload("res://sprites/Server-2.tres"),
+	preload("res://sprites/Server-3.tres"),
+	preload("res://sprites/Server-4.tres"),
+	preload("res://sprites/Server-5.tres"),
 ]
 
 @export var level = 0
 
 func _ready() -> void:
-	$Sprite2D.texture = sprite[level]
+	$Sprite2D.sprite_frames = sprite[level]
 	Gamestate.players[Player].add_machine(self)
 	on_upgrade.connect(update_sprite)
 	
 func update_sprite(new_level: int):
-	$Sprite2D.texture = sprite[level]
+	$Sprite2D.sprite_frames = sprite[level]
 	
 
 func _input(event: InputEvent) -> void:
