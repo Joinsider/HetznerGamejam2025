@@ -28,4 +28,3 @@ func switch_to_gameover(player_1_won: bool = false, player_2_won: bool = false):
 	
 	# Switch to the game over scene
 	get_tree().change_scene_to_file("res://scene/GameOver.tscn")
-

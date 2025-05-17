@@ -2,7 +2,7 @@ extends Node2D
 
 @export var Player: int = 0
 
-const _sprite = [cd ..
+const _sprite = [
 	preload("res://sprites/1-coin.png"),
 	preload("res://sprites/2-coins.png"),
 	preload("res://sprites/3-coins.png"),
