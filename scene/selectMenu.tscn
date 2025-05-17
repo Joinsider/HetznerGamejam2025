@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg0yn7o4j1jg4"]
+[gd_scene load_steps=9 format=3 uid="uid://dg0yn7o4j1jg4"]
 
 [ext_resource type="Script" uid="uid://cy3mpa401bm4y" path="res://scripts/menuController.gd" id="1_pf7vd"]
 [ext_resource type="Script" uid="uid://cfc0fd3fc8b17" path="res://scripts/meueItem.gd" id="1_v5ul1"]
-[ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_2ii7x"]
+[ext_resource type="Texture2D" uid="uid://dnw7gjh8q2xvt" path="res://sprites/Thunderstorm.png" id="3_hg6f8"]
+[ext_resource type="Texture2D" uid="uid://cnh8dc5pumras" path="res://sprites/DDOS.png" id="4_6wjab"]
+[ext_resource type="Texture2D" uid="uid://dr43wmeeuutb6" path="res://sprites/overvoltage.png" id="5_4c32f"]
+[ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="6_apqs7"]
+[ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="7_2expe"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_352gf"]
 size = Vector2(20, 20)
@@ -21,7 +25,7 @@ texture_filter = 1
 texture = SubResource("PlaceholderTexture2D_352gf")
 
 [node name="Item" type="Sprite2D" parent="1"]
-texture = ExtResource("2_2ii7x")
+texture = ExtResource("3_hg6f8")
 
 [node name="2" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
 position = Vector2(0, 20)
@@ -35,7 +39,7 @@ texture_filter = 1
 texture = SubResource("PlaceholderTexture2D_352gf")
 
 [node name="Item" type="Sprite2D" parent="2"]
-texture = ExtResource("2_2ii7x")
+texture = ExtResource("4_6wjab")
 
 [node name="3" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
 position = Vector2(0, 40)
@@ -49,7 +53,7 @@ texture_filter = 1
 texture = SubResource("PlaceholderTexture2D_352gf")
 
 [node name="Item" type="Sprite2D" parent="3"]
-texture = ExtResource("2_2ii7x")
+texture = ExtResource("5_4c32f")
 
 [node name="4" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
 position = Vector2(0, 60)
@@ -63,7 +67,7 @@ texture_filter = 1
 texture = SubResource("PlaceholderTexture2D_352gf")
 
 [node name="Item" type="Sprite2D" parent="4"]
-texture = ExtResource("2_2ii7x")
+texture = ExtResource("6_apqs7")
 
 [node name="5" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
 position = Vector2(0, 80)
@@ -77,4 +81,4 @@ texture_filter = 1
 texture = SubResource("PlaceholderTexture2D_352gf")
 
 [node name="Item" type="Sprite2D" parent="5"]
-texture = ExtResource("2_2ii7x")
+texture = ExtResource("7_2expe")
