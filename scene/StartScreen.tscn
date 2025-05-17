@@ -46,3 +46,18 @@ offset_right = 49.0
 offset_bottom = 164.0
 grow_horizontal = 2
 text = "How to play?"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 76.0
+offset_top = 178.0
+offset_right = 436.0
+offset_bottom = 259.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 496.0
+offset_bottom = 97.0
+scale = Vector2(0.7, 0.7)
+text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod "

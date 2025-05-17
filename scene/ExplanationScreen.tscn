@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bj7wssm0t6kd7"]
+[gd_scene load_steps=5 format=3 uid="uid://bj7wssm0t6kd7"]
 
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_8bqwc"]
+[ext_resource type="Script" uid="uid://y6mhbpbwpr0l" path="res://scripts/explanation_screen.gd" id="1_vxb50"]
+[ext_resource type="Texture2D" uid="uid://dvugg7tw3dy2o" path="res://sprites/button-small.png" id="2_t23jg"]
+[ext_resource type="Texture2D" uid="uid://btutig4boyvey" path="res://sprites/button-large.png" id="3_vxb50"]
 
 [node name="RulesScreen" type="Node2D"]
+script = ExtResource("1_vxb50")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(256, 144)
@@ -15,9 +19,267 @@ offset_top = 44.0
 offset_right = 228.0
 offset_bottom = 244.0
 
+[node name="Control" type="Control" parent="Player1Panel"]
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -9.0
+offset_right = 179.0
+offset_bottom = 56.0
+
+[node name="W" type="Sprite2D" parent="Player1Panel/Control"]
+position = Vector2(56, 30)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/Control/W"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "W"
+
+[node name="A" type="Sprite2D" parent="Player1Panel/Control"]
+position = Vector2(40, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/Control/A"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "A"
+
+[node name="S" type="Sprite2D" parent="Player1Panel/Control"]
+position = Vector2(56, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/Control/S"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "S"
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Sprite2D" parent="Player1Panel/Control"]
+position = Vector2(71, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/Control/D"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "D"
+
+[node name="Q" type="Sprite2D" parent="Player1Panel"]
+position = Vector2(34, 74)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/Q"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "Q"
+
+[node name="AttackMenu" type="Label" parent="Player1Panel"]
+offset_left = 74.0
+offset_top = 69.0
+offset_right = 216.0
+offset_bottom = 85.0
+scale = Vector2(0.8, 0.8)
+text = "Open Attack Menu"
+
+[node name="Description" type="Label" parent="Player1Panel/AttackMenu"]
+layout_mode = 0
+offset_top = 16.25
+offset_right = 375.0
+offset_bottom = 51.25
+scale = Vector2(0.5, 0.5)
+text = "(Attacks weaken your opponent)"
+
+[node name="E" type="Sprite2D" parent="Player1Panel"]
+position = Vector2(34, 118)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player1Panel/E"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "E"
+
+[node name="Upgrade" type="Label" parent="Player1Panel"]
+offset_left = 74.0
+offset_top = 112.0
+offset_right = 200.0
+offset_bottom = 128.0
+scale = Vector2(0.8, 0.8)
+text = "Upgrade Server"
+
+[node name="MovePlayer" type="Label" parent="Player1Panel"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 23.0
+offset_right = 197.0
+offset_bottom = 39.0
+scale = Vector2(0.8, 0.8)
+text = "Move the player"
+
 [node name="Player2Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 200)
 offset_left = 284.0
 offset_top = 44.0
 offset_right = 484.0
 offset_bottom = 244.0
+
+[node name="Shift" type="Sprite2D" parent="Player2Panel"]
+position = Vector2(36, 118)
+texture = ExtResource("3_vxb50")
+
+[node name="Label" type="Label" parent="Player2Panel/Shift"]
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "Shift"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="STRG" type="Sprite2D" parent="Player2Panel"]
+position = Vector2(36, 74)
+texture = ExtResource("3_vxb50")
+
+[node name="Label" type="Label" parent="Player2Panel/STRG"]
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "STRG"
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="Player2Panel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -9.0
+offset_right = 179.0
+offset_bottom = 56.0
+
+[node name="Up" type="Sprite2D" parent="Player2Panel/Control"]
+position = Vector2(56, 30)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/Control/Up"]
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 38.0
+offset_bottom = 14.0
+scale = Vector2(0.6, 0.6)
+text = "^"
+
+[node name="Left" type="Sprite2D" parent="Player2Panel/Control"]
+position = Vector2(40, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/Control/Left"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "<"
+
+[node name="Down" type="Sprite2D" parent="Player2Panel/Control"]
+position = Vector2(56, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/Control/Down"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 18.0
+rotation = -3.14159
+scale = Vector2(0.6, 0.6)
+text = "^"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="Sprite2D" parent="Player2Panel/Control"]
+position = Vector2(71, 46)
+texture = ExtResource("2_t23jg")
+
+[node name="Label" type="Label" parent="Player2Panel/Control/Right"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = ">"
+
+[node name="MovePlayer" type="Label" parent="Player2Panel"]
+offset_left = 74.0
+offset_top = 23.0
+offset_right = 197.0
+offset_bottom = 39.0
+scale = Vector2(0.8, 0.8)
+text = "Move the player"
+
+[node name="Upgrade" type="Label" parent="Player2Panel"]
+offset_left = 74.0
+offset_top = 112.0
+offset_right = 200.0
+offset_bottom = 128.0
+scale = Vector2(0.8, 0.8)
+text = "Upgrade Server"
+
+[node name="AttackMenu" type="Label" parent="Player2Panel"]
+offset_left = 74.0
+offset_top = 69.0
+offset_right = 216.0
+offset_bottom = 85.0
+scale = Vector2(0.8, 0.8)
+text = "Open Attack Menu"
+
+[node name="Description" type="Label" parent="Player2Panel/AttackMenu"]
+layout_mode = 0
+offset_top = 16.25
+offset_right = 375.0
+offset_bottom = 51.25
+scale = Vector2(0.5, 0.5)
+text = "(Attacks weaken your opponent)"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 28.0
+offset_top = 11.0
+offset_right = 130.0
+offset_bottom = 38.0
+
+[node name="Shift" type="Sprite2D" parent="Panel"]
+position = Vector2(19, 13)
+texture = ExtResource("3_vxb50")
+
+[node name="Label" type="Label" parent="Panel/Shift"]
+offset_left = -13.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 12.0
+scale = Vector2(0.6, 0.6)
+text = "ESC"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MovePlayer" type="Label" parent="Panel"]
+offset_left = 43.0
+offset_top = 7.0
+offset_right = 166.0
+offset_bottom = 23.0
+scale = Vector2(0.8, 0.8)
+text = "Go back"
