@@ -151,22 +151,13 @@ var _last_position_step: Vector2 = Vector2(0, 0)
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction_x := Input.get_axis(_controlls[PlayerIndex][0], _controlls[PlayerIndex][1])
-	if direction_x:
-		velocity.x = direction_x * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	var direction_y := Input.get_axis(_controlls[PlayerIndex][2], _controlls[PlayerIndex][3])
-	if direction_y:
-		velocity.y = direction_y * SPEED
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+	var input_direction = Input.get_vector(_controlls[PlayerIndex][0], _controlls[PlayerIndex][1], _controlls[PlayerIndex][2], _controlls[PlayerIndex][3])
+	velocity = input_direction * 50
 	
 	if is_in_menu or _frezed:
 		return
 	move_and_slide()
-	$Sprite2D.flip_h = direction_x < 0
+	$Sprite2D.flip_h = input_direction[0] < 0
 	if (position - _last_position_step).length() > 20:
 		$FootSteps.play()
 		_last_position_step = position
