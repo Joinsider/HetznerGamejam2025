@@ -39,4 +39,6 @@ emission_shape = 3
 emission_rect_extents = Vector2(128, 0)
 gravity = Vector2(0, 400)
 
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+
 [connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]
