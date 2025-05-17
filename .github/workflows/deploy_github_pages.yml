@@ -1,0 +1,52 @@
+name: 'Publish to GitHub Pages'
+
+env:
+  GODOT_VERSION: 4.4.1 # Remember to manually set image to this version below.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    container:
+      image: barichello/godot-ci:4.4.1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download and install export templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          echo "Downloading Godot ${GODOT_VERSION} export templates..."
+          curl -Lo /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
+          echo "Extracting templates..."
+          unzip -q /tmp/templates.tpz -d /tmp
+          cp -r /tmp/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          ls -la ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          echo "Template installation complete!"
+          
+      - name: Create staging directory
+        run: mkdir -v -p docs/web
+
+      - name: Build
+        run: godot -v --export-release "Web" docs/index.html project.godot
+
+      - name: Copy additional files to build directory
+        run: |
+          cp coi-serviceworker.js docs/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          force_orphan: true
+          user_name: 'github-ci[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Publish to gh-pages'
