@@ -1,0 +1,33 @@
+name: Export Godot Web Build
+
+on:
+  workflow_dispatch: 
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Godot
+        uses: firebelley/setup-godot@v2
+        with:
+          godot-version: 4.4.1
+          export-templates: true
+
+      - name: Export project to Web
+        run: |
+          mkdir -p docs
+          godot --headless --export-release "Web" docs/index.html
+
+      - name: Copy coi-serviceworker.js
+        run: cp coi-serviceworker.js docs/
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs
+          git commit -m "Automated web export"
+          git push
