@@ -9,13 +9,14 @@ size = Vector2(256, 288)
 script = ExtResource("1_ym5fm")
 
 [node name="Effect0" type="Sprite2D" parent="."]
+visible = false
 z_index = 10
 z_as_relative = false
 position = Vector2(128, 144)
 texture = SubResource("PlaceholderTexture2D_s3otx")
 
 [node name="DeleteTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 
