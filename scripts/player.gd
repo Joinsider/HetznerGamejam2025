@@ -4,6 +4,8 @@ extends CharacterBody2D
 signal coins_updated(coins: int)
 signal collectable_coins_updated(coins: int)
 signal machine_upgraded
+signal demand_updated(new_demand: int)
+signal attack_started(attack: Gameconstants.Attack)
 
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
@@ -13,11 +15,29 @@ var _collectable_coins: int = 0
 var _coins: int = 50
 var _machines: Array[Machine] = []
 
+var _demand: int = 100 #Requests Per Second
+
+var activeAttacks: Array[Gameconstants.Attack] = []
+
 func get_income() -> int:
 	var income: int = 0
 	for machine in _machines:
 		income += Gameconstants.machine_levels[machine.level].outcome
 	return income
+func get_performance() -> int:
+	var performance: int = 0
+	for machine in _machines:
+		performance += Gameconstants.machine_levels[machine.level].performance
+	if Gameconstants.Attack.THUNDERSTORM in activeAttacks:
+		return floor(performance / 2)
+	return performance
+func get_demand() -> int:
+	if Gameconstants.Attack.DDOS in activeAttacks:
+		return _demand * 2
+	return _demand
+	
+func attack(type: Gameconstants.Attack) -> void:
+	pass
 
 func add_machine(machine: Machine) -> void:
 	_machines.append(machine)

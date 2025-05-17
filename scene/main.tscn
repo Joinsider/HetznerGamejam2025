@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlnqtwcysd5c7"]
+[gd_scene load_steps=13 format=3 uid="uid://dlnqtwcysd5c7"]
 
 [ext_resource type="PackedScene" uid="uid://cr6pmkx3fod6e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="2_wp4xf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dg0yn7o4j1jg4" path="res://scene/selectMenu.tscn" id="4_brvut"]
 [ext_resource type="PackedScene" uid="uid://dqf88ncyxgbw3" path="res://scene/statistics.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://x1abqqy62so4" path="res://scene/hopperMoney.tscn" id="6_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://6e7d6bib2eij" path="res://scene/demandDisplay.tscn" id="7_p1hux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
@@ -154,4 +155,13 @@ Player = 1
 
 [node name="Statistics2" parent="." instance=ExtResource("5_0ha60")]
 position = Vector2(270, 16)
+Player = 1
+
+[node name="DemandDisplay" parent="." instance=ExtResource("7_p1hux")]
+z_index = 2
+position = Vector2(128, 278)
+
+[node name="DemandDisplay2" parent="." instance=ExtResource("7_p1hux")]
+z_index = 2
+position = Vector2(384, 278)
 Player = 1

@@ -32,9 +32,9 @@ func _input(event: InputEvent) -> void:
 	var overlapping_bodies = $Area2D.get_overlapping_bodies()
 	if !(Gamestate.players[Player] in overlapping_bodies):
 		return
-	level_up()
+	_upgrade()
 	
-func level_up() -> void:
+func _upgrade() -> void:
 	if level >= Gameconstants.machine_levels.size() - 1:
 		return
 	var nextLevel = Gameconstants.machine_levels[level+1]
