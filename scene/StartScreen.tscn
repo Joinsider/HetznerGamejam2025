@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://coykhmrd056p"]
+
+[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_dtrtw"]
+[ext_resource type="Script" uid="uid://ba5nq4u61ydhx" path="res://scripts/startScreen.gd" id="1_ypw2f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdqra"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_ypw2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qdqra")
+position = Vector2(256, 144)
+texture = ExtResource("1_dtrtw")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(512, 288)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 512.0
+offset_bottom = 288.0
+
+[node name="StartGame" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -34.0
+offset_right = 52.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="GameExplanation" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 140.0
+offset_right = 49.0
+offset_bottom = 164.0
+grow_horizontal = 2
+text = "How to play?"
