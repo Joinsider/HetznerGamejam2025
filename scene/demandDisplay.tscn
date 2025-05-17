@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://6e7d6bib2eij"]
 
-[ext_resource type="Script" uid="uid://dymjo4dwdd06g" path="res://scripts/demand_display.gd" id="1_mv0gk"]
+[ext_resource type="Script" uid="uid://dymjo4dwdd06g" path="res://scripts/utilization_display.gd" id="1_mv0gk"]
 [ext_resource type="Texture2D" uid="uid://bh5bvml5e6enr" path="res://sprites/demand-bar.png" id="1_ngd5f"]
 [ext_resource type="Texture2D" uid="uid://dkhahf3nftc72" path="res://sprites/demand-bar-indicator.png" id="2_3jd31"]
 

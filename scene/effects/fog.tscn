@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dk7ruhxn5qibi"]
 
-[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_tm3ge"]
+[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_tm3ge"]
 [ext_resource type="Texture2D" uid="uid://d3oqop8mkiqy2" path="res://sprites/Fog-Attack.png" id="2_y33ka"]
 
 [node name="Fog" type="Node2D"]

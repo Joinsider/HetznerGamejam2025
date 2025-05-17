@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://daxu3g6do40wc"]
 
-[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_65lvn"]
+[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_65lvn"]
 [ext_resource type="Texture2D" uid="uid://brsvfp6sp800x" path="res://sprites/Fire1.png" id="2_tngjr"]
 
 [node name="Overvoltage" type="Node2D"]
