@@ -455,27 +455,27 @@ offset_bottom = 40.0
 
 [node name="Q" type="Sprite2D" parent="Player2Panel/Page1/Keyboard"]
 position = Vector2(34, 74)
-texture = ExtResource("2_t23jg")
+texture = ExtResource("3_vxb50")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/Q"]
-offset_left = -3.0
+offset_left = -11.0
 offset_top = -4.0
-offset_right = 37.0
+offset_right = 29.0
 offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
-text = "Q"
+text = "Shift"
 
 [node name="E" type="Sprite2D" parent="Player2Panel/Page1/Keyboard"]
 position = Vector2(34, 118)
-texture = ExtResource("2_t23jg")
+texture = ExtResource("3_vxb50")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/E"]
-offset_left = -3.0
+offset_left = -14.0
 offset_top = -4.0
-offset_right = 37.0
+offset_right = 32.0
 offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
-text = "E"
+text = "STRG"
 
 [node name="Control" type="Control" parent="Player2Panel/Page1/Keyboard"]
 anchors_preset = 0
@@ -489,36 +489,37 @@ position = Vector2(56, 30)
 texture = ExtResource("2_t23jg")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/Control/W"]
-offset_left = -3.0
-offset_top = -4.0
-offset_right = 37.0
-offset_bottom = 12.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 33.5
+offset_bottom = 14.0
 scale = Vector2(0.6, 0.6)
-text = "W"
+text = "^"
 
 [node name="A" type="Sprite2D" parent="Player2Panel/Page1/Keyboard/Control"]
 position = Vector2(40, 46)
 texture = ExtResource("2_t23jg")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/Control/A"]
-offset_left = -3.0
+offset_left = -2.0
 offset_top = -4.0
-offset_right = 37.0
+offset_right = 33.5
 offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
-text = "A"
+text = "<"
 
 [node name="S" type="Sprite2D" parent="Player2Panel/Page1/Keyboard/Control"]
 position = Vector2(56, 46)
 texture = ExtResource("2_t23jg")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/Control/S"]
-offset_left = -3.0
-offset_top = -4.0
-offset_right = 37.0
-offset_bottom = 12.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 38.5
+offset_bottom = 18.0
+rotation = 3.14159
 scale = Vector2(0.6, 0.6)
-text = "S"
+text = "^"
 metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Sprite2D" parent="Player2Panel/Page1/Keyboard/Control"]
@@ -526,12 +527,12 @@ position = Vector2(71, 46)
 texture = ExtResource("2_t23jg")
 
 [node name="Label" type="Label" parent="Player2Panel/Page1/Keyboard/Control/D"]
-offset_left = -3.0
+offset_left = -1.0
 offset_top = -4.0
-offset_right = 37.0
+offset_right = 39.0
 offset_bottom = 12.0
 scale = Vector2(0.6, 0.6)
-text = "D"
+text = ">"
 
 [node name="AttackMenu" type="Label" parent="Player2Panel/Page1"]
 layout_mode = 0
