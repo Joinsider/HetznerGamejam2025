@@ -15,7 +15,7 @@ signal attack_ended(attack: Gameconstants.Attack)
 
 var is_in_menu: bool = false
 var _collectable_coins: int = 0
-var _coins: int = 500
+var _coins: int = Gameconstants.config.startMoney
 var _machines: Array[Machine] = []
 var _frezed
 

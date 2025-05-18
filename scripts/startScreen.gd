@@ -24,7 +24,7 @@ func _ready():
 	
 func _on_restart_button_pressed():
 	# Change to the main scene
-	get_tree().change_scene_to_file("res://scene/main.tscn")
+	get_tree().change_scene_to_file("res://scene/difficultySelector.tscn")
 
 func _on_rules_button_pressed():
 	# Change to the rules scene

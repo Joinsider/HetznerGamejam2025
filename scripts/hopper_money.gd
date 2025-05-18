@@ -27,5 +27,7 @@ func _on_collectable_coins_updated(coins: int):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if !(body == Gamestate.players[Player]):
 		return
+	if Gamestate.players[Player]._collectable_coins == 0:
+		return
 	Gamestate.players[Player].collect_coins()
 	$Audio.play()
