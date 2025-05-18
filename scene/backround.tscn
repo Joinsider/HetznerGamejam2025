@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=3 uid="uid://du2hu5f6vkwsr"]
+
+[ext_resource type="SpriteFrames" uid="uid://c7axsr5s1pkwh" path="res://sprites/Server-5.tres" id="1_i0aca"]
+[ext_resource type="Script" uid="uid://csb3kja4m6og6" path="res://scripts/machineBlink.gd" id="2_bu1k6"]
+[ext_resource type="SpriteFrames" uid="uid://r8v14rkbjxpr" path="res://sprites/Server-3.tres" id="3_gpli1"]
+[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="3_grboa"]
+[ext_resource type="SpriteFrames" uid="uid://dmakxiowcr0bt" path="res://sprites/Server-2.tres" id="4_brnsk"]
+[ext_resource type="SpriteFrames" uid="uid://bnxg4whigi0wn" path="res://sprites/Server-0.tres" id="4_gpli1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gpli1"]
+
+[node name="Backround" type="Node2D"]
+
+[node name="Servers" type="Node2D" parent="."]
+
+[node name="Player1" type="Node2D" parent="Servers"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(48, 48)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(112, 48)
+sprite_frames = ExtResource("3_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(112, 112)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(48, 112)
+sprite_frames = ExtResource("4_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D5" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(48, 176)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D6" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(112, 176)
+sprite_frames = ExtResource("4_brnsk")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D7" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(112, 240)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D8" type="AnimatedSprite2D" parent="Servers/Player1"]
+position = Vector2(48, 240)
+sprite_frames = ExtResource("3_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Player2" type="Node2D" parent="Servers"]
+position = Vector2(352, 0)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(48, 48)
+sprite_frames = ExtResource("3_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(112, 48)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(112, 112)
+sprite_frames = ExtResource("4_brnsk")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(48, 112)
+sprite_frames = ExtResource("3_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D5" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(48, 176)
+sprite_frames = ExtResource("4_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D6" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(112, 176)
+sprite_frames = ExtResource("3_gpli1")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D7" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(112, 240)
+sprite_frames = ExtResource("4_brnsk")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D8" type="AnimatedSprite2D" parent="Servers/Player2"]
+position = Vector2(48, 240)
+sprite_frames = ExtResource("1_i0aca")
+script = ExtResource("2_bu1k6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_gpli1")
+position = Vector2(256, 144)
+texture = ExtResource("3_grboa")

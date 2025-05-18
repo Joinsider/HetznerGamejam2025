@@ -1,7 +1,7 @@
 extends Node
 
-@onready var _start_game_button = $Control/StartGame
-@onready var _rules_button = $Control/GameExplanation
+@onready var _start_game_button = $Control/Grid/StartGame
+@onready var _rules_button = $Control/Grid/GameExplanation
 
 func _ready():
 	# Connect the button's pressed signal to our function

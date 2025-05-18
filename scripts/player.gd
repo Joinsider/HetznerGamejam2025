@@ -147,7 +147,7 @@ func _ready() -> void:
 	Gamestate.players[PlayerIndex] = self
 	utilization_updated.connect(check_death_timer)
 	
-var _last_position_step: Vector2 = Vector2(0, 0)
+@onready var _last_position_step: Vector2 = position
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

@@ -5,7 +5,7 @@ var player1_current_page = 0
 var player2_current_page = 0
 # Number of pages per player
 const PAGES_PER_PLAYER = 2
-		    
+			
 
 func _ready():
 	# Initialize page visibility - show only first page for each player

@@ -66,7 +66,7 @@ var configs = {
 		},
 		0.5,
 		2,
-		func(difficulty: int) -> int: return int(pow(difficulty,20)),
+		func(difficulty: int) -> int: return int(pow(difficulty,2)),
 		50),
 	
 }

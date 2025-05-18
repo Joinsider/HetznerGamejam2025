@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dqf88ncyxgbw3" path="res://scene/statistics.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://x1abqqy62so4" path="res://scene/hopperMoney.tscn" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://6e7d6bib2eij" path="res://scene/demandDisplay.tscn" id="7_p1hux"]
-[ext_resource type="PackedScene" uid="uid://ct2kg2n1y02pt" path="res://scene/deathWarning.tscn" id="9_b5f6u"]
+[ext_resource type="PackedScene" path="res://scene/deathWarning.tscn" id="9_b5f6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
