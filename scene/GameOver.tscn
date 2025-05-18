@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7s2d5a3qd8a5"]
 
-[ext_resource type="Script" uid="uid://bnyn2xqbw4pok" path="res://scripts/gameOver.gd" id="2_tbok3"]
+[ext_resource type="Script" uid="uid://n14fnos4vyie" path="res://scripts/gameOver.gd" id="2_tbok3"]
 [ext_resource type="PackedScene" uid="uid://du2hu5f6vkwsr" path="res://scene/backround.tscn" id="3_u7gfx"]
 [ext_resource type="Texture2D" uid="uid://c7bic0mtr6vuc" path="res://sprites/Duck-end.png" id="3_vq0q6"]
 

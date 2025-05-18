@@ -12,6 +12,25 @@ signal utilization_updated(utilization: float)
 signal attack_started(attack: Gameconstants.Attack)
 signal attack_ended(attack: Gameconstants.Attack)
 
+enum AnimationType {
+	DEFAULT,
+	KNIVE,
+	SLEEP
+}
+
+const _animations = {
+	0: {
+		AnimationType.DEFAULT: "duck0",
+		AnimationType.KNIVE: "duck0-knive",
+		AnimationType.SLEEP: "duck0-sleep"
+	},
+	1: {
+		AnimationType.DEFAULT: "duck1",
+		AnimationType.KNIVE: "duck1-knive",
+		AnimationType.SLEEP: "duck1-sleep"
+	},
+}
+
 @export var SPEED = 50.0
 @export var PlayerIndex = 0
 @export var Test :PackedScene
@@ -37,6 +56,12 @@ var attackScene = {
 }
 
 var killer = false
+
+func set_default_animation() -> void:
+	if killer:
+		$AnimatedSprite2D.animation = _animations[PlayerIndex][AnimationType.KNIVE]
+	else:
+		$AnimatedSprite2D.animation = _animations[PlayerIndex][AnimationType.DEFAULT]
 
 func _otherPlayer(player:int) -> int:
 	return posmod(player + 1, 2)
@@ -91,7 +116,7 @@ func attack(type: Gameconstants.Attack) -> void:
 	)
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = true
-		set_texture(PlayerIndex+2)
+		$AnimatedSprite2D.animation = _animations[PlayerIndex][AnimationType.SLEEP]
 	if type == Gameconstants.Attack.OVERVOLTAGE:
 		var suitable_machines = get_machines(1)
 		suitable_machines.shuffle()
@@ -102,8 +127,8 @@ func attack(type: Gameconstants.Attack) -> void:
 			suitable_machines[i].downgrade()
 	if type == Gameconstants.Attack.CATSFISTS:
 		Gamestate.players[_otherPlayer(PlayerIndex)].show_message("Kill Them!!")
-		Gamestate.players[_otherPlayer(PlayerIndex)].set_texture(_otherPlayer(PlayerIndex)+4)
 		Gamestate.players[_otherPlayer(PlayerIndex)].killer = true
+		Gamestate.players[_otherPlayer(PlayerIndex)].set_default_animation()
 		for child in get_parent().get_children():
 			if child.name == "Middle":
 				child.free()
@@ -154,20 +179,9 @@ var _controlls = [
  	["player0_left", "player0_right", "player0_up", "player0_down"],
 	["player1_left", "player1_right", "player1_up", "player1_down"]
 ]
-var _sprite = [
-	preload("res://sprites/Duck0.png"),
-	preload("res://sprites/Duck1.png"),
-	preload("res://sprites/Duck0-Sleeping.png"),
-	preload("res://sprites/Duck1-Sleeping.png"),
-	preload("res://sprites/Duck0-Knife.png"),
-	preload("res://sprites/Duck1-Knife.png")
-]
-
-func set_texture(index:int) -> void:
-	$Sprite2D.texture = _sprite[index]
 
 func _ready() -> void:
-	$Sprite2D.texture = _sprite[PlayerIndex]
+	set_default_animation()
 	Gamestate.players[PlayerIndex] = self
 	utilization_updated.connect(check_death_timer)
 	
@@ -179,9 +193,14 @@ func _physics_process(delta: float) -> void:
 	velocity = input_direction * 50
 	
 	if is_in_menu or _frezed:
+		$AnimatedSprite2D.pause()
 		return
 	move_and_slide()
-	$Sprite2D.flip_h = input_direction[0] < 0
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play()
+	else:
+		$AnimatedSprite2D.pause()
+	$AnimatedSprite2D.flip_h = input_direction[0] < 0
 	if (position - _last_position_step).length() > 20:
 		$FootSteps.play()
 		_last_position_step = position
@@ -195,7 +214,7 @@ func _on_attack_finish(type: Gameconstants.Attack) -> void:
 	attack_ended.emit(type)
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = false
-		$Sprite2D.texture = _sprite[PlayerIndex]
+		set_default_animation()
 	utilization_updated.emit(get_utilization())
 
 

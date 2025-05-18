@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://cr6pmkx3fod6e"]
+[gd_scene load_steps=26 format=3 uid="uid://cr6pmkx3fod6e"]
 
-[ext_resource type="Script" uid="uid://p8acx441hhuv" path="res://scripts/player.gd" id="1_hjaqi"]
+[ext_resource type="Script" uid="uid://dvsg810ouqcnm" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_hjaqi"]
 [ext_resource type="AudioStream" uid="uid://cmcifma2covn5" path="res://sounds/step1.mp3" id="3_oh5ij"]
 [ext_resource type="AudioStream" uid="uid://yq1gn3x1mp1h" path="res://sounds/step2.mp3" id="4_hp4bs"]
@@ -9,7 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://dxxesg7deso8u" path="res://sprites/Vogel1.png" id="7_ml7e8"]
 [ext_resource type="Texture2D" uid="uid://cj14hwft0bgfr" path="res://sprites/Vogel2.png" id="8_ihjo1"]
 [ext_resource type="Texture2D" uid="uid://0bgqyfsoxe27" path="res://sprites/Vogel3.png" id="9_dk1vr"]
-[ext_resource type="Script" uid="uid://b4jiw4te7pa3n" path="res://scripts/AnimationPlay.gd" id="10_34jf3"]
+[ext_resource type="Script" uid="uid://desmg5ycy2rub" path="res://scripts/AnimationPlay.gd" id="10_34jf3"]
+[ext_resource type="Texture2D" uid="uid://dfpbqfp0mqb5f" path="res://sprites/duck0-left.png" id="11_v4iqv"]
+[ext_resource type="Texture2D" uid="uid://c8rtmx3p1uupq" path="res://sprites/duck0-right.png" id="12_42h83"]
+[ext_resource type="Texture2D" uid="uid://cf1v3ogb8r8a0" path="res://sprites/duck0-left-knive.png" id="13_iuf2t"]
+[ext_resource type="Texture2D" uid="uid://cwpoml4xqmo2q" path="res://sprites/duck0-right-knive.png" id="14_jrjdb"]
+[ext_resource type="Texture2D" uid="uid://bu7u7mqtrdol0" path="res://sprites/Duck0-Sleeping.png" id="15_iuf2t"]
+[ext_resource type="Texture2D" uid="uid://fqqe6j4sstmb" path="res://sprites/duck1-left.png" id="15_kk4ol"]
+[ext_resource type="Texture2D" uid="uid://bh84hwygf48h6" path="res://sprites/duck1-right.png" id="16_4reak"]
+[ext_resource type="Texture2D" uid="uid://bph0kngnofru5" path="res://sprites/duck1-left-knive.png" id="17_wt23p"]
+[ext_resource type="Texture2D" uid="uid://c5530wmcx8o8u" path="res://sprites/duck1-right-knive.png" id="18_k8m7u"]
+[ext_resource type="Texture2D" uid="uid://vb1wgogikhug" path="res://sprites/Duck1-Sleeping.png" id="20_jrjdb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ct4mp"]
 radius = 9.0
@@ -40,6 +50,69 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qucqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_v4iqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_42h83")
+}],
+"loop": true,
+"name": &"duck0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_iuf2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jrjdb")
+}],
+"loop": true,
+"name": &"duck0-knive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_iuf2t")
+}],
+"loop": true,
+"name": &"duck0-sleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_kk4ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4reak")
+}],
+"loop": true,
+"name": &"duck1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_wt23p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k8m7u")
+}],
+"loop": true,
+"name": &"duck1-knive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_jrjdb")
+}],
+"loop": true,
+"name": &"duck1-sleep",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_hjaqi")
 
@@ -47,6 +120,7 @@ script = ExtResource("1_hjaqi")
 shape = SubResource("CircleShape2D_ct4mp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_hjaqi")
 
@@ -94,6 +168,10 @@ position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_oh5ij")
 frame_progress = 0.394761
 script = ExtResource("10_34jf3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qucqc")
+animation = &"duck1-sleep"
 
 [connection signal="attack_started" from="." to="." method="_on_attack_started"]
 [connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]

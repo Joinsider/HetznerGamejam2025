@@ -47,7 +47,7 @@ var configs = {
 		0.8,
 		1.3,
 		func(difficulty: int) -> int: return int(pow(difficulty,1.91)),
-		50), 
+		5000000), 
 	ConfigName.difficulty2:  GameConfig.new(
 		"Easy",
 		[
