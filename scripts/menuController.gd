@@ -25,10 +25,8 @@ func _input(event: InputEvent) -> void:
 	if Gamestate.players[Player]._frezed:
 		return
 	if event is InputEventJoypadMotion:
-		print(abs(event.axis_value))
 		if event.axis==1:
-			if abs(event.axis_value) < 0.6: 
-				print("unsett")
+			if abs(event.axis_value) < 0.6:
 				block = false
 				return
 				
@@ -36,7 +34,6 @@ func _input(event: InputEvent) -> void:
 				return
 				
 			if abs(event.axis_value) >= 0.98:
-				print("set")
 				block = true
 			else:
 				return
