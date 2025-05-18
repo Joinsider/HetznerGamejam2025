@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://coykhmrd056p"]
 
-[ext_resource type="Script" uid="uid://ba5nq4u61ydhx" path="res://scripts/startScreen.gd" id="1_ypw2f"]
-[ext_resource type="PackedScene" path="res://scene/backround.tscn" id="3_qdqra"]
+[ext_resource type="Script" uid="uid://b6xce0sac2flq" path="res://scripts/startScreen.gd" id="1_ypw2f"]
+[ext_resource type="PackedScene" uid="uid://du2hu5f6vkwsr" path="res://scene/backround.tscn" id="3_qdqra"]
 [ext_resource type="Texture2D" uid="uid://b11hykl3dybch" path="res://sprites/Logo-Pathetic-Hosting.png" id="3_ypw2f"]
 
 [node name="StartScreen" type="Node2D"]
@@ -64,7 +64,7 @@ offset_top = 10.0
 offset_right = 496.0
 offset_bottom = 97.0
 scale = Vector2(0.7, 0.7)
-text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod "
+text = "Ever wanted to build your own hosting company and be mean at the same time? Well, you're totally at the right place at the right time! Introducing: Pathetic Hosting! Start your company, upgrade your servers, and attack the enemy. But be careful! The load on your servers rises quickly! Do you upgrade your servers to withstand the load, or spend money to attack and damage your opponent? It's totally up to you, but your company is ruined blazing fast. The right balance is what matters! "
 
 [node name="Logo-pathetic-hosting" type="Sprite2D" parent="."]
 position = Vector2(256, 78)

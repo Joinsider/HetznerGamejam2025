@@ -1,7 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bj7wssm0t6kd7"]
 
-[ext_resource type="Texture2D" uid="uid://8pyutmsfoh6e" path="res://sprites/Background.png" id="1_8bqwc"]
-[ext_resource type="Script" uid="uid://y6mhbpbwpr0l" path="res://scripts/explanation_screen.gd" id="1_vxb50"]
+[ext_resource type="Script" uid="uid://bup1wra7y0jj3" path="res://scripts/explanation_screen.gd" id="1_vxb50"]
 [ext_resource type="Texture2D" uid="uid://dvugg7tw3dy2o" path="res://sprites/button-small.png" id="2_t23jg"]
 [ext_resource type="Texture2D" uid="uid://btutig4boyvey" path="res://sprites/button-large.png" id="3_vxb50"]
 [ext_resource type="Texture2D" uid="uid://jlho8qoqrx3n" path="res://sprites/attack-container-small.png" id="4_fehqs"]
@@ -15,13 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="9_ffvsi"]
 [ext_resource type="Texture2D" uid="uid://dfgfgicayqoc7" path="res://sprites/controller_xb_b.png" id="11_bha0l"]
 [ext_resource type="Texture2D" uid="uid://bcf41m3mn7dk" path="res://sprites/controller_ps_circle.png" id="12_upw8m"]
+[ext_resource type="PackedScene" uid="uid://du2hu5f6vkwsr" path="res://scene/backround.tscn" id="15_lfsah"]
 
 [node name="RulesScreen" type="Node2D"]
 script = ExtResource("1_vxb50")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(256, 144)
-texture = ExtResource("1_8bqwc")
 
 [node name="Player1Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 200)
@@ -777,3 +773,6 @@ offset_right = 166.0
 offset_bottom = 23.0
 scale = Vector2(0.8, 0.8)
 text = "Go back"
+
+[node name="Backround" parent="." instance=ExtResource("15_lfsah")]
+z_index = -1
