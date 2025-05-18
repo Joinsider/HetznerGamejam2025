@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://t74txwr3vmnf"]
 
-[ext_resource type="Script" uid="uid://hu3plbu4ugd4" path="res://scripts/difficultySelector.gd" id="2_j8j4r"]
-[ext_resource type="PackedScene" path="res://scene/backround.tscn" id="2_jx70r"]
+[ext_resource type="Script" uid="uid://bjecbymqnxd3i" path="res://scripts/difficultySelector.gd" id="2_j8j4r"]
+[ext_resource type="PackedScene" uid="uid://du2hu5f6vkwsr" path="res://scene/backround.tscn" id="2_jx70r"]
 
 [node name="DifficultySelector" type="Node2D"]
 
@@ -45,21 +45,6 @@ layout_mode = 2
 text = "None"
 script = ExtResource("2_j8j4r")
 Name = 2
-
-[node name="Difficulty4" type="Button" parent="Control/GridContainer"]
-layout_mode = 2
-text = "None"
-script = ExtResource("2_j8j4r")
-
-[node name="Difficulty5" type="Button" parent="Control/GridContainer"]
-layout_mode = 2
-text = "None"
-script = ExtResource("2_j8j4r")
-
-[node name="Difficulty6" type="Button" parent="Control/GridContainer"]
-layout_mode = 2
-text = "None"
-script = ExtResource("2_j8j4r")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
