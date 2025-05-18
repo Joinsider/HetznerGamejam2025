@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: Copyright information recorded in version control history
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
 class_name MachineLevel
 extends Node
 
