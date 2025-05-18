@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://65adckbmjn34"]
 
-[ext_resource type="Script" uid="uid://if35iagbpl7y" path="res://scripts/autodelete.gd" id="1_m30gh"]
+[ext_resource type="Script" uid="uid://cq2ffggj6bob3" path="res://scripts/autodelete.gd" id="1_m30gh"]
 [ext_resource type="AudioStream" uid="uid://drqm4uq4jp12y" path="res://sounds/thunderstorm.mp3" id="4_05srs"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s3otx"]
