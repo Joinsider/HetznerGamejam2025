@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://cr6pmkx3fod6e"]
 
-[ext_resource type="Script" uid="uid://dvsg810ouqcnm" path="res://scripts/player.gd" id="1_hjaqi"]
+[ext_resource type="Script" uid="uid://p8acx441hhuv" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_hjaqi"]
 [ext_resource type="AudioStream" uid="uid://cmcifma2covn5" path="res://sounds/step1.mp3" id="3_oh5ij"]
 [ext_resource type="AudioStream" uid="uid://yq1gn3x1mp1h" path="res://sounds/step2.mp3" id="4_hp4bs"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dxxesg7deso8u" path="res://sprites/Vogel1.png" id="7_ml7e8"]
 [ext_resource type="Texture2D" uid="uid://cj14hwft0bgfr" path="res://sprites/Vogel2.png" id="8_ihjo1"]
 [ext_resource type="Texture2D" uid="uid://0bgqyfsoxe27" path="res://sprites/Vogel3.png" id="9_dk1vr"]
-[ext_resource type="Script" uid="uid://desmg5ycy2rub" path="res://scripts/AnimationPlay.gd" id="10_34jf3"]
+[ext_resource type="Script" uid="uid://b4jiw4te7pa3n" path="res://scripts/AnimationPlay.gd" id="10_34jf3"]
 [ext_resource type="Texture2D" uid="uid://dfpbqfp0mqb5f" path="res://sprites/duck0-left.png" id="11_v4iqv"]
 [ext_resource type="Texture2D" uid="uid://c8rtmx3p1uupq" path="res://sprites/duck0-right.png" id="12_42h83"]
 [ext_resource type="Texture2D" uid="uid://cf1v3ogb8r8a0" path="res://sprites/duck0-left-knive.png" id="13_iuf2t"]
