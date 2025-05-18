@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dqf88ncyxgbw3" path="res://scene/statistics.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://x1abqqy62so4" path="res://scene/hopperMoney.tscn" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://6e7d6bib2eij" path="res://scene/demandDisplay.tscn" id="7_p1hux"]
-[ext_resource type="PackedScene" path="res://scene/deathWarning.tscn" id="9_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://cj0bepw30cwxr" path="res://scene/deathWarning.tscn" id="9_b5f6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4xf"]
 size = Vector2(512, 100)
@@ -41,10 +41,13 @@ texture = ExtResource("2_of57s")
 [node name="Player" parent="." instance=ExtResource("2_v0l8b")]
 z_index = 1
 position = Vector2(147, 99)
+SPEED = 50.0
+PlayerIndex = 0
 
 [node name="Player2" parent="." instance=ExtResource("2_v0l8b")]
 z_index = 1
 position = Vector2(294, 198)
+SPEED = 50.0
 PlayerIndex = 1
 
 [node name="Servers" type="Node2D" parent="."]
@@ -125,23 +128,23 @@ position = Vector2(256, -50)
 shape = SubResource("RectangleShape2D_brvut")
 debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
 
-[node name="Right Collision" type="StaticBody2D" parent="."]
+[node name="Middle" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Collision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle"]
 position = Vector2(256, 144)
 shape = SubResource("RectangleShape2D_v0l8b")
+debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
+
+[node name="Rig Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rig Collision"]
+position = Vector2(563, 144)
+shape = SubResource("RectangleShape2D_0ha60")
 debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
 
 [node name="Left Collision" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left Collision"]
-position = Vector2(563, 144)
-shape = SubResource("RectangleShape2D_0ha60")
-debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)
-
-[node name="Middle" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle"]
 position = Vector2(-50, 144)
 shape = SubResource("RectangleShape2D_4j5ol")
 debug_color = Color(0.870619, 0.000497287, 0.848461, 0.42)

@@ -10,11 +10,13 @@ var controlls = [
 	["player1_left", "player1_up", "player1_down","player1_upgrade"]
 ]
 
+
 @onready var selected = $".".get_children()[1]
 
 func _ready() -> void:
 	Gamestate.players[Player].attack_started.connect(_onAtack)
-
+	Gamestate.players[Player].machine_upgraded.connect(_onMachine_upgraded)
+	
 func _otherPlayer(player:int) -> int:
 	return posmod(player + 1, 2)
 	
@@ -70,3 +72,17 @@ func _onAtack(type:Gameconstants.Attack) -> void:
 		visible = false
 		Gamestate.players[Player].is_in_menu = false
 		
+func _onMachine_upgraded() -> void:
+	_secretMenu(Gamestate.players[Player].get_machines(5).size() == Gamestate.players[Player]._machines.size())
+	
+func _secretMenu(svisible:bool):
+	if svisible:
+		$Sprite2D.texture = load("res://sprites/attack-container-6.png")
+		$"5".next = $"6Secret"
+		$"1".prev = $"6Secret"
+		$"6Secret".visible = true
+	else:
+		$Sprite2D.texture = load("res://sprites/attack-container.png")
+		$"6Secret".visible = false
+		$"5".next = $"1"
+		$"1".prev = $"5"

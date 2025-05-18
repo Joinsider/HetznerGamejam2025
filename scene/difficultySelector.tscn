@@ -32,6 +32,7 @@ columns = 2
 layout_mode = 2
 text = "Start Game"
 script = ExtResource("2_j8j4r")
+DefaultFocused = true
 
 [node name="Difficulty2" type="Button" parent="Control/GridContainer"]
 layout_mode = 2

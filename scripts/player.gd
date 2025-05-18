@@ -32,8 +32,14 @@ var attackScene = {
 	Gameconstants.Attack.OVERVOLTAGE:preload("res://scene/effects/overvoltage.tscn"),
 	Gameconstants.Attack.THUNDERSTORM:preload("res://scene/effects/thunderstorm.tscn"),
 	Gameconstants.Attack.FREEZE:preload("res://scene/effects/freeze.tscn"),
-	Gameconstants.Attack.FOG:preload("res://scene/effects/fog.tscn")
+	Gameconstants.Attack.FOG:preload("res://scene/effects/fog.tscn"),
+	Gameconstants.Attack.CATSFISTS:preload("res://scene/effects/catsfists.tscn")
 }
+
+var killer = false
+
+func _otherPlayer(player:int) -> int:
+	return posmod(player + 1, 2)
 
 func check_death_timer(utilization: float) -> void:
 	if utilization >= 1:
@@ -85,7 +91,7 @@ func attack(type: Gameconstants.Attack) -> void:
 	)
 	if type == Gameconstants.Attack.FREEZE:
 		_frezed = true
-		$Sprite2D.texture = _sprite[PlayerIndex+2]
+		set_texture(PlayerIndex+2)
 	if type == Gameconstants.Attack.OVERVOLTAGE:
 		var suitable_machines = get_machines(1)
 		suitable_machines.shuffle()
@@ -94,9 +100,21 @@ func attack(type: Gameconstants.Attack) -> void:
 		print(affected_machines)
 		for i in range(affected_machines):
 			suitable_machines[i].downgrade()
+	if type == Gameconstants.Attack.CATSFISTS:
+		Gamestate.players[_otherPlayer(PlayerIndex)].show_message("Kill Them!!")
+		Gamestate.players[_otherPlayer(PlayerIndex)].set_texture(_otherPlayer(PlayerIndex)+4)
+		Gamestate.players[_otherPlayer(PlayerIndex)].killer = true
+		for child in get_parent().get_children():
+			if child.name == "Middle":
+				child.free()
+			elif child.name == "Sprite2D":
+				child.texture = load("res://sprites/hopper.png") #TODO:Change ME!
+			elif child.name == "HopperMoney":
+				child.free()
+				
+		
 	attack_started.emit(type)
 	utilization_updated.emit(get_utilization())
-	
 
 func add_machine(machine: Machine) -> void:
 	_machines.append(machine)
@@ -142,8 +160,13 @@ var _sprite = [
 	preload("res://sprites/Duck0.png"),
 	preload("res://sprites/Duck1.png"),
 	preload("res://sprites/Duck0-Sleeping.png"),
-	preload("res://sprites/Duck1-Sleeping.png")
+	preload("res://sprites/Duck1-Sleeping.png"),
+	preload("res://sprites/Duck0-Knife.png"),
+	preload("res://sprites/Duck1-Knife.png")
 ]
+
+func set_texture(index:int) -> void:
+	$Sprite2D.texture = _sprite[index]
 
 func _ready() -> void:
 	$Sprite2D.texture = _sprite[PlayerIndex]
@@ -187,3 +210,9 @@ func _on_demand_progress_timeout() -> void:
 
 func _on_death_timer_timeout() -> void:
 	Gamestate.switch_to_gameover(PlayerIndex != 0)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body == Gamestate.players[_otherPlayer(PlayerIndex)] and killer:
+		Gamestate.switch_to_gameover(_otherPlayer(PlayerIndex))
+		

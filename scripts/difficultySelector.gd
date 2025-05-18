@@ -4,10 +4,13 @@
 extends Button
 
 @export var Name: Gameconstants.ConfigName
+@export var DefaultFocused : bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	text = Gameconstants.configs[Name].displayName
 	pressed.connect(_on_pressed)
+	if DefaultFocused:
+		grab_focus()
 
 
 func _on_pressed() -> void:
