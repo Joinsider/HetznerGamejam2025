@@ -16,3 +16,8 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	Gameconstants.config = Gameconstants.configs[Name]
 	get_tree().change_scene_to_file("res://scene/main.tscn")
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		# If the user presses the cancel button, go back to the start screen
+		get_tree().change_scene_to_file("res://scene/StartScreen.tscn")

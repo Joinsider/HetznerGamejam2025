@@ -109,3 +109,20 @@ var configs = {
 }
 
 var config: GameConfig = configs[ConfigName.difficulty1]
+
+# Controller types
+enum ControllerType {KEYBOARD, CONTROLLER}
+var player1_controller_type = ControllerType.KEYBOARD
+var player2_controller_type = ControllerType.KEYBOARD
+
+func check_connected_controllers():
+	# Check if any controllers are connected at startup and set the appropriate type
+	for device_id in range(Input.get_connected_joypads().size()):
+		if device_id == 0:
+			player1_controller_type = ControllerType.CONTROLLER
+		elif device_id == 1:
+			player2_controller_type = ControllerType.CONTROLLER
+			
+func _ready():
+	check_connected_controllers()
+			
