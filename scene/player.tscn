@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr6pmkx3fod6e"]
+[gd_scene load_steps=15 format=3 uid="uid://cr6pmkx3fod6e"]
 
 [ext_resource type="Script" uid="uid://p8acx441hhuv" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_hjaqi"]
@@ -6,6 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://yq1gn3x1mp1h" path="res://sounds/step2.mp3" id="4_hp4bs"]
 [ext_resource type="AudioStream" uid="uid://c3djijkj4mecm" path="res://sounds/step3.mp3" id="5_g2vtq"]
 [ext_resource type="AudioStream" uid="uid://b8hfyno2xqwuf" path="res://sounds/step4.mp3" id="6_2fvbb"]
+[ext_resource type="Texture2D" uid="uid://dxxesg7deso8u" path="res://sprites/Vogel1.png" id="7_ml7e8"]
+[ext_resource type="Texture2D" uid="uid://cj14hwft0bgfr" path="res://sprites/Vogel2.png" id="8_ihjo1"]
+[ext_resource type="Texture2D" uid="uid://0bgqyfsoxe27" path="res://sprites/Vogel3.png" id="9_dk1vr"]
+[ext_resource type="Script" uid="uid://b4jiw4te7pa3n" path="res://scripts/AnimationPlay.gd" id="10_34jf3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ct4mp"]
 radius = 9.0
@@ -18,6 +22,23 @@ stream_2/stream = ExtResource("5_g2vtq")
 stream_3/stream = ExtResource("6_2fvbb")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oh5ij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oh5ij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ml7e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ihjo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dk1vr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_hjaqi")
@@ -66,6 +87,13 @@ volume_db = -6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_oh5ij")
+
+[node name="zZz" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_oh5ij")
+frame_progress = 0.394761
+script = ExtResource("10_34jf3")
 
 [connection signal="attack_started" from="." to="." method="_on_attack_started"]
 [connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]

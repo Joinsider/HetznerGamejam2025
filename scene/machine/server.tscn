@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://610r2hnyq8u4"]
+[gd_scene load_steps=6 format=3 uid="uid://610r2hnyq8u4"]
 
 [ext_resource type="Script" uid="uid://8jdpt15vdu6b" path="res://scripts/machine.gd" id="1_lfpuk"]
 [ext_resource type="SpriteFrames" uid="uid://bnxg4whigi0wn" path="res://sprites/Server-0.tres" id="2_lfpuk"]
 [ext_resource type="Script" uid="uid://csb3kja4m6og6" path="res://scripts/machineBlink.gd" id="3_7ka82"]
+[ext_resource type="AudioStream" uid="uid://c6v1fj0g4unlr" path="res://sounds/reload-123781.mp3" id="4_fa61p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfpuk"]
 size = Vector2(32, 32)
@@ -41,6 +42,9 @@ scale = Vector2(0.3, 0.3)
 
 [node name="UpgradeInfo" type="Label" parent="CenterContainer"]
 layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fa61p")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

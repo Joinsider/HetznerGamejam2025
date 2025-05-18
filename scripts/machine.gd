@@ -48,6 +48,7 @@ func _upgrade() -> void:
 	if (Gamestate.players[Player].remove_coins(nextLevel.cost)):
 		level+=1
 		on_upgrade.emit(level)
+		$AudioStreamPlayer.play()
 	else:
 		Gamestate.players[Player].show_message("Not enough money! (" + str(Gamestate.players[Player]._coins) + "/" + str(nextLevel.cost) + ")")
 
