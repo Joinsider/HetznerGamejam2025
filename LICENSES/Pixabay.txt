@@ -1,0 +1,169 @@
+SPDX-License-Identifier: LicenseRef-Pixabay
+SPDX-FileCopyrightText: 2025 Pixabay.de
+
+1. Allgemeines
+
+Willkommen bei Pixabay, der Community für kreative Köpfe, die lizenzfreie Inhalte teilen möchten. Diese Nutzungsbedingungen („Nutzungsbedingungen“) gelten für die Nutzung der Website pixabay.com, zugehörige Websites, Software, mobile Apps, Plugins und andere Services, die von Pixabay zur Verfügung gestellt werden (zusammengefasst bezeichnet als „Service(s)“).
+
+Diese Nutzungsbedingungen regeln das Verhältnis zwischen Pixabay, einer Marke der Canva Germany GmbH, („wir“, „unser/e“ oder „Pixabay“) und den Nutzern des Service („du“, „dein/e“ oder „Nutzer“) sowie in bestimmten Fällen das Verhältnis der Nutzer untereinander. Durch die Nutzung des Service (einschließlich des Herunterladens und der Nutzung von Inhalten des Service oder des Beitragens von Inhalten oder Mitteilungen zum Service):
+	erklärst du dich damit einverstanden, die vorliegenden Nutzungsbedingungen zu akzeptieren, wodurch eine rechtsverbindliche Vereinbarung zwischen dir und uns zustande kommt; und
+	versicherst und garantierst du, dass du das volle Recht, die Befugnis und die Kompetenz hast, diesen Nutzungsbedingungen zuzustimmen und sie einzuhalten, und dass du alle Verpflichtungen, die in diesen Nutzungsbedingungen aufgeführt sind, vollständig erfüllen wirst.
+
+Stimmst du diesen Nutzungsbedingungen nicht zu, darfst du unseren Service nicht nutzen.
+
+Kinder dürfen nicht auf den Service zugreifen und ihn nicht nutzen, wenn ihnen dies nicht durch ein Elternteil, einen Erziehungsberechtigten oder eine andere autorisierte erwachsene Person erlaubt wurde, die sich zur Einhaltung dieser Nutzungsbedingungen verpflichtet. Für die Zwecke dieser Nutzungsbedingungen gilt eine Person unter 13 Jahren als Kind (oder unter dem gesetzlichen Mindestalter, das in dem Land, in dem sich das Kind aufhält, für die Zustimmung zur Verarbeitung personenbezogener Daten gilt; in Deutschland beträgt das gesetzliche Mindestalter 16 Jahre).
+
+Wir können diese Nutzungsbedingungen jederzeit nach eigenem Ermessen ändern oder modifizieren. Dazu gehört auch das Recht, die durch diese Bedingungen gewährten Lizenzen zu streichen oder zu ändern. Die jeweils aktuelle Version dieser Nutzungsbedingungen findest du auf dieser Seite. Falls wir Änderungen vornehmen, die nach unserem eigenen Ermessen deine Rechte oder deine Nutzung des Service wesentlich beeinträchtigen, informieren wir dich durch eine angemessene Mitteilung darüber. Dies erfolgt über den Service oder über eine Direktnachricht innerhalb des Service und/oder im öffentlichen Forum von Pixabay. Nutzt du den Service nach diesem Datum weiter, gilt dies als Zustimmung zu den geänderten oder modifizierten Bedingungen.
+2. Inhalte
+
+Wenn wir in diesen Nutzungsbedingungen von „Inhalten“ sprechen, meinen wir damit Inhalte, die innerhalb des Services verfügbar sind oder auf diesen hochgeladen werden. Davon ausgenommen sind bezahlte Werbung oder gesponserte Inhalte von Dritten (auf die Pixabay keinen Einfluss hat und für die wir keine Lizenz gewähren). Die Inhalte umfassen unter anderem:
+	„Bilder“, also Fotos, Vektorgrafiken, Zeichnungen und Illustrationen.
+	„Videos“, also bewegte Bilder, Animationen, Filmmaterial und andere audiovisuelle Darstellungen und Inhalte.
+	„Audio“, also Musik, Sounds, Soundeffekte und andere akustische Darstellungen und Inhalte.
+	„Andere Medien“, also alle anderen Medien oder visuellen oder akustischen Inhalte oder Kombinationen von diesen.
+
+und umfasst in jedem Fall alle zugehörigen Texte, Captions, Beschreibungen und Metadaten.
+3. Mitteilungen
+
+Pixabay stellt außerdem im Rahmen des Service verschiedene Funktionen zur Verfügung, mit deren Hilfe du mit dem Service und anderen Nutzern interagieren und kommunizieren kannst. Hierzu zählen beispielsweise:
+	Auswählen eines Benutzernamens, Hochladen eines Profilfotos und Erstellen einer Profilseite;
+	Veröffentlichen von Beiträgen in unserem Pixabay-Forum und Diskussionsräumen;
+	Veröffentlichen von Kommentaren zu beliebigen Inhalten oder Blog-Artikeln;
+	Senden von Nachrichten an andere Nutzer über unsere Benachrichtigungsfunktion und/oder
+	sonstige Mitteilungen, die du über den Service sendest, zusammen „Mitteilung(en)“ genannt.
+4. CC0-Lizenz
+
+Einige der Inhalte, die über den Service zum Download bereitgestellt werden, unterliegen der CC0-Lizenz („Creative Commons Zero; CC0-Inhalte“). CC0-Inhalte des Service sind alle Inhalte, deren „Veröffentlichungsdatum“ vor dem 9. Januar 2019 liegt. Dementsprechend haben die Urheber dieser Werke selbige im größtmöglichen rechtlich zulässigen Umfang der Allgemeinheit zur Verfügung gestellt und dabei weltweit auf sämtliche Urheberrechte an den CC0-Inhalten verzichtet, einschließlich aller verwandten Schutzrechte. Gemäß den CC0-Lizenzbedingungen können CC0-Inhalte ohne Urheberrechtsvermerk und ohne Nennung der Inhaber der CC0-Inhalte oder von Pixabay für alle persönlichen und gewerblichen Zwecke genutzt werden.
+5. Inhaltslizenz für andere Inhalte (nicht CC0), die dir gewährt wird
+
+Wenn du Inhalte vom Service herunterlädst, die keine CC0-Inhalte sind, gewähren wir dir ein unwiderrufliches, weltweites, zeitlich (soweit gesetzlich zulässig) unbegrenztes, nicht exklusives und gebührenfreies Recht, die Inhalte für kommerzielle oder nichtkommerzielle Zwecke herunterzuladen, zu nutzen, zu kopieren, zu verändern oder anzupassen („Inhaltslizenz“), vorbehaltlich der unten beschriebenen verbotenen Nutzungen (denen du zustimmst und für die du anerkennst, dass du diese nicht ausüben darfst). Die gewährten Rechte sind nicht exklusiv, was bedeutet, dass wir anderen Nutzern dieselben Rechte an denselben Inhalten einräumen können. Zur Klarstellung sei darauf hingewiesen, dass du keine Rechte an den Mitteilungen anderer Nutzer erhältst.
+
+Du stimmst zu und erkennst an, dass die folgenden Punkte „verbotene Nutzungen“ sind und die Inhaltslizenz, die wir dir gewähren, an die Bedingung geknüpft ist, dass du keine dieser verbotenen Nutzungen durchführst.
+
+	Du darfst die Inhalte (in digitaler oder physischer Form) nicht als eigenständiges Produkt verkaufen oder verbreiten. Dies umfasst den Verkauf oder die Verbreitung von Inhalten als Bild, Audio, Video, NFT oder andere digitale Datei (auch über eine Stock-Media-Plattform) sowie als Druck, Hintergrundbild, Poster oder auf Waren oder anderen physischen Produkten.
+
+	„Eigenständig“ bedeutet, dass die Inhalte nicht kreativ bearbeitet wurden und im Wesentlichen in der Form erhalten bleiben, in der sie auch im Service vorhanden sind. Hier sind einige Beispiele:
+		Die Verwendung eines Inhalts in seiner ursprünglichen Form oder nur unter Verwendung eines Filters, einer Änderung der Farben, einer Größenänderung oder eines Zuschneiden des Inhalts gilt als eigenständige Nutzung.
+		Die Verwendung eines Inhalts in Kombination mit Bildern, Audiodateien, anderen Medien, Text, Illustrationen, Hintergrundmerkmalen und Bearbeitungstechniken ist keine eigenständige Nutzung, sofern aus dieser Kombination ein „neues“ kreatives Werk entsteht.
+	Wenn in einem Inhalt Warenzeichen, Logos oder Marken (egal ob zwei- oder dreidimensional) abgebildet sind, darfst du diesen Inhalt nicht für kommerzielle Zwecke für Waren und Dienstleistungen verwenden. Insbesondere darfst du diesen Inhalt nicht auf Waren oder andere physische Produkte drucken, die zum Verkauf stehen.
+	Du darfst Inhalte nicht auf unmoralische oder illegale Weise verwenden, insbesondere nicht solche, die eine identifizierbare Person zeigen. Du darfst keine Inhalte verwenden, die pornografisch, obszön, anstößig (unter anderem im Zusammenhang mit Erotik, Escort-Services, Drogenkonsum, Partnervermittlungsdiensten, oder in einer Weise, die jemanden als Person darstellt, die an einer körperlichen oder geistigen Krankheit leidet oder wegen einer solchen behandelt wird), illegal, unmoralisch, verletzend, verleumderisch, hasserfüllt, bedrohlich oder beleidigend sind oder in einem politischen Kontext stehen (wie der Förderung, Bewerbung oder Unterstützung einer Partei, eines Kandidaten oder Amtsinhabers bzw. im Zusammenhang mit einer politischen Partei oder einem politischen Standpunkt stehend) oder gegen Gesetze, Vorschriften oder Branchenstandards verstoßen oder in irgendeiner Weise die Rechte einer natürlichen oder juristischen Person verletzen.
+	Du darfst Inhalte nicht in irreführender oder trügerischer Weise verwenden. Du darfst Inhalte nicht in einer Weise verwenden, die irreführend oder trügerisch ist, einschließlich und ohne Einschränkung:
+		durch die Andeutung, dass eine abgebildete Person, Marke, Organisation oder ein sonstiger Dritter dich oder deine Waren oder Dienstleistungen unterstützt oder mit ihnen verbunden ist, es sei denn, es liegt eine Genehmigung vor; oder
+		durch die Andeutung, dass die Inhalte von dir oder einer anderen Person als dem Inhaber der geistigen Eigentumsrechte an den Inhalten erstellt wurden (insbesondere durch die Behauptung oder die Andeutung, dass du das Eigentum oder die ausschließlichen Rechte an den Inhalten besitzt).
+	Du darfst die Inhalte nicht als Teil einer Handelsmarke, einer Bildmarke, eines Markennamens, eines Unternehmensnamens oder einer Dienstleistungsmarke verwenden. 
+
+Zusätzlich zu den verbotenen Nutzungen können bestimmte Inhalte (einschließlich CC0-Inhalte) zusätzlichen Rechten an geistigem Eigentum (z. B. Urheberrechten, Marken, Designrechten), moralischen Rechten, Besitzrechten, Eigentumsrechten, Datenschutzrechten oder Ähnlichem unterliegen. Dazu gehören unter anderem identifizierbare Personen, Logos, Marken aller Art (zwei- oder dreidimensional), Waren oder Dienstleistungen, Gebäude und Architektur, Audio- oder Videomuster und Organisationen.
+
+Vor der Nutzung von Inhalten (einschließlich CC0-Inhalte) musst du prüfen, ob du die Zustimmung eines Dritten oder eine Lizenz für die Nutzung des Inhalts benötigst. Wenn du den Inhalt für kommerzielle Zwecke verwendest (z. B. in Verbindung mit dem Verkauf oder der Werbung für ein Produkt oder eine Dienstleistung), ist es wahrscheinlich, dass du eine Zustimmung oder eine Lizenz benötigst. Die Verantwortung für die Feststellung, ob Genehmigungen erforderlich sind, liegt einzig und allein bei dir. Wir übernehmen keine Gewähr dafür, dass für die Inhalte Genehmigungen oder Lizenzen eingeholt wurden, und wir lehnen ausdrücklich jede Verantwortung und Haftung in Bezug auf solche Angelegenheiten ab.
+6. Namensnennung
+
+Du musst Pixabay oder den Beitragenden deiner verwendeten Inhalte nicht nennen, aber es wird allgemein geschätzt – besonders wenn die Verwendung redaktioneller Natur ist und Namensnennungen eher üblich sind. Du kannst diese in folgendem Format angeben: „von [Beitragender] über Pixabay“.
+7A. Inhalte oder Mitteilungen hochladen
+
+Wir freuen uns, wenn du Inhalte oder Mitteilungen zu unserem Service beisteuerst. Damit auch andere diese Inhalte und Mitteilungen nutzen können, benötigen wir von dir als Beitragendem bestimmte Rechte und Zustimmungserklärungen. Du bist für die Inhalte und Mitteilungen, die du auf den Service hochlädst, verantwortlich. Dabei gelten folgende Bestimmungen und Nutzungsbedingungen:
+	Wenn du Inhalte auf den Service hochlädst, gewährst du Pixabay eine unwiderrufliche, zeitlich (soweit gesetzlich zulässig) unbegrenzte, weltweite, nicht exklusive, gebührenfreie Lizenz (einschließlich des Rechts zur Unterlizenzierung) zur Verwendung, Speicherung, Vermarktung, Vervielfältigung, Darstellung, Ausstellung, Ausstrahlung, öffentlichen Aufführung, Verbesserung, Veränderung, Anpassung, Modifizierung oder zum Herunterladen der Inhalte (ganz oder teilweise) für jeden bekannten oder zukünftigen Zweck, einschließlich kommerzieller und nicht kommerzieller Zwecke. Dies schließt das Recht ein, den Inhalt unter der Inhaltslizenz, einer anderen Lizenz oder unter anderen Bedingungen, die von Pixabay jetzt oder in Zukunft angeboten werden, weiterzugeben, einschließlich über eine API.
+	Wenn du Mitteilungen auf den Service hochlädst, gewährst du Pixabay eine unwiderrufliche, zeitlich (soweit gesetzlich zulässig) unbegrenzte, weltweite, nicht exklusive, gebührenfreie Lizenz (einschließlich des Rechts zur Unterlizenzierung) zur Verwendung, Speicherung, Vervielfältigung, Darstellung, Ausstellung, Ausstrahlung, öffentlichen Aufführung, Verbesserung, Veränderung, Anpassung, Modifizierung oder zum Herunterladen der Mitteilungen (ganz oder teilweise), um den Service zu betreiben und die Mitteilungen anderen Nutzern zu zeigen.
+	Du erklärst und garantierst ausdrücklich, dass:
+		alle Rechte, Ansprüche und Nutzungsrechte an allen Inhalten oder Mitteilungen, die du auf den Service hochlädst, allein bei dir liegen;
+		der Inhalt oder die Mitteilungen nicht die geistigen Eigentumsrechte, moralischen Rechte, Eigentumsrechte, Besitzrechte, Datenschutzrechte oder ähnliche Rechte einer natürlichen oder juristischen Person verletzen und die Nutzung des Inhalts in Übereinstimmung mit diesen Bedingungen keine Verletzung darstellen; und
+		du alle erforderlichen Freigaben, Genehmigungen oder Lizenzen hast (und aufbewahren wirst), um die Nutzung des Inhalts oder der Mitteilungen in Übereinstimmung mit diesen Bedingungen zu ermöglichen. Dies umfasst nicht exklusive, zeitlich (soweit gesetzlich zulässig) unbegrenzte, unwiderrufliche, weltweite und gebührenfreie Modell- und/oder Eigentumsfreigaben und/oder alle anderen erforderlichen Genehmigungen für die Nutzung des Inhalts für jeden Zweck ohne jegliche Bedingungen, es sei denn, solche Bedingungen sind gesetzlich vorgeschrieben; und
+		du zusagst, weitere Dokumente auszustellen, die nach billigem Ermessen notwendig sind, um den Rechten von Pixabay Wirkung zu verleihen.
+	Du nimmst zur Kenntnis und erklärst dich damit einverstanden, dass deine Inhalte der Öffentlichkeit zur persönlichen und kommerziellen Nutzung durch Dritte gemäß diesen Nutzungsbedingungen zur Verfügung gestellt werden, ohne dass du namentlich genannt wirst oder dafür eine Vergütung erhältst. Du nimmst zur Kenntnis und erklärst dich damit einverstanden, dass deine Mitteilungen der Öffentlichkeit zur Verfügung gestellt werden, ohne dass du namentlich genannt wirst oder dafür eine Vergütung erhältst. Du nimmst ferner zur Kenntnis und erklärst dich damit einverstanden, dass Pixabay, seine Partner und von Pixabay ausdrücklich autorisierte Drittpartner deine Inhalte, deine Mitteilungen und deine allgemeinen Nutzungs- und Aktivitätsdaten in Pixabay (einschließlich deiner Analysedaten und Suchanfragen) nutzen dürfen, um ihre Dienste zu entwickeln, zu verbessern und bereitzustellen, u. a. unter Einsatz von Technologien für maschinelles Lernen. Wenn du nicht möchtest, dass deine Inhalte für maschinelles Lernen verwendet werden, kannst du den Einsatz von künftigem KI-Training durch uns jederzeit ablehnen, indem du deine Kontoeinstellungen entsprechend änderst.
+	Du verpflichtest dich, keine Inhalte oder Mitteilungen hochzuladen oder den Service nicht direkt oder indirekt auf eine Weise zu nutzen, die:
+		die Gefahr von körperlichen oder geistigen Schäden, seelischem Leid, Tod, Behinderung oder Entstellung für sich selbst, andere Personen oder Tiere fördert oder herbeiführt;
+		die Gefahr von Verletzung, Verlust oder Beschädigung von Eigentum fördert oder herbeiführt;
+		versucht, Kindern zu schaden oder sie auszubeuten;
+		belästigend, beleidigend, rassistisch oder ethnisch anstößig, verleumderisch, die Privatsphäre oder die Öffentlichkeitsrechte verletzend, verleumderisch oder bedrohend ist;
+		diskriminierend ist, zu Diskriminierung anderer aufgrund von Ethnie, Religion, Geschlecht, sexueller Orientierung, Alter, Behinderung, Abstammung, nationaler Herkunft oder einer anderen Grundlage anstiftet oder diese fördert;
+		sexuell explizit oder pornografisch ist oder Links zu solchen Materialien enthält;
+		den Verkauf oder die Werbung für illegale Handlungen, Produkte oder Dienstleistungen beinhaltet;
+		betrügerisch ist oder betrügerische Handlungen fördert;
+		die Rechte einer Person oder von Dritten verletzt, einschließlich deren Rechte auf geistiges Eigentum und Datenschutz;
+		Informationen oder Inhalte enthält, die aufgrund von Gesetzen oder Vertraulichkeits-, Vertrags- oder treuhänderischen Pflichten nicht verfügbar gemacht werden dürfen;
+		Informationen oder Desinformationen enthält, die falsch, trügerisch oder irreführend sind oder anderweitig die Verbreitung falscher Informationen fördert, unterstützt, ermutigt oder erleichtert;
+		gegen anwendbares Recht verstößt oder Handlungen fördert, die illegal sind;
+		demokratische Prozesse oder Institutionen bedroht oder untergräbt.
+	Du verpflichtest dich, keine Inhalte oder Mitteilungen hochzuladen, die Signaturen oder Wasserzeichen enthalten oder Werbung sind.
+	Deine Inhalte unterliegen folgenden Richtlinien:
+		Richtlinien zur Fotoqualität:https://pixabay.com/de/blog/posts/qualitatsanforderungen-fur-bilder-34/
+		Richtlinien zur Audioqualität:https://pixabay.com/de/blog/posts/richtlinien-zur-audioqualitat-187/
+		Richtlinien zur Qualität von Illustrationen:https://pixabay.com/blog/posts/illustration-quality-guidelines-271/
+		Richtlinien zur GIF-Qualität:https://pixabay.com/de/blog/posts/gif-qualitatsrichtlinien-233/
+		Richtlinien zur Videoqualität:https://pixabay.com/de/blog/posts/qualitatsanforderungen-fur-videos-70/
+	Deine Mitteilungen unterliegen folgenden Richtlinien:
+		Regeln und Richtlinien des Forums: https://pixabay.com/de/blog/posts/forenregeln-und-verhaltenskodex-auf-pixabay-160/
+
+Wir behalten uns das Recht vor, Inhalte oder Mitteilungen jederzeit und aus beliebigen Gründen nach unserem Ermessen aus dem Service zu entfernen. Dies gilt insbesondere für fehlerhafte Dateien, minderwertige Inhalte, Inhalte oder Mitteilungen, die gegen diese Nutzungsbedingungen verstoßen, und für jegliche Gründe, die sich auf mögliche rechtliche Streitfälle beziehen. Weitere Informationen darüber, wie wir Inhalte und Mitteilungen moderieren, findest du hier.
+7B. Inhalte hochladen, die mit generativer KI-Technologie erstellt wurden
+
+Du darfst Inhalte, die du mit generativer KI-Technologie (d. h. Tools, die mithilfe von maschinellem Lernen Inhalte aus Texteingaben oder anderen Eingaben generieren) erstellt hast, auf den Service hochladen. In diesem Fall gelten zusätzlich zu Abschnitt 7A die folgenden besonderen Bedingungen.
+	Du musst sicherstellen, dass es die Bedingungen der von dir verwendeten generativen KI-Technologie erlauben, eine Lizenz zu erteilen und die in Abschnitt 7A genannten Garantien zu geben.
+	Du musst alle KI-generierten Inhalte deutlich kennzeichnen, indem auf der Uploads-Seite das Kontrollkästchen „KI-generiert“ aktivierst.
+	Du darfst keine KI-generierten Inhalte mit den Namen von realen Personen, Künstlern, Warenzeichen oder Marken kennzeichnen.
+	Du darfst keine KI-generierten Inhalte hochladen, die den Stil eines anderen Künstlers imitieren oder versuchen, urheberrechtlich oder markenrechtlich geschütztes Material oder das Bild einer realen Person zu reproduzieren.
+8. Nutzung des Service
+
+Für den Zugriff auf und die Nutzung bestimmter Funktionen des Service musst du dich möglicherweise bei uns registrieren. Wenn du das tust, erklärst du dich damit einverstanden, wahrheitsgemäße, genaue und aktuelle Angaben zu machen, wie sie im Registrierungsformular des Service verlangt werden. Die Registrierungsdaten und andere Informationen, die du über den Service zur Verfügung stellst, unterliegen unserer Datenschutzrichtlinie. Du bist für alle Aktivitäten verantwortlich, die auf deinem Konto durchgeführt werden. Du darfst Dritten nicht gestatten, mit deinem eindeutigen Benutzernamen, Kennwort oder einem anderen Sicherheitscode auf den Service zuzugreifen oder ihn zu nutzen. Dein Benutzername darf keine Rechte Dritter verletzen und darf nicht beleidigend, vulgär oder obszön sein.
+
+Mit der Nutzung des Service nimmst du folgende Punkte zur Kenntnis und erklärst dich damit einverstanden:
+	Data Mining, Datenextraktion, Scraping und der Einsatz von Programmen oder Bots zur automatischen Datenerfassung und/oder Extraktion digitaler Daten über den Service und/oder die darin bereitgestellten Inhalte sind für sämtliche nicht autorisierte Zwecke, einschließlich und uneingeschränkt für Zwecke des maschinellen Lernens, strengstens untersagt.
+	Die Technologie und Software, die den Services zugrunde liegen oder in Verbindung mit ihnen vertrieben werden, sind unser Eigentum und das unserer Lizenzgeber, verbundenen Unternehmen und Partner. Wir übertragen dir keine Rechte an dieser Software. Du darfst diese Technologie oder Software nicht kopieren, modifizieren, davon abgeleitete Werke erstellen, zurückentwickeln, disassemblieren oder anderweitig versuchen, den Quellcode zu ermitteln, verkaufen, abtreten, unterlizenzieren oder anderweitig übertragen, es sei denn, wir erteilen im Voraus unsere ausdrückliche Genehmigung.
+	Das massenhafte, umfangreiche oder systematische Kopieren von Inhalten ist strengstens untersagt, es sei denn, es liegt eine ausdrückliche Genehmigung unsererseits vor
+	Du wirst weder selbst noch durch Dritte:
+		den Service oder einen Teil davon kopieren, vervielfältigen, dekompilieren, zurückentwickeln, versuchen, den Quellcode abzuleiten, modifizieren oder abgeleitete Werke davon erstellen;
+		Inhalte verwenden oder zusammenstellen, um einen ähnlichen oder konkurrierenden Dienst zum Service aufzubauen, oder das Erscheinungsbild oder die Handhabung des Service kopieren;
+		den Service nutzen, um unaufgefordert Nachrichten zu übermitteln oder Spam zu versenden;
+		den Service zum Speichern oder Übertragen von Viren oder bösartigem Code verwenden;
+		dich im Service als eine andere natürliche oder juristische Person ausgeben oder eine nicht existierende Beziehung zu diesen Personen vortäuschen;
+		ohne unsere ausdrückliche schriftliche Zustimmung Metatags oder andere versteckte Texte verwenden oder verwerten, die unseren Namen oder eine unserer Marken enthalten;
+		persönliche Daten, einschließlich Mitgliedsnamen oder Profile, von anderen Nutzern erfassen, speichern oder verwenden;
+		auf den Service zu Zwecken des Leistungsvergleichs oder zur Entwicklung oder Vermarktung eines Konkurrenzprodukts zugreifen oder
+		Maßnahmen umgehen, die wir zur Verhinderung oder Einschränkung des Zugriffs auf den Service einsetzen, einschließlich, aber nicht beschränkt auf Funktionen, die die Nutzung oder das Kopieren von Inhalten verhindern oder einschränken oder die Nutzung des Service oder der Inhalte einschränken.
+	Die Zusammenstellung der Inhalte ist als kollektives Werk und/oder Zusammenstellung gemäß den Urheberrechtsgesetzen, internationalen Übereinkommen und anderen Gesetzen zum Schutz des geistigen Eigentums urheberrechtlich geschützt.
+9. Laufzeit und Kündigung
+
+Diese Nutzungsbedingungen treten in Kraft, wenn du erstmals auf die Services zugreifst, und bleiben vollumfänglich gültig, bis dein Konto gelöscht oder gekündigt wird.
+
+Wenn Pixabay nach eigenem Ermessen entscheidet, dass du, dein Inhalt oder deine Nutzung der Services gegen diese Nutzungsbedingungen verstößt, kann Pixabay eine der folgenden Maßnahmen ergreifen: (i) die verbotenen Inhalte löschen; (ii) deinen Zugang zu den Services sperren; (iii) dein Konto kündigen und löschen; (iv) dich dauerhaft von der Nutzung der Services ausschließen und/oder (v) die verbotenen Inhalte oder Aktivitäten den zuständigen Behörden melden. Nach der Kündigung kannst du die Services nicht weiter nutzen. Die Services dürfen von Nutzern, die zuvor von Pixabay aus den Services entfernt wurden, nicht mehr verwendet werden.
+10. Richtlinien für die Meldung und Löschung von Inhalten
+
+Pixabay respektiert die Urheberrechte. Wenn du der Meinung bist, dass deine Rechte an geistigem Eigentum durch Inhalte oder Mitteilungen, die über den Service zugänglich sind, verletzt wurden, melde dies bitte über die in Pixabay integrierten Meldefunktionen oder verwende dieses Formular. Bitte füge deiner Meldung folgende Informationen bei:
+	Angabe des Rechts an geistigem Eigentum, das deiner Meinung nach verletzt wurde.
+	Angabe des Inhalts, der deiner Meinung nach deine Rechte verletzt, einschließlich eines URL-Links zu dem Bereich, in dem dieser Inhalt in den Services erscheint.
+	Deine Kontaktinformationen, zum Beispiel deine E-Mail-Adresse.
+	Eine Erklärung, dass du in gutem Glauben davon ausgehst, dass die Nutzung des Inhalts in der beanstandeten Weise nicht durch den Inhaber der geistigen Eigentumsrechte, seinen Vertreter oder das Gesetz genehmigt ist.
+	Eine Erklärung, dass die oben genannten Informationen korrekt sind und dass du der Inhaber der Rechte an geistigem Eigentum bist (oder befugt bist, in seinem Namen zu handeln).
+
+Wenn du der Meinung ist, dass ein Inhalt, der auf oder über die Services bereitgestellt wird, gegen Gesetze verstößt, melde dies bitte an info@pixabay.com. Die Ausführungen in diesem Abschnitt stellen keine Rechtsberatung dar. Wir empfehlen dir, einen Anwalt zu konsultieren, um dich über deine Rechte und Pflichten nach den geltenden Gesetzen zu informieren.
+11. Ansprüche wegen Rechtsverletzung
+
+Wenn du von Pixabay oder anderswo erfährst, dass ein Anspruch in Bezug auf einen Inhalt besteht und Pixabay haftbar sein könnte, musst du die Nutzung des Inhalts sofort und auf eigene Kosten einstellen. Dies gilt unabhängig davon, ob es sich um einen drohenden, potenziellen oder tatsächlichen Anspruch handelt. Außerdem musst du den Inhalt sofort aus deinen Räumlichkeiten, Computersystemen und Speichern (elektronisch oder physisch) löschen oder entfernen, dafür sorgen, dass deine Kunden, Drucker oder ISPs dies ebenfalls tun, und Pixabay so schnell wie möglich per E-Mail an info@pixabay.com informieren.
+12. Entschädigung
+
+Du erklärst dich damit einverstanden, Pixabay und seine Partner für alle Verluste, Ausgaben, Schäden und Kosten, einschließlich und ohne Einschränkung angemessener Anwaltskosten, zu entschädigen, davon freizustellen und dafür schadlos zu halten, die aus folgenden Gründen entstehen:
+	einen Verstoß von dir gegen die Nutzungsbedingungen (direkt oder indirekt); und
+	Ansprüche von Dritten, die sich aus deiner Nutzung der Service ergeben.
+
+Wird ein Anspruch von einem Dritten erhoben, musst du uns unverzüglich alle Informationen zur Verfügung stellen, die für die Prüfung des Anspruchs und die Verteidigung erforderlich sind. Weitergehende Schadensersatzansprüche von uns gegen dich bleiben hiervon unberührt.
+13. Streitbeilegung und anwendbares Recht https://ec.europa.eu/consumers/odr/
+
+Pixabay ist weder verpflichtet noch bereit, an einem Schlichtungsverfahren im Sinne des VSBG teilzunehmen. Pixabay bemüht sich, etwaige Meinungsverschiedenheiten gütlich zu lösen. Unsere E-Mail-Adresse lautet info@pixabay.com.
+
+Auf das Vertragsverhältnis zwischen den Nutzern und Pixabay findet das Recht der Bundesrepublik Deutschland Anwendung. Als Gerichtsstand wird, soweit zulässig, Berlin vereinbart.
+14. Gewährleistung und Haftung
+
+DIE SERVICES WERDEN OHNE MÄNGELGEWÄHR UND IN DER VORHANDENEN FORM ZUR VERFÜGUNG GESTELLT. WIR ÜBERNEHMEN KEINE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG IN BEZUG AUF DIE INHALTE (EINSCHLIESSLICH JEDWEDER INHALTE VON DRITTEN UND GESPONSERTER INHALTE UND JEDWEDER LINKS), DIE SERVICES, DIE RICHTIGKEIT VON INFORMATIONEN ODER RECHTE ODER LIZENZEN IM RAHMEN DIESER NUTZUNGSBEDINGUNGEN, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF STILLSCHWEIGENDE ZUSICHERUNGEN DER MARKTGÄNGIGKEIT ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+
+PIXABAY ÜBERNIMMT KEINE GEWÄHR DAFÜR, DASS DIE SERVICES ODER INHALTE DEINEN ANFORDERUNGEN ENTSPRECHEN ODER DASS IHRE NUTZUNG OHNE UNTERBRECHUNGEN ODER FEHLERFREI IST.
+
+PIXABAY BEMÜHT SICH, SICHERZUSTELLEN, DASS HOCHGELADENE INHALTE NICHT MISSBRAUCHT ODER ENTGEGEN DEN NUTZUNGSBEDINGUNGEN VERWENDET WERDEN, JEDOCH KANN PIXABAY NICHT FÜR DIE HANDLUNGEN ODER UNTERLASSUNGEN SEINER NUTZER VERANTWORTLICH GEMACHT WERDEN, EINSCHLIESSLICH EINES MISSBRAUCHS ODER EINER MISSBRÄUCHLICHEN VERWENDUNG VON INHALTEN, DIE DU HOCHGELADEN HAST.
+
+PIXABAY HAFTET WEDER DIR NOCH EINER ANDEREN NATÜRLICHEN ODER JURISTISCHEN PERSON GEGENÜBER FÜR ALLGEMEINE SCHÄDEN, STRAFSCHADENSERSATZ, BESONDERE, INDIREKTE SCHÄDEN, FOLGESCHÄDEN ODER BEILÄUFIG ENTSTANDENE SCHÄDEN, ENTGANGENEN GEWINN ODER SONSTIGE SCHÄDEN, KOSTEN ODER VERLUSTE, DIE SICH AUS DEINER NUTZUNG DER SERVICES ODER INHALTE ERGEBEN.
+15. Versionen und salvatorische Klausel
+
+Diese Nutzungsbedingungen ersetzen alle früheren Zusicherungen, Vereinbarungen oder Absprachen (schriftlich oder mündlich) zwischen dir und Pixabay in Bezug auf die Services, einschließlich früherer Versionen der Nutzungsbedingungen. Etwaige nicht-englische Übersetzungen werden nur zur Hilfestellung zur Verfügung gestellt. Maßgeblich ist die englische Fassung dieser Nutzungsbedingungen.
+
+Sollten eine oder mehrere Bestimmungen dieser Nutzungsbedingungen ungültig, rechtswidrig oder nicht durchsetzbar sein, hat dies keine Auswirkungen auf die Gültigkeit, Rechtmäßigkeit und Durchsetzbarkeit der übrigen Bestimmungen. Solche Bestimmungen sollten nur insoweit geändert werden, als dies für ihre Durchsetzbarkeit erforderlich ist.
+16. Gewinnspiele und Werbeaktionen
+
+Von Zeit zu Zeit kann Pixabay Gewinnspiele, Wettbewerbe oder Werbeaktionen durchführen („Aktionen“), für die jeweils separate ergänzende Nutzungsbedingungen gelten, die innerhalb der Services veröffentlicht oder dir von Pixabay auf andere Weise bekannt gemacht werden. Durch die Teilnahme an Aktionen akzeptierst du diese ergänzenden Nutzungsbedingungen und unsere Datenschutzrichtlinie.

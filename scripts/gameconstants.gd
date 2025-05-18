@@ -1,3 +1,6 @@
+##SPDX-FileCopyrightText: Copyright information recorded in version control history
+##
+##SPDX-License-Identifier: AGPL-3.0-or-later
 extends Node
 
 enum Attack {
