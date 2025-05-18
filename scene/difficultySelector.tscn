@@ -30,7 +30,7 @@ columns = 2
 
 [node name="Difficulty1" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
-text = "Start Game"
+text = "None"
 script = ExtResource("2_j8j4r")
 DefaultFocused = true
 
@@ -44,6 +44,7 @@ Name = 1
 layout_mode = 2
 text = "None"
 script = ExtResource("2_j8j4r")
+Name = 2
 
 [node name="Difficulty4" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
