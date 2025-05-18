@@ -1,15 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://dg0yn7o4j1jg4"]
+[gd_scene load_steps=13 format=3 uid="uid://dg0yn7o4j1jg4"]
 
-[ext_resource type="Script" uid="uid://cy3mpa401bm4y" path="res://scripts/menuController.gd" id="1_pf7vd"]
-[ext_resource type="Script" uid="uid://cfc0fd3fc8b17" path="res://scripts/meueItem.gd" id="1_v5ul1"]
+[ext_resource type="Script" uid="uid://d1w575g7qvmw2" path="res://scripts/menuController.gd" id="1_pf7vd"]
+[ext_resource type="Script" uid="uid://d3qgf55gmc20g" path="res://scripts/meueItem.gd" id="1_v5ul1"]
 [ext_resource type="Texture2D" uid="uid://dnw7gjh8q2xvt" path="res://sprites/Thunderstorm.png" id="3_hg6f8"]
 [ext_resource type="Texture2D" uid="uid://c7ekb1j56sfxd" path="res://sprites/attack-selection.png" id="4_4c32f"]
 [ext_resource type="Texture2D" uid="uid://cnh8dc5pumras" path="res://sprites/DDOS.png" id="4_6wjab"]
 [ext_resource type="Texture2D" uid="uid://dr43wmeeuutb6" path="res://sprites/overvoltage.png" id="5_4c32f"]
-[ext_resource type="Script" uid="uid://dti2pluqs7j2f" path="res://scripts/SelectMenueLable.gd" id="5_apqs7"]
+[ext_resource type="Script" uid="uid://bhrare7wm3wru" path="res://scripts/SelectMenueLable.gd" id="5_apqs7"]
 [ext_resource type="Texture2D" uid="uid://fsi10pul6i2j" path="res://sprites/Fog.png" id="6_apqs7"]
 [ext_resource type="Texture2D" uid="uid://bctqwlj7x0tcx" path="res://sprites/Schlafparalyse.png" id="7_2expe"]
 [ext_resource type="Texture2D" uid="uid://h7r4xnsl3i4c" path="res://sprites/attack-container.png" id="8_6wjab"]
+[ext_resource type="Texture2D" uid="uid://bavsoalee2g83" path="res://sprites/Katzen-Faust.png" id="11_2expe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4c32f"]
 
@@ -18,7 +19,7 @@ visible = false
 script = ExtResource("1_pf7vd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 40)
+position = Vector2(0, 50)
 texture = ExtResource("8_6wjab")
 
 [node name="1" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
@@ -265,3 +266,54 @@ type = 3
 
 [node name="Item" type="Sprite2D" parent="5"]
 texture = ExtResource("7_2expe")
+
+[node name="6Secret" type="Node2D" parent="." node_paths=PackedStringArray("prev", "next")]
+visible = false
+position = Vector2(0, 100)
+script = ExtResource("1_v5ul1")
+prev = NodePath("../5")
+next = NodePath("../1")
+atack = 5
+
+[node name="Select" type="Sprite2D" parent="6Secret"]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_4c32f")
+
+[node name="Label" type="Label" parent="6Secret/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -20.0
+offset_right = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cats Fists"
+label_settings = SubResource("LabelSettings_4c32f")
+vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 5
+
+[node name="Label2" type="Label" parent="6Secret/Select"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -20.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cats Fists"
+label_settings = SubResource("LabelSettings_4c32f")
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("5_apqs7")
+type = 5
+
+[node name="Item" type="Sprite2D" parent="6Secret"]
+texture = ExtResource("11_2expe")

@@ -8,7 +8,9 @@ enum Attack {
 	OVERVOLTAGE,
 	THUNDERSTORM,
 	FREEZE,
-	FOG
+	FOG,
+	CATSFISTS
+	
 }
 
 enum ConfigName {
@@ -38,12 +40,13 @@ var configs = {
 			Attack.OVERVOLTAGE:300,
 			Attack.THUNDERSTORM:400,
 			Attack.FREEZE:50,
-			Attack.FOG:50
+			Attack.FOG:50,
+			Attack.CATSFISTS:20000
 		},
 		0.5,
 		2,
 		func(difficulty: int) -> int: return int(pow(difficulty,1.8)),
-		500),
+		9999999500),
 	ConfigName.difficulty2:  GameConfig.new(
 		"Dif 2",
 		[
@@ -65,7 +68,8 @@ var configs = {
 			Attack.OVERVOLTAGE:300,
 			Attack.THUNDERSTORM:400,
 			Attack.FREEZE:50,
-			Attack.FOG:50
+			Attack.FOG:50,
+			Attack.CATSFISTS:20000
 		},
 		0.5,
 		2,

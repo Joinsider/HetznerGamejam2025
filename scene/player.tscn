@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cr6pmkx3fod6e"]
+[gd_scene load_steps=10 format=3 uid="uid://cr6pmkx3fod6e"]
 
-[ext_resource type="Script" uid="uid://diwdyyttqfeiq" path="res://scripts/player.gd" id="1_hjaqi"]
+[ext_resource type="Script" uid="uid://p8acx441hhuv" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://1lcgnhjiyid2" path="res://sprites/Duck1.png" id="2_hjaqi"]
 [ext_resource type="AudioStream" uid="uid://cmcifma2covn5" path="res://sounds/step1.mp3" id="3_oh5ij"]
 [ext_resource type="AudioStream" uid="uid://yq1gn3x1mp1h" path="res://sounds/step2.mp3" id="4_hp4bs"]
@@ -16,6 +16,8 @@ stream_0/stream = ExtResource("3_oh5ij")
 stream_1/stream = ExtResource("4_hp4bs")
 stream_2/stream = ExtResource("5_g2vtq")
 stream_3/stream = ExtResource("6_2fvbb")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oh5ij"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_hjaqi")
@@ -60,7 +62,13 @@ one_shot = true
 stream = SubResource("AudioStreamRandomizer_ml7e8")
 volume_db = -6.0
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_oh5ij")
+
 [connection signal="attack_started" from="." to="." method="_on_attack_started"]
 [connection signal="timeout" from="NotificationTimer" to="." method="_on_notification_timer_timeout"]
 [connection signal="timeout" from="demandProgress" to="." method="_on_demand_progress_timeout"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
