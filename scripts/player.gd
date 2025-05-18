@@ -108,9 +108,7 @@ func attack(type: Gameconstants.Attack) -> void:
 			if child.name == "Middle":
 				child.free()
 			elif child.name == "Sprite2D":
-				child.texture = load("res://sprites/hopper.png") #TODO:Change ME!
-			elif child.name == "HopperMoney":
-				child.free()
+				child.texture = load("res://sprites/background-open.png")
 				
 		
 	attack_started.emit(type)
@@ -211,8 +209,22 @@ func _on_demand_progress_timeout() -> void:
 func _on_death_timer_timeout() -> void:
 	Gamestate.switch_to_gameover(PlayerIndex != 0)
 
+func zZz() -> void:
+	$zZz.visible = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == Gamestate.players[_otherPlayer(PlayerIndex)] and killer:
-		Gamestate.switch_to_gameover(_otherPlayer(PlayerIndex))
+		Gamestate.players[_otherPlayer(PlayerIndex)].zZz()
+		var timer := Timer.new()
+		timer.wait_time = 3.0
+		timer.one_shot = true
+		timer.autostart = true
+		add_child(timer)
+
+		# Connect timeout signal to a lambda function
+		timer.timeout.connect(func(): 
+			Gamestate.switch_to_gameover(_otherPlayer(PlayerIndex))
+
+		)
+		
 		
