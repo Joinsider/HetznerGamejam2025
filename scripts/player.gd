@@ -107,8 +107,11 @@ func attack(type: Gameconstants.Attack) -> void:
 		for child in get_parent().get_children():
 			if child.name == "Middle":
 				child.free()
-				print("oppen")
-				continue
+			elif child.name == "Sprite2D":
+				child.texture = load("res://sprites/hopper.png") #TODO:Change ME!
+			elif child.name == "HopperMoney":
+				child.free()
+				
 		
 	attack_started.emit(type)
 	utilization_updated.emit(get_utilization())
